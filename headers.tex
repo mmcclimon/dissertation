@@ -1,0 +1,161 @@
+%% headers.tex %%
+
+% misc. TeX settings
+% ------------------
+\widowpenalty=10000
+\clubpenalty=10000
+\setlength{\parindent}{0pt}
+% \setlength{\parskip}{6pt plus 2pt minus 1pt}
+% \setlength{\emergencystretch}{3em}  % prevent overfull lines
+% \setcounter{secnumdepth}{0}
+
+% page layout
+% -----------
+\usepackage[
+  outer=1in,
+  inner=1.5in,
+  top=1in,
+  bottom=1in,
+  headheight=.5in
+]{geometry}
+
+\usepackage{setspace}
+\doublespacing
+\raggedright
+\parindent=0.5in
+
+% bibliography
+% ------------
+\usepackage[
+  backend=biber,
+  notes,
+  parentracker=true
+]{biblatex-chicago}
+\bibliography{diss.bib}
+
+% footnotes
+% ------------
+\usepackage{sepfootnotes}
+\newfootnotes{f}
+\newcommand{\fn}{\fnote}
+\newcommand{\fntext}{\fnotecontent}
+
+\usepackage[ragged, bottom, splitrule]{footmisc}
+\setlength{\skip\footins}{14pt}
+\renewcommand{\footnotelayout}{\raggedright}
+
+% fonts
+% -----------
+\usepackage{amssymb,amsmath}
+\usepackage{fixltx2e} % provides \textsubscript
+
+\usepackage{mathspec}
+\usepackage{xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+
+\setmainfont{Junicode}
+\setmathfont(Digits){Junicode}
+\setmathsfont(Latin){Junicode}
+\setmathrm{Junicode}
+\setmathsfont(Symbols){XITS Math}
+\fontsize{12pt}{12pt}
+
+\usepackage{subscript}    % for \textsubscript
+\usepackage{csquotes}
+\usepackage[chicago]{ellipsis}      % better spaced ellipses
+
+% section heading sizes
+% \usepackage{titlesec}
+% \titleformat*{\section}{\large\bfseries}
+% \titleformat*{\subsection}{\normalsize\bfseries}
+
+% hyperref
+% --------
+% (Provides PDF table of contents)
+\usepackage[unicode,pdfencoding=auto]{hyperref}
+\hypersetup{bookmarks=true}
+
+% examples/captions
+% -----------------
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[
+  name={Example},
+  placement=ht
+]{example}
+\newcommand{\exBeg}{\begin{example}}
+\newcommand{\exEnd}{\end{example}}
+
+% provide opts to includegraphics as optional arg
+\newcommand{\centerGraphic}[2][]{%
+  \begin{center}%
+    \includegraphics[#1]{#2}%
+  \end{center}%
+}
+
+\usepackage[
+  format = plain,
+  labelsep = period,
+  %textformat = period,
+  justification = raggedright,
+  singlelinecheck = false,
+]{caption}
+
+% misc. formatting
+% ----------------
+\usepackage{datetime}
+\yyyymmdddate
+\renewcommand{\dateseparator}{-}
+
+% proposal-specific
+% -----------------
+
+% scale degrees /music stuff
+\newcommand{\sd}[1]{\ensuremath{\hat{#1}}}
+\renewcommand{\flat}{{\fontspec{ScaleDegrees Times}f}}
+\renewcommand{\sharp}{{\fontspec{ScaleDegrees Times}s}}
+\newcommand{\nat}{{\fontspec{ScaleDegrees Times}n}}
+
+% kerning on these characters sucks, so define some kern lengths
+\newcommand{\fklen}{1.25pt}
+\newcommand{\sklen}{1pt}
+\newcommand{\flatkern}{\hspace{\fklen}}
+\newcommand{\sharpkern}{\hspace{\sklen}}
+
+\newcommand{\Bflat}{\mbox{B\flatkern\flat}}
+\newcommand{\Eflat}{\mbox{E\flatkern\flat}}
+\newcommand{\Aflat}{\mbox{A\flatkern\flat}}
+\newcommand{\Dflat}{\mbox{D\flatkern\flat}}
+\newcommand{\Gflat}{\mbox{G\flatkern\flat}}
+\newcommand{\Cflat}{\mbox{C\flatkern\flat}}
+\newcommand{\Fflat}{\mbox{F\flatkern\flat}}
+
+% Define a new command, \h, that prints a harmony.
+% It substitutes all 's' chars with sharps, and all 'b' chars with flats.
+% Also adds some padding before the special chars and wraps them in an mbox{}
+% so that they don't get split across lines
+%
+% Ex: \h{Fsm7b5} --> \mbox{F\hspace{1.25pt}\sharp{}m7\hspace{1.25pt}\flat{}5}
+\usepackage{xstring}
+\newcommand{\h}[1]{%
+  \mbox{%
+    \StrSubstitute{#1}{s}{\sharp{}}[\x]%
+    \StrSubstitute{\x}{b}{\flat{}}[\x]%
+    \expandarg%
+    \StrSubstitute{\x}{\flat}{\hspace{\fklen}\flat}[\x]%
+    \StrSubstitute{\x}{\sharp}{\hspace{\sklen}\sharp}[\x]%
+    \x%
+  }%
+}
+
+% text shortcuts
+\newcommand{\tf}{\mbox{ii--V}}
+\newcommand{\tfo}{\mbox{ii--V--I}}
+\newcommand{\tsub}{\textsubscript}
+\newcommand{\tsup}{\textsuperscript}
+
+
+% math shortcuts
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\TFarrow}{\ensuremath{\overset{\mathrm{TF}}{\lra}}}
+
+%% end headers.tex %%
