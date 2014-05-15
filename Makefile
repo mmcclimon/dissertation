@@ -4,6 +4,7 @@ TEX_FILE = $(FILE).tex
 BUILD_FOLDER = build
 BUILD_PDF = $(BUILD_FOLDER)/$(FILE).pdf
 
+BIBTOOL = bibtool
 LATEX = latexmk
 LATEX_FLAGS = -xelatex --outdir=$(BUILD_FOLDER)
 LATEX_WATCH = -pvc
@@ -20,6 +21,16 @@ $(FILE).pdf: $(TEX_FILE)
 
 move:
 	if [ -f "$(BUILD_PDF)" ]; then cp $(BUILD_PDF) .; fi
+
+.PHONY: bib
+bib: $(FILE).bib
+	$(BIBTOOL) -i $< -o $<
+
+# Biber is stupid and the cache is easily corrupted. If citations aren't
+# working, 'make fix' will fix it.
+.PHONY: fix
+fix:
+	rm -rf $$(biber --cache)
 
 clean: move
 	$(LATEX) -c --outdir=$(BUILD_FOLDER)
