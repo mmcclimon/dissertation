@@ -11,13 +11,7 @@
 
 % page layout
 % -----------
-\usepackage[
-  outer=1in,
-  inner=1.5in,
-  top=1in,
-  bottom=1in,
-  headheight=.5in
-]{geometry}
+\usepackage[margin=1in,headheight=.5in]{geometry}
 
 \usepackage{setspace}
 \doublespacing
@@ -61,8 +55,12 @@
 \fontsize{12pt}{12pt}
 
 \usepackage{subscript}    % for \textsubscript
-\usepackage{csquotes}
-\usepackage[chicago]{ellipsis}      % better spaced ellipses
+
+\usepackage[
+  leftmargin = 0.5in,
+  rightmargin = 0.5in,
+  vskip = \partopsep
+]{quoting}
 
 % section headings
 % ----------------
@@ -92,8 +90,7 @@
 % hyperref
 % --------
 % (Provides PDF table of contents)
-\usepackage[unicode,pdfencoding=auto]{hyperref}
-\hypersetup{bookmarks=true}
+\usepackage[unicode,bookmarks,pdfencoding=auto,hyperfootnotes=false]{hyperref}
 \urlstyle{same}
 
 % examples/captions
@@ -126,6 +123,7 @@
 \usepackage{datetime}
 \yyyymmdddate
 \renewcommand{\dateseparator}{-}
+\usepackage[chicago]{ellipsis}      % better spaced ellipses
 
 % proposal-specific
 % -----------------
