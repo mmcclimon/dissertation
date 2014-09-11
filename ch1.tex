@@ -53,7 +53,7 @@ be flexible, especially on the later end; given the strong influence of the
 bebop tradition on jazz and jazz pedagogy, the hard bop style continued to
 exist well beyond 1965, and many players today still play in the style.
 
-Now that we have dilineated “jazz,” we should explain exactly what we mean by
+Now that we have delineated “jazz,” we should explain exactly what we mean by
 “harmony.” Harmony is of course one of the oldest topics in music theory, and
 as such has been hotly contested throughout its history. It is often
 found in opposition to couterpoint; in this view, counterpoint is concerned
@@ -73,7 +73,7 @@ particular sound, and improvising musicians must be able to understand this
 information quickly (when reading) and to recall it easily (when improvising).
 
 % rewrite? {
-Since the pioneering work of George Russell in the late 1950s, many jazz%{{{
+Since the pioneering work of George Russell in the late 1950s, many jazz
 musicians conceive of an equivalence between a harmony (a chord symbol) and a
 scale.\footcite{russell:lcc} The chord symbol \h{Dm7} might imply a D dorian
 scale, for example, rather than simply the notes D--F--A--C. Because any of
@@ -82,7 +82,7 @@ chord symbol makes a convenient shorthand for a particular “way of playing.”
 This equivalence between chords and scales will be the focus of chapter 4; for
 now it enough to note that understanding jazz harmony often involves more than
 understanding relationships between four-voice seventh chords.
-%}%}}}
+%}
 
 When analyzing jazz harmony, it is often difficult to determine exactly what
 one should be analyzing. Lead sheets as circulated in fake books can be highly
@@ -305,7 +305,7 @@ with Larson on this point, and don’t have anything in particular to add.
 Certainly we should not expect that our theories can only prove useful for the
 music for which they are designed; in fact as theorists we generally hope that
 the opposite is true, and that our theories have broader applications than
-originally imagined!
+originally intended!
 
 The second question has generated much more discussion in the literature
 regarding exactly how we might apply Schenkerian methods to jazz, already
@@ -462,7 +462,7 @@ Most commonly the elements of the set are harmonies, but they do not have to
 be.\fn{tt-1}
 
 Mathematical music theories have become especially widespread in recent
-years.\fn{tt-2} Many of these models focus on only on triads; while these
+years.\fn{tt-2} Many of these models focus only on triads; while these
 models are valuable, nearly all chords in jazz are (at least) seventh chords.
 Because the neo-Riemannian literature is relatively well-known, it will be
 useful here to limit our focus to those theories that deal in some way with
@@ -505,7 +505,7 @@ cardinalities, including Joseph Straus’s formulation of atonal voice leading
 and Clifton Callender’s split and fuse
 operations.\footcites{straus:2003,callender:1998} Finally, Dmitri Tymoczko’s
 continuous tetrachordal space can accomodate \emph{all} four-note chords, but,
-as hook notes, Tymoczko downplays (and sometimes ignores) the transformational
+as Hook notes, Tymoczko downplays (and sometimes ignores) the transformational
 aspects of his geometric models.\fn{tt-6}
 
 % xxx More here, esp. on cross-type stuff
@@ -515,7 +515,60 @@ passing here, we will return to some of them in some detail below, where they
 will be more relevant. Because Hook does not strictly define what constitutes
 a “type” in a cross-type transformation, his formulation will allow us to
 apply transformational procedures rigorously in situations where we might wish
-to consider objects of different types.\fn{tt-7}
+to consider objects to be members of different types, even though they may be
+identical in some other typological system.\fn{tt-7}
 
+%}}}
+
+\section{Diatonic Chord Space}
+\label{sec:diatonic-space} %{{{
+
+% xxx revise me
+
+It will be easiest to describe the transformational approach to jazz harmony
+by way of an example. Much of this dissertation will be interested in the
+development of various musical spaces.\fn{ds-1} These spaces can then be used
+as a kind of shortcut to explore transformational relationships among a given
+set of harmonies.
+
+Figure \ref{ds:autumn-leaves-changes} shows the chord changes to the A section
+on the jazz standard “Autumn Leaves.”\fn{ds-2a} Jazz musicians typically refer
+to this progression as a “diatonic cycle”: it uses only seventh-chords found
+in the G-minor diatonic collection. As in classical tonal music, the leading
+tone is raised in the dominant chord so that the resulting chord is a D7, not
+a Dm7.\fn{ds-2} We can easily arrange this progression around the familiar
+circle of fifths, placing G minor, the tonic, at the top of the circle (see
+Figure \ref{ds:circle-of-fifths}).
+
+\figBeg
+  \centerGraphic{eps/ch1/autumn-leaves-changes.pdf}
+  \caption{The changes to “Autumn Leaves” (Joseph Kosma), A section.}
+  \label{ds:autumn-leaves-changes}
+\figEnd
+
+\figBeg
+  \centerGraphic{eps/ch1/circle-of-fifths.pdf}
+  \caption{The changes to “Autumn Leaves,” arranged around the diatonic circle
+    of fifths.}
+  \label{ds:circle-of-fifths}
+\figEnd
+
+While this arrangement around the diatonic circle of fifths makes intuitive
+sense, it also forms what David Lewin has called a Generalized Interval System
+(GIS).\footcite[26]{lewin:gmit} Since this is the first of several GISs we
+will encounter, it will be useful here to explore the concept in some depth.
+
+% xxx a paragraph here on GISs and how they’re useful, etc.
+[[[ to be written ]]]
+
+A GIS ($S$, IVLS, int) consists of a space $S$, an interval group IVLS, and an
+interval function of the space. Here, the space of the GIS is the set of
+chords in the diatonic cycle: \mbox{$S =$ \{\h{GmM7},} \h{Am7b5}, \h{BfM7}, \h{Cm7},
+\h{D7}, \h{EbM7}, \h{F7}\}. The interval group, IVLS, is the cyclic group
+$\mathcal{C}_7 = \{t_0,t_1,\ldots,t_6\}$, where $t_k$ is the diatonic
+transposition operator that transposes the root of a chord $k$ steps inside a
+particular diatonic collection. The interval function maps $S \times S$ into
+IVLS; the interval between two chords in $S$ is a member of the group
+$\mathcal{C}_7$.
 
 %}}}

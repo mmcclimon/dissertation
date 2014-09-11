@@ -98,10 +98,15 @@
 \usepackage{newfloat}
 \DeclareFloatingEnvironment[
   name={Example},
-  placement=ht
+  placement=Htbp
 ]{example}
 \newcommand{\exBeg}{\begin{example}}
 \newcommand{\exEnd}{\end{example}}
+
+\newcommand{\figBeg}{\begin{figure}}
+\newcommand{\figEnd}{\end{figure}}
+
+\usepackage[section]{placeins}
 
 % provide opts to includegraphics as optional arg
 \newcommand{\centerGraphic}[2][]{%
@@ -113,7 +118,8 @@
 \usepackage[
   format = plain,
   labelsep = period,
-  %textformat = period,
+  font=small,
+  margin=0.5in,
   justification = raggedright,
   singlelinecheck = false,
 ]{caption}
