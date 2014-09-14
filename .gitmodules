@@ -1,0 +1,3 @@
+[submodule "eps"]
+	path = eps
+	url = git://github.com/mmcclimon/dissertation_examples.git
