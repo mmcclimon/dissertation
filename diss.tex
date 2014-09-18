@@ -1,18 +1,14 @@
 \documentclass[12pt,oneside]{book}
-\input{headers.tex}
-\input{ch1-notes.tex}
-
-% this controls what gets compiled
-\includeonly{ch1}
+\usepackage{mjmdiss}
+\usepackage{subfiles}
 
 \begin{document}
 
 \frontmatter
-  \include{front}
+  \subfile{front}
 \mainmatter
-  \include{ch1}
+  \subfile{ch1}
 \backmatter
-  \include{back}
-
+  \subfile{back}
 
 \end{document}
