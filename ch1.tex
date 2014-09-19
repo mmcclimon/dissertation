@@ -799,13 +799,13 @@ the connections from chord to chord are all $t_3$ operations, continuing the
 chain that has been present since the beginning (see Figure
 \ref{ds:autumn-leaves-bridge}).
 
-\figBeg
+\figBeg[htbp]
   \centerGraphic{eps/ch1/autumn-leaves-complete.pdf}
   \caption{The complete changes to “Autumn Leaves.”}
   \label{ds:autumn-leaves-complete}
 \figEnd
 
-\figBeg
+\figBeg[htbp]
   \vspace{\baselineskip}
   \centerGraphic{eps/ch1/autumn-leaves-bridge.pdf}
   \caption{A transformation network for “Autumn Leaves,” bridge.}
@@ -833,7 +833,7 @@ Interpolating this chord allows us to hear the progression (beginning on
 \h{Cm7}) as identical to that of the first eight bars, now displaced to span a
 formal boundary, as shown in Figure \ref{ds:displaced-cycle}.\fn{ds-12}
 
-\figBeg
+\figBeg[htbp]
   \centerGraphic{eps/ch1/displaced-cycle.pdf}
   \caption{The diatonic cycle of “Autumn Leaves,” with a hypermetrically
     displaced copy spanning the formal boundary at the end of the bridge.}
@@ -850,7 +850,62 @@ bridge). These \tf\ progressions are best stood in chromatic, rather than
 diatonic, space; for now, we will pass over this progression until we have
 developed such a space.
 
+It is relatively rare for tunes to be as systematically diatonic as “Autumn
+Leaves” (though Bart Howard’s “Fly Me to the Moon” comes close); instead,
+pieces often make use of diatonic cycles in only a portion of a piece before
+moving on to contrasting music. A relatively straightforward example of this
+is Sammy Fain and Bob Hilliard’s “Alice in Wonderland,” the changes to which
+are shown in Figure \ref{ds:wonderland-changes}.\fn{ds-13} Like “Autumn
+Leaves,” “Alice in Wonderland” begins with a minor diatonic cycle in mm.~1--7
+(also beginning on a iv chord), shown here in A minor. We can modify our GIS
+from above simply by changing the set ($S$ is now the set \{\h{Am}, \h{Bm7b5},
+\h{CM7}, \h{Dm7}, \h{E7}, \h{FM7}, \h{G7}\}); the groups IVLS and the
+interval function are identical. The harmony in m.~7 is an \h{Am7} chord,
+but because the quality of the tonic seventh chord is ambiguous in minor
+keys, this chord is easily understood as a tonic.
 
+\figBeg[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{Changes to “Alice in Wonderland” (Sammy Fain/Bob Hilliard), mm.\
+  1--16.}
+  \label{ds:wonderland-changes}
+\figEnd
+
+The second eight measures are all diatonic in the key of C major; the linking
+\h{Eb7} chord signals a shift between diatonic collections.\fn{ds-14} This
+move to the relative major is common, and the only difference between the two
+diatonic sets is the shift of \h{E7} (in A minor) to \h{Em7} (in C major). The
+progression here is not as systematic as the first eight (see the annotations
+in Figure \ref{ds:wonderland-transformations}). After a C-major \tf\ in
+mm.~9--10, the harmony moves up a step to \h{Em7}--\h{Am7}.\fn{ds-15} The
+progression \h{G7}--\h{Em7} seems to move backwards in the cycle, almost as if
+realizing the phrase is in danger of C major too soon. We can capture this
+intution by choosing to understand the progression not as a forward-directed
+$t_5$, but as an algebraically-equivalent combination of three ascending
+fifths ($t_3^{-1} + t_3^{-1} + t_3^{-1}$).
+
+\figBeg[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{The changes to “Alice in Wonderland,” with transformational labels
+  between harmonies.}
+  \label{ds:wonderland-transformations}
+\figEnd
+
+Throughout \emph{GMIT}, Lewin is clear that transformational theory is a means
+of expressing our “intuitions” about a musical passage in a mathematically
+rigorous way.\fn{ds-16} As he puts it: “If I want to change Gestalt 1 into
+Gestalt 2 \ldots, what sorts of admissible transformations in my space
+(members of STRANS or otherwise) will do the best
+job?”\footcite[159]{lewin:gmit} Our explication of diatonic seventh-chord
+spaces may appear to stem from the desire to label everything a $t_3$ and move
+on, confident that we could justify our lables mathematically if called upon
+to do so. This, though, could not be further from the truth; developing the
+space allows us a powerful means to capture intuitions (or apperceptions) like
+the one above. Though the operation $t_5$ does map \h{G7} to \h{Em7} in the
+C-major diatonic space, hearing this connection as $t_3^{-1} + t_3^{-1} +
+t_3^{-1}$ instead represents the idea of stepping backwards through the circle
+of descending fifths (an observation that may not be easy to show using other
+methods of analysis).
 
 % }}}}
 
