@@ -5,15 +5,130 @@
 \title{A Transformational Approach to Jazz Harmony}
 \author{Michael McClimon}
 \date{}
-\maketitle
+\makeatletter \let\Title\@title \makeatother
 
+% Title page {{{
+\begin{center}
+  \singlespacing
+  \thispagestyle{empty}
+
+  \vspace*{\fill}
+  \keepthetitle
+  \MakeUppercase{\Title}
+
+  \vspace{\baselineskip}
+  Michael McClimon
+
+  \vspace{\baselineskip}
+  \vspace{\baselineskip}
+  \vspace{\baselineskip}
+  \vspace{\baselineskip}
+
+  Submitted to the faculty of the University Graduate School \\
+  in partial fulfillment of the requirements for the degree \\
+  Doctor of Philosophy \\
+  in the Jacobs School of Music, \\
+  Indiana University \\
+  month year
+
+  \vspace{\fill}
+\end{center}
+\clearpage
+% }}}
+
+% Acceptance page {{{
 \singlespacing
+\begin{center}
+  Accepted by the Graduate Faculty, Indiana University, in partial fulfillment
+  of the requirements for the degree of Doctor of Philosophy.
+\end{center}
 
-\tableofcontents
-\listoffigures
+{\flushleft
+  \vspace{\baselineskip}
+  Doctoral Committee
+}
+
+{\flushright
+
+\vspace{5em}
+\rule{20em}{0.5pt} \\ Julian Hook, Ph.D.
+
+\vspace{5em}
+\rule{20em}{0.5pt} \\ Blair Johnston, Ph.D.
+
+\vspace{5em}
+\rule{20em}{0.5pt} \\ Marianne Kielian-Gilbert, Ph.D.
+
+\vspace{5em}
+\rule{20em}{0.5pt} \\ Brent Wallarab
+
+}
+
+
+{\flushleft
+defense date
+}
+
+\clearpage
+% }}}
+
+% Copyright page {{{
+\begin{center}
+  \vspace*{\fill}
+  Copyright \copyright\ year \\
+  Michael McClimon
+  \vspace*{\fill}
+\end{center}
+\clearpage
+% }}}
+
+% Acknowledgements {{{
+
+\section*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+
 \clearpage
 
-\section{Notes to the Reader}
+% }}}
+
+% Abstract {{{
+\addcontentsline{toc}{section}{Abstract}
+\begin{center}
+  Michael McClimon
+
+  \vspace{\baselineskip}
+  \MakeUppercase{\Title}
+\end{center}
+
+\doublespacing
+(abstract goes here)
+
+{\flushright
+
+\vspace{4em}
+\rule{20em}{0.5pt} \\ Julian Hook, Ph.D.
+
+\vspace{4em}
+\rule{20em}{0.5pt} \\ Blair Johnston, Ph.D.
+
+\vspace{4em}
+\rule{20em}{0.5pt} \\ Marianne Kielian-Gilbert, Ph.D.
+
+\vspace{4em}
+\rule{20em}{0.5pt} \\ Brent Wallarab
+
+}
+% }}}
+
+\singlespacing
+\tableofcontents
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+\clearpage
+
+% Notes to the Reader {{{
+\section*{Notes to the Reader}
+\addcontentsline{toc}{section}{Notes to the Reader}
 
 \doublespacing
 References to recordings in this dissertation are generally made only by
@@ -30,6 +145,10 @@ not simply the melody). When I am referencing a \emph{particular}
 instantiation of a work (e.g.~Bill Evans’s recording of “Autumn Leaves” from
 \emph{Portrait in Jazz}), I will make that clear.
 
+% }}}
+
 
 
 \end{document}
+
+% vim: fdm=marker

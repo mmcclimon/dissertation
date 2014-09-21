@@ -69,6 +69,7 @@
 
 % section headings
 % ----------------
+\usepackage{titling}
 \usepackage{titlesec}
 \titleformat{\chapter}[display]{%
   \normalfont\large\bfseries}
@@ -86,16 +87,16 @@
 
 \lhead{}
 \chead{}
-\rhead{\thepage}
+\rhead{\tiny{\today\ \currenttime}}
 \lfoot{}
-\cfoot{}
-\rfoot{\tiny{\today\ \currenttime}}
+\cfoot{\thepage}
+\rfoot{}
 \renewcommand{\headrulewidth}{0pt}
 
 % hyperref
 % --------
 % (Provides PDF table of contents)
-\usepackage[unicode,bookmarks,pdfencoding=auto,hyperfootnotes=false]{hyperref}
+\usepackage[unicode,bookmarks,pdfencoding=auto,hyperfootnotes=false,linktocpage]{hyperref}
 \urlstyle{same}
 
 % examples/captions
