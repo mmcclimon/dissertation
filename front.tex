@@ -7,6 +7,8 @@
 \date{}
 \makeatletter \let\Title\@title \makeatother
 
+\pdfbookmark[0]{Front Matter}{fm:frontmatter}
+
 % Title page {{{
 \begin{center}
   \singlespacing
@@ -84,6 +86,7 @@ defense date
 
 % Acknowledgements {{{
 
+\phantomsection
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
 
@@ -92,6 +95,7 @@ defense date
 % }}}
 
 % Abstract {{{
+\phantomsection
 \addcontentsline{toc}{section}{Abstract}
 \begin{center}
   Michael McClimon
@@ -120,13 +124,21 @@ defense date
 }
 % }}}
 
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Table of Contents}
 \singlespacing
 \tableofcontents
-\listoffigures
+
+\clearpage
+\phantomsection
 \addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+
 \clearpage
 
 % Notes to the Reader {{{
+\phantomsection
 \section*{Notes to the Reader}
 \addcontentsline{toc}{section}{Notes to the Reader}
 
