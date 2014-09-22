@@ -60,6 +60,7 @@
 
 \usepackage{subscript}    % for \textsubscript
 \usepackage{paralist}
+\usepackage{gensymb}
 
 \usepackage[
   leftmargin = 0.5in,
@@ -176,6 +177,7 @@
   \mbox{%
     \StrSubstitute{#1}{s}{\sharp{}}[\x]%
     \StrSubstitute{\x}{b}{\flat{}}[\x]%
+    \StrSubstitute{\x}{o}{\degree{}}[\x]%
     \expandarg%
     \StrSubstitute{\x}{\flat}{\hspace{\fklen}\flat}[\x]%
     \StrSubstitute{\x}{\sharp}{\hspace{\sklen}\sharp}[\x]%
@@ -186,6 +188,7 @@
 % text shortcuts
 \newcommand{\tf}{\mbox{ii--V}}
 \newcommand{\tfo}{\mbox{ii--V--I}}
+\newcommand{\slideS}{\textsc{slide}\textsuperscript{7}}
 \newcommand{\tsub}{\textsubscript}
 \newcommand{\tsup}{\textsuperscript}
 
