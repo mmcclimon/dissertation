@@ -19,7 +19,7 @@
 \usepackage{setspace}
 \doublespacing
 \raggedright
-\parindent=0.5in
+\parindent=2em
 
 % bibliography
 % ------------
@@ -58,7 +58,7 @@
   }
 }
 
-\setmainfont[Numbers=OldStyle]{Junicode}
+\setmainfont[Numbers={OldStyle}]{Junicode}
 \setmathfont(Digits){Junicode}
 \setmathsfont(Latin)[Numbers=Lining]{Junicode}
 \setmathrm{Junicode}
@@ -72,8 +72,8 @@
 \usepackage{gensymb}
 
 \usepackage[
-  leftmargin = 0.5in,
-  rightmargin = 0.5in,
+  leftmargin = 2em,
+  rightmargin = 2em,
   vskip = \partopsep
 ]{quoting}
 
@@ -82,12 +82,12 @@
 \usepackage{titling}
 \usepackage{titlesec}
 \titleformat{\chapter}[display]{%
-  \normalfont\large\bfseries}
-  {\chaptertitlename\ \thechapter}{0pt}{\vspace{-1ex}\Large}{}
+  \normalfont\large}
+  {\chaptertitlename\ \thechapter}{0pt}{\vspace{-2ex}\LARGE}{}
 \titlespacing*{\chapter}{0pt}{0pt}{1em}
 
-\titleformat*{\section}{\large\bfseries}
-\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\section}{\large}
+\titleformat*{\subsection}{\normalsize\scshape}
 
 % page header
 % -----------
@@ -136,7 +136,7 @@
   format = plain,
   labelsep = period,
   font=small,
-  margin=0.5in,
+  margin=2em,
   justification = raggedright,
   singlelinecheck = false,
 ]{caption}
