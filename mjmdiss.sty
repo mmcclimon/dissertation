@@ -49,7 +49,14 @@
 
 \usepackage{mathspec}
 \usepackage{xltxtra,xunicode}
-\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\defaultfontfeatures{%
+  Mapping=tex-text,%
+  Scale=MatchLowercase,
+  SmallCapsFeatures={
+    LetterSpace=5.0,
+    Letters = SmallCaps
+  }
+}
 
 \setmainfont{Junicode}
 \setmathfont(Digits){Junicode}
@@ -194,6 +201,7 @@
 \newcommand{\rightparen}{)}
 \newcommand{\ivls}{\textsc{ivls}}
 \newcommand{\gis}{\textsc{gis}}
+\newcommand{\strans}{\textsc{strans}}
 
 
 % math shortcuts
