@@ -58,12 +58,14 @@
   }
 }
 
-\setmainfont{Junicode}
+\setmainfont[Numbers=OldStyle]{Junicode}
 \setmathfont(Digits){Junicode}
-\setmathsfont(Latin){Junicode}
+\setmathsfont(Latin)[Numbers=Lining]{Junicode}
 \setmathrm{Junicode}
 \setmathsfont(Symbols){XITS Math}
 \fontsize{12pt}{12pt}
+
+\newfontface\liningNums[Numbers=Lining]{Junicode}
 
 \usepackage{subscript}    % for \textsubscript
 \usepackage{paralist}
@@ -181,6 +183,8 @@
 % Ex: \h{Fsm7b5} --> \mbox{F\hspace{1.25pt}\sharp{}m7\hspace{1.25pt}\flat{}5}
 \usepackage{xstring}
 \newcommand{\h}[1]{%
+  {%
+    \liningNums
   \mbox{%
     \StrSubstitute{#1}{s}{\sharp{}}[\x]%
     \StrSubstitute{\x}{b}{\flat{}}[\x]%
@@ -189,6 +193,7 @@
     \StrSubstitute{\x}{\flat}{\hspace{\fklen}\flat}[\x]%
     \StrSubstitute{\x}{\sharp}{\hspace{\sklen}\sharp}[\x]%
     \x%
+  }%
   }%
 }
 
