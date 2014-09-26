@@ -51,7 +51,7 @@
 \usepackage{xltxtra,xunicode}
 \defaultfontfeatures{%
   Mapping=tex-text,%
-  Scale=MatchLowercase,
+  Scale=MatchUppercase,
   SmallCapsFeatures={
     LetterSpace=5.0,
     Letters = SmallCaps
@@ -82,8 +82,8 @@
 \usepackage{titling}
 \usepackage{titlesec}
 \titleformat{\chapter}[display]{%
-  \normalfont\large}
-  {\chaptertitlename\ \thechapter}{0pt}{\vspace{-2ex}\LARGE}{}
+  \normalfont\large\scshape}
+  {\chaptertitlename\ \thechapter}{0pt}{\vspace{-2ex}\LARGE\upshape}{}
 \titlespacing*{\chapter}{0pt}{0pt}{1em}
 
 \titleformat*{\section}{\large}
