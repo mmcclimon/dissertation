@@ -66,6 +66,7 @@
 \fontsize{12pt}{12pt}
 
 \newfontface\liningNums[Numbers=Lining]{Junicode}
+\newfontface\sscaptionfont[Numbers=OldStyle]{Fira Sans}
 
 \usepackage{subscript}    % for \textsubscript
 \usepackage{paralist}
@@ -132,14 +133,17 @@
   \end{center}%
 }
 
-\usepackage[
+
+\usepackage{caption}
+\DeclareCaptionFont{sansserif}{\sscaptionfont\footnotesize}
+\captionsetup{
   format = plain,
   labelsep = period,
-  font=small,
+  font=sansserif,
   margin=2em,
   justification = raggedright,
   singlelinecheck = false,
-]{caption}
+}
 
 
 \usepackage{marginnote}
