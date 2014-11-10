@@ -1,0 +1,110 @@
+%% Chapter 2
+\documentclass[diss]{subfiles}
+\input{ch2-notes.tex}
+\begin{document}
+
+\chapter{Fifths Spaces}
+
+Because most jazz is not purely diatonic, we need to expand our
+transformational system to account for more chromatic examples. This chapter
+will begin that work, taking the very common \tfo\ progression as its basis.
+Most of the spaces we will develop in this chapter will fall under the broad
+category of “fifths spaces,” but at the end of the chapter we will have
+occasion to return to the diatonic space of chapter 1 to see how they might be
+enhanced with the chromatic spaces introduced here.
+
+% xxx this title is stupid
+\section{\tf\ Space: An Initial Pass}
+
+% {{{
+
+The most common harmonic progression in jazz is undoubtedly the
+\mbox{ii\tsup{7}--V\tsup{7}--I\tsup{7}} progression (hereafter, just \tfo, or
+often just \tf). It is the first progression taught in most jazz method books,
+and the only small-scale harmonic progression to have an entire Aebersold
+play-along volume dedicated to it.\fn{tf-1} The progression is so prevalent
+that many jazz musicians describe tunes in terms of their constituent \tf{}s;
+a musician might describe the bridge of “All the Things You Are” (shown in
+Example \ref{tf:all-things-bridge}) as being “\tf\ to G, \tf\ to E, then V--I
+in F.”\fn{tf-2} Given the importance of the progression for improvising jazz
+musicians, it seems natural to use the progression as the basis for developing
+a more general transformational model of jazz harmony.
+
+\exBeg[htbp]
+  \centerGraphic{eps/ch2/all-things-bridge.pdf}
+  \caption{The bridge of “All the Things You Are” (Jerome Kern).}
+  \label{tf:all-things-bridge}
+\exEnd
+
+\figBeg[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption[A transformation network for a single \tfo\ progression.]{A
+  transformation network for a \tfo\ in C major: \caph{Dm7}--\caph{G7}--\caph{CM7}.}
+  \label{tf:single-tfo-network}
+\figEnd
+
+Figure \ref{tf:single-tfo-network} shows a transformation network for a single
+\tfo\ progression; we will begin by developing the formal apparatus for this
+progression, after which we can begin to combine \tfo\ progressions to form a
+larger musical space. The illustration, with its combination of general Roman
+numerals and specific key centers, is designed to reflect how jazz musicians
+tend to talk about harmony; we might read this network as “a \tfo\ in C.” This
+combination of Roman numerals and key areas bears some similarity to Fred
+Lerdahl’s chordal-regional space, but Figure \ref{tf:single-tfo-network} is a
+transformation network, while chordal-regional space is strictly a spatial
+metaphor.\footcite[96--97]{lerdahl:2004}
+
+We have encountered one transformation network already (in Figure
+\ref{ds:autumn-leaves-bridge}), but we have yet to define the concept
+formally.  Transformation networks are a major part of David Lewin’s project
+in \emph{GMIT}, and have been thoroughly covered in the literature, so we will
+not rehearse the formalism at any length here.\fn{tf-3} Briefly, a
+transformation network consists of objects of some kind (here, they are
+chords), represented as vertices in a graph, along with some relations between
+them, represented as arrows. Lewin defines a transformation as “a function
+from a family [set] S into S itself.”\fn{tf-4} The transformations in Figure
+\ref{ds:autumn-leaves-bridge} are indeed Lewinnian transformations (mappings
+in the G-minor diatonic set), but the \tfo\ transformation network is more
+complex.
+
+The transformation TF in Figure \ref{tf:single-tfo-network} is in fact a
+\emph{cross-type} transformation, as defined by Julian
+Hook.\footcite{hook:2007} Hook expands Lewin’s definition of a transformation
+network to include objects of different types, necessary to define
+transformations in the \tfo\ progression. The progression contains musical
+objects of three types of diatonic seventh chords: minor, dominant,
+and major sevenths (in the key of C major, the progression is
+\h{Dm7}--\h{G7}--\h{CM7}). Using Hook’s relaxed definitions, we are free to
+define transformations from any set of objects to any other; to understand the
+figure above, we need to define the transformation TF such that it maps
+ii\tsup{7} chords to V\tsup{7} chords, and V\tsup{7} chords to I\tsup{7}
+chords.
+
+\figBeg[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{The underlying transformation graph for a single \tfo\ progression.}
+  \label{tf:single-tfo-graph}
+\figEnd
+
+Before defining the transformations, however, we first need to define the sets
+themselves. To help with this, Figure \ref{tf:single-tfo-graph} shows the
+underlying transformation graph of the transformation network in
+\ref{tf:single-tfo-network}. Throughout \emph{GMIT}, Lewin is careful to
+distinguish transformation graphs from transformation networks: a graph is an
+abstract structure, showing only relations (transformations) between
+unspecified set members, while a network realizes a graph, specifying the
+actual musical objects under consideration.\fn{tf-5} Because cross-type
+transformation graphs contain objects of different types, a node in a
+cross-type transformation graph must be labeled with the set from which the
+node contents may be drawn (even in a transformation
+graph).\footcite[7]{hook:2007} In Figure \ref{tf:single-tfo-graph}, the nodes
+are labeled simply $S_1$, $S_2$, and $S_3$, which we can understand as the
+sets of ii\tsup{7}, V\tsup{7}, and I\tsup{7} chords, respectively.
+
+
+% }}}
+
+
+\end{document}
+
+% vim:fdm=marker

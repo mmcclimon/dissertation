@@ -67,6 +67,7 @@
 
 \newfontface\liningNums[Numbers=Lining]{Junicode}
 \newfontface\sscaptionfont[Numbers=OldStyle]{Fira Sans}
+\newfontface\ssliningfont[Numbers=Lining]{Fira Sans}
 
 \usepackage{subscript}    % for \textsubscript
 \usepackage{paralist}
@@ -188,7 +189,23 @@
 \usepackage{xstring}
 \newcommand{\h}[1]{%
   {%
-    \liningNums
+    \liningNums%
+  \mbox{%
+    \StrSubstitute{#1}{s}{\sharp{}}[\x]%
+    \StrSubstitute{\x}{b}{\flat{}}[\x]%
+    \StrSubstitute{\x}{o}{\degree{}}[\x]%
+    \expandarg%
+    \StrSubstitute{\x}{\flat}{\hspace{\fklen}\flat}[\x]%
+    \StrSubstitute{\x}{\sharp}{\hspace{\sklen}\sharp}[\x]%
+    \x%
+  }%
+  }%
+}
+
+% caption harmony
+\newcommand{\caph}[1]{%
+  {%
+    \ssliningfont%
   \mbox{%
     \StrSubstitute{#1}{s}{\sharp{}}[\x]%
     \StrSubstitute{\x}{b}{\flat{}}[\x]%
