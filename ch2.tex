@@ -31,13 +31,13 @@ musicians, it seems natural to use the progression as the basis for developing
 a more general transformational model of jazz harmony.
 
 \exBeg[htbp]
-  \centerGraphic{eps/ch2/all-things-bridge.pdf}
+  \centerGraphic[width=20em]{eps/ch2/all-things-bridge.pdf}
   \caption{The bridge of “All the Things You Are” (Jerome Kern).}
   \label{tf:all-things-bridge}
 \exEnd
 
 \figBeg[htbp]
-  \centerGraphic{eps/xxx.pdf}
+  \centerGraphic[width=15em]{eps/ch2/single-tfo-network.pdf}
   \caption[A transformation network for a single \tfo\ progression.]{A
   transformation network for a \tfo\ in C major: \caph{Dm7}--\caph{G7}--\caph{CM7}.}
   \label{tf:single-tfo-network}
@@ -46,12 +46,13 @@ a more general transformational model of jazz harmony.
 Figure \ref{tf:single-tfo-network} shows a transformation network for a single
 \tfo\ progression; we will begin by developing the formal apparatus for this
 progression, after which we can begin to combine \tfo\ progressions to form a
-larger musical space. The illustration, with its combination of general Roman
-numerals and specific key centers, is designed to reflect how jazz musicians
-tend to talk about harmony; we might read this network as “a \tfo\ in C.” This
-combination of Roman numerals and key areas bears some similarity to Fred
-Lerdahl’s chordal-regional space, but Figure \ref{tf:single-tfo-network} is a
-transformation network, while chordal-regional space is strictly a spatial
+larger musical space.\fn{tf-2a} The illustration, with its combination of
+general Roman numerals and specific key centers, is designed to reflect how
+jazz musicians tend to talk about harmony; we might read this network as “a
+\tfo\ in C.” This combination of Roman numerals and key areas bears some
+similarity to Fred Lerdahl’s chordal-regional space, but Figure
+\ref{tf:single-tfo-network} is a transformation network, while
+chordal-regional space is strictly a spatial
 metaphor.\footcite[96--97]{lerdahl:2004}
 
 We have encountered one transformation network already (in Figure
@@ -81,7 +82,7 @@ ii\tsup{7} chords to V\tsup{7} chords, and V\tsup{7} chords to I\tsup{7}
 chords.
 
 \figBeg[htbp]
-  \centerGraphic{eps/xxx.pdf}
+  \centerGraphic[width=15em]{eps/ch2/single-tfo-graph.pdf}
   \caption{The underlying transformation graph for a single \tfo\ progression.}
   \label{tf:single-tfo-graph}
 \figEnd
@@ -159,7 +160,7 @@ representing a \tf, which we will call simply ``TF'':
 
 \noindent Again, these definitions are designed to be musically relevant; the
 voice-leading diagram in Example \ref{tf:tfo-voice-leading} illustrates this
-more clearly. The root of the second chord is a fifth below the root of the
+more clearly.\fn{tf-6a} The root of the second chord is a fifth below the root of the
 first ($y_1 = x_1 + 5$), the third of the second chord is a semitone below the
 seventh of the first ($y_2 = x_3 - 1$), and the seventh of the second chord is
 a common tone with the third of the first ($y_3 = x_2$). In Lewin's
@@ -170,7 +171,7 @@ to become the new third.'' (When we wish to emphasize this mapping
 aspect of the transformation, we may also write ii\tsup{7}
 \TFarrow\ V\tsup{7}, rather than TF(ii\tsup{7}) = V\tsup{7}.)
 Note that the transformation TF is also valid
-between a V\tsup{7} and I\tsup{7} as well (the second equation above,
+between V\tsup{7} and I\tsup{7} as well (the second equation above,
 involving sets $S_2$ and $S_3$). TF is both one-to-one and onto for sets of
 ordered triples; it maps each ii\tsup{7} to a unique V\tsup{7}, and each
 V\tsup{7} to a unique I\tsup{7}. As such, its inverse ($\mathrm{TF}^{-1}$) is
@@ -178,7 +179,7 @@ well defined, and allows motion backwards along the arrows shown in the
 transformation graph in Figure \ref{tf:single-tfo-graph}.
 
 \exBeg[htbp]
-  \centerGraphic{eps/xxx.pdf}
+  \centerGraphic{eps/ch2/tfo-voice-leading.pdf}
   \caption{Voice leading in the \tfo\ progression.}
   \label{tf:tfo-voice-leading}
 \exEnd
@@ -195,6 +196,12 @@ the three types are all members of a single larger set.\fn{tf-7} The advantage
 for defining TF as a cross-type transformation is that the content of a single
 node in the transformation graph is restricted to members of a 12-element set
 of specific ordered-triple configurations.
+
+\figBeg[thbp]
+  \centerGraphic[width=20em]{eps/ch2/trans-graph-large.pdf}
+  \caption{The transformation graph for a small portion of \tf\ space.}
+  \label{tf:trans-graph-large}
+\figEnd
 
 With this understanding of the transformations involved in a single
 \tfo\ progression, we can continue to see how we might connect multiple
@@ -215,20 +222,14 @@ m_3)=(l_1, l_2, l_3-1) \in S_2$
 n_3)=(m_1, m_2-1, m_3) \in S_1$
 \vspace{0.5\baselineskip}
 
-Like the TF transformation, the \textsc{7th} and \textsc{3rd} transformations
-have clear musical relevance: each lowers the given note by a
-semitone. Although adjacent progressions are connected by $T_5$, the $T_5$
-labels connecting adjacent ii\tsup{7} chords and I\tsup{7} chords are shown in
-gray here (and omitted entirely in most later examples), since these chords
-are not often directly connected in jazz.
+\noindent Like the TF transformation, the \textsc{7th} and \textsc{3rd}
+transformations have clear musical relevance: each lowers the given note by a
+semitone. Although adjacent progressions are connected by descending fifth,
+the $T_5$ labels connecting adjacent ii\tsup{7} chords and I\tsup{7} chords
+are shown in gray here (and omitted entirely in most later examples), since
+these chords are not often directly connected in jazz.
 
-\figBeg[thbp]
-  \centerGraphic{eps/xxx.pdf}
-  \caption{The transformation graph for a small portion of \tf\ space.}
-  \label{tf:trans-graph-large}
-\figEnd
 % }}}
-
 
 \end{document}
 
