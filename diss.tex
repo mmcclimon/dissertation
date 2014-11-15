@@ -1,15 +1,21 @@
 \documentclass[12pt,oneside]{book}
 \usepackage{mjmdiss}
-\usepackage{subfiles}
+
+% notes files, must go before document begin
+\input{ch1-notes}
+\input{ch2-notes}
+
+% control what we’re compiling
+\includeonly{ch2}
 
 \begin{document}
 
 \frontmatter
-  \subfile{front}
+  \include{front}
 \mainmatter
-  \subfile{ch1}
-  \subfile{ch2}
+  \include{ch1}
+  \include{ch2}
 \backmatter
-  \subfile{back}
+  \include{back}
 
 \end{document}
