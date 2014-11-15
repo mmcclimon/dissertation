@@ -88,7 +88,7 @@ chords.
 
 Before defining the transformations, however, we first need to define the sets
 themselves. To help with this, Figure \ref{tf:single-tfo-graph} shows the
-underlying transformation graph of the transformation network in
+underlying transformation graph of the transformation network in Figure
 \ref{tf:single-tfo-network}. Throughout \emph{GMIT}, Lewin is careful to
 distinguish transformation graphs from transformation networks: a graph is an
 abstract structure, showing only relations (transformations) between
@@ -96,7 +96,7 @@ unspecified set members, while a network realizes a graph, specifying the
 actual musical objects under consideration.\fn{tf-5} Because cross-type
 transformation graphs contain objects of different types, a node in a
 cross-type transformation graph must be labeled with the set from which the
-node contents may be drawn (even in a transformation
+node contents may be drawn (even in the abstract transformation
 graph).\footcite[7]{hook:2007} In Figure \ref{tf:single-tfo-graph}, the nodes
 are labeled simply $S_1$, $S_2$, and $S_3$, which we can understand as the
 sets of ii\tsup{7}, V\tsup{7}, and I\tsup{7} chords, respectively.
@@ -113,6 +113,7 @@ In this chapter, we will represent a chord with an ordered triple $X = (x_1,
 x_2, x_3)$, where $x_1$ is the root of the chord, $x_2$ the third, and $x_3$
 the seventh. The definitions of the three sets are as follows:\fn{tf-6}
 
+% xxx do these definitions need numbers?
 \vspace{-3em} % xxx not sure why there’s so much space here
 \begin{align*}
   S_1 &= \{ (x_1, x_2, x_3)\ |\ x_2 - x_1 = 3; x_3 - x_1 = 10 \} &
@@ -134,10 +135,98 @@ classes offers the great advantage of flexibility. Using the ordered-triple
 representation, the progressions \h{Dm7}--\h{G7}--\h{Cmaj7} and
 \h{Dm9(b5)}--\h{G7b13s9b9}--\h{Cmaj7s11} are understood as equivalent, since
 the roots, thirds, and sevenths are the same: both progressions are
-represented $(2, 5, 0)$--$(7, 11, 5)$--$(0, 4, 11)$.
+represented $(2, 5, 0)$--\allowbreak$(7, 11, 5)$--\allowbreak$(0, 4,
+11)$. Because the sets are defined in pitch-class space, the three sets all
+have cardinality $12$: each pitch class is the root of exactly one ii\tsup{7},
+V\tsup{7}, and I\tsup{7} chord.
 
+With the space of the nodes defined, we can now formulate the transformation
+representing a \tf, which we will call simply ``TF'':
 
+\vspace{-3em} % xxx not sure why there’s so much space here
+\begin{alignat*}{3}
+    \mathrm{TF}(X\text{\thinspace}) = Y\text{, where}\ X = (x_1, x_2, x_3) \in S_1
+    & \text{ and}\ &
+    Y &= (\text{\thinspace}y_1, y_2, y_3) &= (x_1 + 5, x_3 - 1, x_2) \in S_2 \\
+    %
+    \mathrm{TF}(Y\text{\thinspace}) = Z\text{, where}\ Y =
+    (\text{\thinspace}y_1, y_2, y_3) \in S_2
+    & \text{ and} &
+    Z &= (z_1, z_2, z_3) &= (\text{\thinspace}y_1 + 5, y_3 - 1, y_2) \in
+    S_3
+\end{alignat*}
+\vspace{-3em}
 
+\noindent Again, these definitions are designed to be musically relevant; the
+voice-leading diagram in Example \ref{tf:tfo-voice-leading} illustrates this
+more clearly. The root of the second chord is a fifth below the root of the
+first ($y_1 = x_1 + 5$), the third of the second chord is a semitone below the
+seventh of the first ($y_2 = x_3 - 1$), and the seventh of the second chord is
+a common tone with the third of the first ($y_3 = x_2$). In Lewin's
+transformational language, if a jazz musician is ``at a ii\tsup{7} chord'' and
+wishes to ``get to a V\tsup{7} chord,'' the transformation that will do the
+best job is TF: ``move the root down a fifth and the seventh down a semitone
+to become the new third.'' (When we wish to emphasize this mapping
+aspect of the transformation, we may also write ii\tsup{7}
+\TFarrow\ V\tsup{7}, rather than TF(ii\tsup{7}) = V\tsup{7}.)
+Note that the transformation TF is also valid
+between a V\tsup{7} and I\tsup{7} as well (the second equation above,
+involving sets $S_2$ and $S_3$). TF is both one-to-one and onto for sets of
+ordered triples; it maps each ii\tsup{7} to a unique V\tsup{7}, and each
+V\tsup{7} to a unique I\tsup{7}. As such, its inverse ($\mathrm{TF}^{-1}$) is
+well defined, and allows motion backwards along the arrows shown in the
+transformation graph in Figure \ref{tf:single-tfo-graph}.
+
+\exBeg[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{Voice leading in the \tfo\ progression.}
+  \label{tf:tfo-voice-leading}
+\exEnd
+
+It is worth mentioning here that TF and \tft\ (which we will define in the
+next section) are well-defined operations for any ordered triple of members of
+the integers mod-12 (i.e., a member of the set $\intZ_{12} \times \intZ_{12}
+\times \intZ_{12}$). There is nothing mathematically incorrect
+about the statement $(0, 1, 2) \TFarrow (5, 1, 1) \TFarrow (10, 0, 1)$, for
+example, but this succession has little musical relevance for the applications
+under consideration here. Because Hook does not formally define what he means
+by a ``type,'' the formulation allows for situations like this one, in which
+the three types are all members of a single larger set.\fn{tf-7} The advantage
+for defining TF as a cross-type transformation is that the content of a single
+node in the transformation graph is restricted to members of a 12-element set
+of specific ordered-triple configurations.
+
+With this understanding of the transformations involved in a single
+\tfo\ progression, we can continue to see how we might connect multiple
+progressions in order to form a complete \tf\ space. Because root motion by
+descending fifth is extremely common in jazz, we might consider connecting
+\tfo\ progressions by descending fifth as well; the transformation graph in
+Figure \ref{tf:trans-graph-large} illustrates this arrangement. This
+descending fifths arrangement means that all of the chords sharing a root are
+aligned vertically (directly below \h{GM7} is \h{G7}, which is itself above
+\h{Gm7}). This arrangement allows us to define two more transformations, which
+we will call simply \textsc{7th} and \textsc{3rd}:
+
+\vspace{0.5\baselineskip}
+\h{7}\textsc{th}$(L) = M$, where $L = (l_1, l_2, l_3) \in S_3$ and $M=(m_1, m_2,
+m_3)=(l_1, l_2, l_3-1) \in S_2$
+
+\h{3}\textsc{rd}$(M) = N$, where $M = (m_1, m_2, m_3) \in S_2$ and $N=(n_1, n_2,
+n_3)=(m_1, m_2-1, m_3) \in S_1$
+\vspace{0.5\baselineskip}
+
+Like the TF transformation, the \textsc{7th} and \textsc{3rd} transformations
+have clear musical relevance: each lowers the given note by a
+semitone. Although adjacent progressions are connected by $T_5$, the $T_5$
+labels connecting adjacent ii\tsup{7} chords and I\tsup{7} chords are shown in
+gray here (and omitted entirely in most later examples), since these chords
+are not often directly connected in jazz.
+
+\figBeg[thbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{The transformation graph for a small portion of \tf\ space.}
+  \label{tf:trans-graph-large}
+\figEnd
 % }}}
 
 
