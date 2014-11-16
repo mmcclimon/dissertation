@@ -15,6 +15,9 @@ enhanced with the chromatic spaces introduced here.
 
 % {{{
 
+\subsection{Formalism}
+% {{{
+
 The most common harmonic progression in jazz is undoubtedly the
 \mbox{ii\tsup{7}--V\tsup{7}--I\tsup{7}} progression (hereafter, just \tfo, or
 often just \tf). It is the first progression taught in most jazz method books,
@@ -194,6 +197,7 @@ for defining TF as a cross-type transformation is that the content of a single
 node in the transformation graph is restricted to members of a 12-element set
 of specific ordered-triple configurations.
 
+% xxx this should be a combination graphic: graph + network
 \figBeg[thbp]
   \centerGraphic[width=20em]{eps/ch2/trans-graph-large.pdf}
   \caption{The transformation graph for a small portion of \tf\ space.}
@@ -226,6 +230,38 @@ the $T_5$ labels connecting adjacent ii\tsup{7} chords and I\tsup{7} chords
 are shown in gray here (and omitted entirely in most later examples), since
 these chords are not often directly connected in jazz.
 
+\figBeg[tbp]
+  \centerGraphic{eps/ch2/tf-circle-fifths.pdf}
+  \caption{The complete \tf\ space, arranged around the circle of fifths.}
+  \label{tf:tf-circle-fifths}
+\figEnd
+
+By extending the graph of Figure \ref{tf:trans-graph-large} and including the
+node contents (thereby changing it from a tranformation \emph{graph} to a
+transformation \emph{network}), we arrive at the entirety of \tf\ space, as
+shown in Figure \ref{tf:tf-circle-fifths}. Because \tf\ space includes
+cross-type transformations, it does not easily form a Lewinnian \gis.\fn{tf-8}
+Considered more generally, though, it is easy to see that by considering a
+single \tfo\ progression as a unit, \tf\ space maps cleanly onto ordinary
+pitch-class space.  As Figure \ref{tf:trans-graph-large} makes clear, we can
+consider the \tfo\ in C as being three perfect fifths above the \tfo\ in
+\Eflat\ (or put transformationally, the $T_3$ operation transforms a \tfo\ in
+C to one in \Eflat). This formulation does not allow us a means to say, for
+example, that “the ii chord in C is $x$ units away from the V chord in \Eflat,”
+but because \tfo{}s are rarely split up, falling back on normal pitch-class
+distance is sufficient in most situations.\fn{tf-9}
+
+% xxx I could go into ii-V space considered as a graph here...I don’t think
+% it’s really all that necessary?
+
+% }}}
+
+\subsection{Analytical Interlude: Lee Morgan, “Ceora”}
+% {{{
+
+% xxx Text on ceora goes here.
+
+% }}}
 % }}}
 
 % vim:fdm=marker
