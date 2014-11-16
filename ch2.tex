@@ -199,21 +199,24 @@ of specific ordered-triple configurations.
 
 % xxx this should be a combination graphic: graph + network
 \figBeg[thbp]
-  \centerGraphic[width=20em]{eps/ch2/trans-graph-large.pdf}
-  \caption{The transformation graph for a small portion of \tf\ space.}
+  \centerGraphic{eps/ch2/trans-graph-large.pdf}
+  \caption[A transformation graph and network for a small portion of \tf\
+    space]{A transformation graph (left) and transformation network (right)
+    for a small portion of \tf\ space.}
   \label{tf:trans-graph-large}
 \figEnd
 
-With this understanding of the transformations involved in a single
-\tfo\ progression, we can continue to see how we might connect multiple
-progressions in order to form a complete \tf\ space. Because root motion by
-descending fifth is extremely common in jazz, we might consider connecting
-\tfo\ progressions by descending fifth as well; the transformation graph in
-Figure \ref{tf:trans-graph-large} illustrates this arrangement. This
-descending fifths arrangement means that all of the chords sharing a root are
-aligned vertically (directly below \h{GM7} is \h{G7}, which is itself above
-\h{Gm7}). This arrangement allows us to define two more transformations, which
-we will call simply \textsc{7th} and \textsc{3rd}:
+With this understanding of the transformations involved in a single \tfo\
+progression, we can continue to see how we might connect multiple progressions
+in order to form a complete \tf\ space. Because root motion by descending
+fifth is extremely common in jazz, we might consider connecting \tfo\
+progressions by descending fifth as well; Figure \ref{tf:trans-graph-large}
+illustrates this arrangement both as a transformation graph and a
+transformation network.  This descending fifths arrangement means that all of
+the chords sharing a root are aligned vertically (directly below \h{GM7} is
+\h{G7}, which is itself above \h{Gm7}). This arrangement allows us to define
+two more transformations, which we will call simply \textsc{7th} and
+\textsc{3rd}:
 
 \vspace{0.5\baselineskip}
 \h{7}\textsc{th}$(L) = M$, where $L = (l_1, l_2, l_3) \in S_3$ and $M=(m_1, m_2,
@@ -227,10 +230,10 @@ n_3)=(m_1, m_2-1, m_3) \in S_1$
 transformations have clear musical relevance: each lowers the given note by a
 semitone. Although adjacent progressions are connected by descending fifth,
 the $T_5$ labels connecting adjacent ii\tsup{7} chords and I\tsup{7} chords
-are shown in gray here (and omitted entirely in most later examples), since
-these chords are not often directly connected in jazz.
+are shown in gray in the graph (and omitted in the network, and most later
+examples), since these chords are not often directly connected in jazz.
 
-\figBeg[tbp]
+\figBeg[thbp]
   \centerGraphic{eps/ch2/tf-circle-fifths.pdf}
   \caption{The complete \tf\ space, arranged around the circle of fifths.}
   \label{tf:tf-circle-fifths}
@@ -247,9 +250,9 @@ pitch-class space.  As Figure \ref{tf:trans-graph-large} makes clear, we can
 consider the \tfo\ in C as being three perfect fifths above the \tfo\ in
 \Eflat\ (or put transformationally, the $T_3$ operation transforms a \tfo\ in
 C to one in \Eflat). This formulation does not allow us a means to say, for
-example, that “the ii chord in C is $x$ units away from the V chord in \Eflat,”
-but because \tfo{}s are rarely split up, falling back on normal pitch-class
-distance is sufficient in most situations.\fn{tf-9}
+example, that “the ii chord in C is $x$ units away from the V chord in
+\Eflat,” but because \tfo{}s are rarely split up, falling back on normal
+pitch-class distance is sufficient in most situations.\fn{tf-9}
 
 % xxx I could go into ii-V space considered as a graph here...I don’t think
 % it’s really all that necessary?
@@ -257,6 +260,7 @@ distance is sufficient in most situations.\fn{tf-9}
 % }}}
 
 \subsection{Analytical Interlude: Lee Morgan, “Ceora”}
+\FloatBarrier
 % {{{
 
 % xxx Text on ceora goes here.
