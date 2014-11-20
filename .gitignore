@@ -26,3 +26,6 @@ eps
 *.mtc
 *.mtc1
 *.out
+
+# auctex
+auto/
