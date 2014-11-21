@@ -12,11 +12,10 @@ enhanced with the chromatic spaces introduced here.
 
 % xxx this title is stupid
 \section{\tf\ Space: An Initial Pass}
-
-% {{{
+%{{{
 
 \subsection{Formalism}
-% {{{
+%{{{
 
 The most common harmonic progression in jazz is undoubtedly the
 \mbox{ii\tsup{7}--V\tsup{7}--I\tsup{7}} progression (hereafter, just \tfo, or
@@ -257,11 +256,11 @@ pitch-class distance is sufficient in most situations.\fn{tf-9}
 % xxx I could go into ii-V space considered as a graph here...I don’t think
 % it’s really all that necessary?
 
-% }}}
+%}}}
 
 \subsection{Analytical Interlude: Lee Morgan, “Ceora”}
 \FloatBarrier
-% {{{
+%{{{
 
 % xxx This whole section should probably be rewritten
 
@@ -348,11 +347,108 @@ a criticism reveals that \tf\ space, with all its mathematical formalism,
 can clarify information that may otherwise remain hidden in the raw data of
 the chord symbols.\fn{tf-13}
 
+%}}}
+
+%}}}
 
 
+\section{\tf\ Space: Tritone Substitutions}
+%{{{
 
-% }}}
-% }}}
+\subsection{Formalism}
+
+There is an important aspect of jazz harmony that has not yet been considered in
+our discussion of \tf\ space. Crucial to harmony beginning in the bebop era is
+the tritone substitution: substituting a dominant seventh chord for the
+dominant seventh whose root is a tritone away.\fn{tft-1} Because
+tritone-substituted dominants are functionally equivalent, both the
+progressions \h{Dm7}--\h{G7}--\h{Cmaj7} and \h{Dm7}--\h{Db7}--\h{Cmaj7} may be
+analyzed as \tfo\ progressions in the key of C.
+
+This functional equivalence means that a tritone-subsituted dominant can
+function as a shortcut to an otherwise distant portion of \tf\ space. In the
+circle-of-fifths arrangement of Figure \ref{tf:tf-circle-fifths}, keys related
+by tritone are maximally far apart (diametrically opposed on the circle), but
+in jazz practice, \h{G7} and \h{Db7} are functionally identical (both
+dominant-function chords in C major). To account for this progression in our
+space, we need to somehow bring these chords closer together; one solution is
+to connect two segments of the space by $T_6$ in a sort of ``third
+dimension,'' as shown in Figure \ref{tft:complete-space}. The topology of this
+space is more complicated than the ordinary circle of fifths, however. Once a
+progression reaches the bottom of the ``front'' side of the figure, it
+reappears at the top of the ``back'' side (\Gflat\ at the bottom is listed
+again as \h{Fs} at the top); likewise, progressions disappearing off the
+bottom of the back side reappear at the top of the front side (C major is
+given in both locations).
+
+\figBeg[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{The complete \tf\ space, showing tritone substitutions.}
+  \label{tft:complete-space}
+\figEnd
+
+
+ % xxx do I need more on topology here??
+
+This arrangement of key centers is topologically equivalent to a Möbius strip,
+which is somewhat easier to see by focusing only on the dominant seventh
+chords, as shown in Figure \ref{tft:mobius-dominants}. By wrapping this figure
+into a circle and gluing the ends together with a half-twist (so that \h{C7}
+and \h{Gb7} match up), we arrive at the desired Möbius strip.\fn{tft-2} Though
+the underlying topology is easier to visualize this way, it is difficult to
+include all of the other progressions (the \tf{}s themselves) in this diagram,
+so we will continue to use the ``three-dimensional'' version of Figure
+\ref{tft:complete-space}, with the understanding that this topology remains in
+effect. In any case, the arrangement of keys into the front and back sides is
+arbitrary, and may be repositioned as necessary; it is often convenient to
+have the tonic key (when there is one) centrally located on the front of the
+space.
+
+\figBeg[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{The Möbius strip at the center of \tf\ space.}
+  \label{tft:mobius-dominants}
+\figEnd
+
+While we could navigate this space using only the transformations TF and
+$T_6$, it is convenient to define another transformation to help with a common
+progression like \h{Dm7}--\h{Db7}--\h{Cmaj7}. We will call this
+transformation \tft, to highlight its relationship to the more normative TF:
+
+\vspace{-3em} % xxx not sure why there’s so much space here
+\begin{alignat*}{3}
+    \mathrm{TF}_\mathrm{T}(X\text{\thinspace}) = Y\text{, where}\ X =
+        (x_1, x_2, x_3) \in S_1
+    & \text{ and}\ &
+    Y &= (\text{\thinspace}y_1, y_2, y_3) &= (x_1 - 1, x_3 + 5, x_2 + 6) \in S_2 \\
+    %
+    \mathrm{TF}_\mathrm{T}(Y\text{\thinspace}) = Z\text{, where}\ Y =
+        (\text{\thinspace}y_1, y_2, y_3) \in S_2
+    & \text{ and} &
+    Z &= (z_1, z_2, z_3) &= (\text{\thinspace}y_1 - 1, y_3 + 5, y_2 + 6) \in
+    S_3
+\end{alignat*}
+\vspace{-3em}
+
+\noindent The \tft\ transformation represents a tritone substitution, but it
+transforms bass motion by fifth into bass motion by semitone (\emph{not} bass
+motion by tritone); the voice-leading diagram in Figure
+\ref{tft:voice-leading-tft} clarifies this. Because TF and $T_6$ commute,
+\tft\ can be considered as either TF followed by $T_6$, or vice versa. With
+this new transformation, we can easily understand the progression
+\h{Abm7}--\h{Db7}--\h{CM7} as a substituted \tfo\ in C: \h{Abm7} \TFarrow\
+\h{Db7} \TFTarrow\ \h{CM7}.
+
+\figBeg[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{Voice leading in the TF and \tft\ transformations, compared.}
+  \label{tft:voice-leading-tft}
+\figEnd
+
+% here, text about slide7s and whatnot
+
+
+%}}}
 
 %%% Local Variables:
 %%% TeX-master: "diss"
