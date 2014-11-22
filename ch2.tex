@@ -444,18 +444,66 @@ transforms bass motion by fifth into bass motion by semitone (\emph{not} bass
 motion by tritone); the voice-leading diagram in Figure
 \ref{tft:voice-leading-tft} clarifies this. Because TF and $T_6$ commute,
 \tft\ can be considered as either TF followed by $T_6$, or vice versa. With
-this new transformation, we can easily understand the progression
+this new transformation, we can understand the progression
 \h{Abm7}--\h{Db7}--\h{CM7} as a substituted \tfo\ in C: \h{Abm7} \TFarrow\
 \h{Db7} \TFTarrow\ \h{CM7}.
 
-\figBeg[htbp]
+\begin{figure}[htbp]
   \centerGraphic{eps/xxx.pdf}
   \caption{Voice leading in the TF and \tft\ transformations, compared.}
   \label{tft:voice-leading-tft}
-\figEnd
+\end{figure}
 
-% here, text about slide7s and whatnot
+The introduction of tritone substitutes complicates the space somewhat; Figure
+\ref{tft:tft-space-extract} shows a transformation network of the same portion
+of the space as in Figure \ref{tf:trans-graph-large}, but with some chords
+replaced with their tritone substitutes (shown in green). The relationship
+between a substituted dominant in G major (\h{Ab7}) and the unsubstituted ii\tsup{7}
+chord in C (\h{Abm7}) is still, of course, a \textsc{3rd} transformation. The
+substituted V\tsup{7} in C moving to the diatonic V\tsup{7} in F changes the
+transposition from a descending fifth to a descending half-step, as indicated
+by the $T_{11}$ arrow.
 
+\begin{figure}[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{A transformation network for a small portion of \tf\ space, with
+    tritone substitutions.}
+  \label{tft:tft-space-extract}
+\end{figure}
+
+Perhaps most interesting in this tritone-substituted space is the new
+relationship between a major seventh chord and the substituted ii\tsup{7} a
+fifth below (in this figure, between \h{GM7} and \h{Abm7}). Normally there is
+no voice-leading connection between these two chords, but with the substituted
+ii\tsup{7}, the third and seventh are both held as common tones, and the root
+and fifth of the chord both ascend by semitone (from G--B--D--\h{Fs} to
+\h{Ab}--\h{Cb}--\h{Eb}--\h{Gb}). Because of its similarity to the
+standard \textsc{slide} transformation, with the addition of the common tone
+seventh, we will call this transformation \slideS:\fn{tft-3}
+
+\vspace{-3em}
+\begin{displaymath}
+    \text{\slideS}(X\text{\thinspace}) = Y\text{, where}\ X =
+        (x_1, x_2, x_3) \in S_3
+     \text{ and}\
+    Y = (\text{\thinspace}y_1, y_2, y_3) = (x_1 + 1, x_2, x_3) \in S_1
+\end{displaymath}
+\vspace{-3em}
+
+\noindent In jazz this progression occurs frequently when moving between key
+centers related by half step, though it is uncommon in classical
+music.\fn{tft-4} We have encountered this transformation once already: the
+motion from \h{DbM7} to \h{Dm7} in mm.~5--6 of ``Ceora'' is indeed a typical
+\slideS\ transformation (see Figure \ref{tft:slide7-ceora}).
+
+\begin{figure}[htbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{The \slideS\ transformation from \protect\caph{DbM7} to
+    \protect\caph{Dm7} in mm.~5--6 of ``Ceora.''}
+  \label{tft:slide7-ceora}
+\end{figure}
+
+% xxx more on slide7 here, the idea of it as an involution (UTTs)?
 
 %}}}
 
