@@ -36,6 +36,16 @@
 \newcommand{\fn}{\fnote}
 \newcommand{\fntext}{\fnotecontent}
 
+% blank footnote comments
+\newcommand\blankfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{\hspace{-2em}#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
+
 \usepackage[ragged, bottom, splitrule]{footmisc}
 \setlength{\skip\footins}{14pt}
 \renewcommand{\footnotelayout}{\raggedright}
