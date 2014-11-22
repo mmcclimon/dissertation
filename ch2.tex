@@ -36,18 +36,18 @@ in F.”\fn{tf-2} Given the importance of the progression for improvising jazz
 musicians, it seems natural to use the progression as the basis for developing
 a more general transformational model of jazz harmony.
 
-\exBeg[tbp]
+\begin{example}[tbp]
   \centerGraphic[width=20em]{eps/ch2/all-things-bridge.pdf}
   \caption{The bridge of “All the Things You Are” (Jerome Kern).}
   \label{tf:all-things-bridge}
-\exEnd
+\end{example}
 
-\figBeg[tbp]
+\begin{figure}[tbp]
   \centerGraphic[width=15em]{eps/ch2/single-tfo-network.pdf}
   \caption[A transformation network for a single \tfo\ progression.]{A
   transformation network for a \tfo\ in C major: \caph{Dm7}--\caph{G7}--\caph{CM7}.}
   \label{tf:single-tfo-network}
-\figEnd
+\end{figure}
 
 Figure \ref{tf:single-tfo-network} shows a transformation network for a single
 \tfo\ progression; we will begin by developing the formal apparatus for this
@@ -87,11 +87,11 @@ figure above, we need to define the transformation TF such that it maps
 ii\tsup{7} chords to V\tsup{7} chords, and V\tsup{7} chords to I\tsup{7}
 chords.
 
-\figBeg[htbp]
+\begin{figure}[htbp]
   \centerGraphic[width=15em]{eps/ch2/single-tfo-graph.pdf}
   \caption{The underlying transformation graph for a single \tfo\ progression.}
   \label{tf:single-tfo-graph}
-\figEnd
+\end{figure}
 
 Before defining the transformations, however, we first need to define the sets
 themselves. To help with this, Figure \ref{tf:single-tfo-graph} shows the
@@ -184,11 +184,11 @@ V\tsup{7} to a unique I\tsup{7}. As such, its inverse ($\mathrm{TF}^{-1}$) is
 well defined, and allows motion backwards along the arrows shown in the
 transformation graph in Figure \ref{tf:single-tfo-graph}.
 
-\exBeg[htbp]
+\begin{example}[htbp]
   \centerGraphic{eps/ch2/tfo-voice-leading.pdf}
   \caption{Voice leading in the \tfo\ progression.}
   \label{tf:tfo-voice-leading}
-\exEnd
+\end{example}
 
 It is worth mentioning here that TF and \tft\ (which we will define in the
 next section) are well-defined operations for any ordered triple of members of
@@ -204,13 +204,13 @@ node in the transformation graph is restricted to members of a 12-element set
 of specific ordered-triple configurations.
 
 % xxx this should be a combination graphic: graph + network
-\figBeg[thbp]
+\begin{figure}[thbp]
   \centerGraphic{eps/ch2/trans-graph-large.pdf}
   \caption[A transformation graph and network for a small portion of \tf\
     space]{A transformation graph (left) and transformation network (right)
     for a small portion of \tf\ space.}
   \label{tf:trans-graph-large}
-\figEnd
+\end{figure}
 
 With this understanding of the transformations involved in a single \tfo\
 progression, we can continue to see how we might connect multiple progressions
@@ -239,11 +239,11 @@ the $T_5$ labels connecting adjacent ii\tsup{7} chords and I\tsup{7} chords
 are shown in gray in the graph (and omitted in the network, and most later
 examples), since these chords are not often directly connected in jazz.
 
-\figBeg[thb]
+\begin{figure}[thb]
   \centerGraphic{eps/ch2/tf-circle-fifths.pdf}
   \caption{The complete \tf\ space, arranged around the circle of fifths.}
   \label{tf:tf-circle-fifths}
-\figEnd
+\end{figure}
 
 By extending the graph of Figure \ref{tf:trans-graph-large} and including the
 node contents (thereby changing it from a tranformation \emph{graph} to a
@@ -283,17 +283,17 @@ shown in Figure \ref{tf:ceora-space-1}.\fn{tf-10} ``Ceora'' is in the key of
 bars, staying within a single horizontal slice of \tf\ space. This is followed
 immediately by a \tfo\ progression in \Dflat, a fifth lower (mm.~4--5).
 
-\exBeg[thbp]
+\begin{example}[thbp]
   \centerGraphic[width=24em]{eps/ch2/ceora-changes-1.pdf}
   \caption{Changes for the A section of ``Ceora'' (Lee Morgan).}
   \label{tf:ceora-changes-1}
-\exEnd
+\end{example}
 
-\figBeg[htbp]
+\begin{figure}[htbp]
   \centerGraphic{eps/ch2/ceora-space-1.pdf}
   \caption{The A section of ``Ceora'' in \tf\ space.}
   \label{tf:ceora-space-1}
-\figEnd
+\end{figure}
 
 At this point, we might expect the \tf{}s to continue in descending fifths,
 but the potential ii\tsup{7} chord in \Gflat\ is substituted with \h{Dm7}, its
@@ -328,11 +328,11 @@ in tonic, resolving in m.~15 of the section. A final \tf\ in the last measure
 provides additional harmonic interest, and functions as a turnaround to lead
 smoothly back to \h{AbM7} to begin the next chorus.
 
-\exBeg[htbp]
+\begin{example}[htbp]
   \centerGraphic[width=24em]{eps/ch2/ceora-changes-2.pdf}
   \caption{Changes for the B section of ``Ceora'' (Lee Morgan).}
   \label{tf:ceora-changes-2}
-\exEnd
+\end{example}
 
 At this point, we have successfully mapped all of the chords in ``Ceora'' to
 their associated locations in \tf\ space; it is reasonable to ask, though,
@@ -390,11 +390,11 @@ again as \h{Fs} at the top); likewise, progressions disappearing off the
 bottom of the back side reappear at the top of the front side (C major is
 given in both locations).
 
-\figBeg[htbp]
+\begin{figure}[htbp]
   \centerGraphic{eps/xxx.pdf}
   \caption{The complete \tf\ space, showing tritone substitutions.}
   \label{tft:complete-space}
-\figEnd
+\end{figure}
 
 
  % xxx do I need more on topology here??
@@ -413,11 +413,11 @@ arbitrary, and may be repositioned as necessary; it is often convenient to
 have the tonic key (when there is one) centrally located on the front of the
 space.
 
-\figBeg[htbp]
+\begin{figure}[htbp]
   \centerGraphic{eps/xxx.pdf}
   \caption{The Möbius strip at the center of \tf\ space.}
   \label{tft:mobius-dominants}
-\figEnd
+\end{figure}
 
 While we could navigate this space using only the transformations TF and
 $T_6$, it is convenient to define another transformation to help with a common
