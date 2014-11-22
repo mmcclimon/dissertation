@@ -11,6 +11,7 @@
 % \setlength{\parskip}{6pt plus 2pt minus 1pt}
 % \setlength{\emergencystretch}{3em}  % prevent overfull lines
 % \setcounter{secnumdepth}{0}
+\usepackage{xspace}
 
 % page layout
 % -----------
@@ -44,8 +45,6 @@
   \endgroup
 }
 
-
-
 \usepackage[ragged, bottom, splitrule]{footmisc}
 \setlength{\skip\footins}{14pt}
 \renewcommand{\footnotelayout}{\raggedright}
@@ -68,18 +67,21 @@
 
 \setmainfont[Numbers={OldStyle}]{Junicode}
 \setmathfont(Digits){Junicode}
-\setmathsfont(Latin)[Numbers=Lining]{Junicode}
+\setmathsfont(Latin){Junicode}
 \setmathrm{Junicode}
 \setmathsfont(Symbols){XITS Math}
 \fontsize{12pt}{12pt}
 
-\newfontface\liningNums[Numbers=Lining]{Junicode}
-\newfontface\sscaptionfont[Numbers=OldStyle]{Fira Sans}
-\newfontface\ssliningfont[Numbers=Lining]{Fira Sans}
+\newfontfamily\liningNums{Junicode}
+\newfontfamily\sscaptionfont[
+    Numbers=OldStyle,
+    SmallCapsFeatures={LetterSpace=3.0},
+]{Source Sans Pro}
+\newfontfamily\ssliningfont[Numbers=Proportional]{Fira Sans}
 
 \usepackage{subscript}    % for \textsubscript
 \usepackage{paralist}
-\usepackage{gensymb}
+\newcommand{\degree}{\ensuremath{^\circ}}
 
 \usepackage[
   leftmargin = 2em,
@@ -222,16 +224,16 @@
 }
 
 % text shortcuts
-\newcommand{\tf}{\mbox{ii--V}}
-\newcommand{\tfo}{\mbox{ii--V--I}}
-\newcommand{\tft}{TF\tsub{T}}
-\newcommand{\slideS}{\textsc{slide}\textsuperscript{7}}
+\newcommand{\tf}{\mbox{ii--V}\xspace}
+\newcommand{\tfo}{\mbox{ii--V--I}\xspace}
+\newcommand{\tft}{TF\tsub{T}\xspace}
+\newcommand{\slideS}{\textsc{slide}\textsuperscript{7}\xspace}
 \newcommand{\tsub}{\textsubscript}
 \newcommand{\tsup}{\textsuperscript}
 \newcommand{\rightparen}{)}
-\newcommand{\ivls}{\textsc{ivls}}
-\newcommand{\gis}{\textsc{gis}}
-\newcommand{\strans}{\textsc{strans}}
+\newcommand{\ivls}{\textsc{ivls}\xspace}
+\newcommand{\gis}{\textsc{gis}\xspace}
+\newcommand{\strans}{\textsc{strans}\xspace}
 
 
 % math shortcuts
@@ -240,4 +242,4 @@
 \newcommand{\TFTarrow}{\ensuremath{\xrightarrow{\mathrm{TF}_\mathrm{T}}}}
 \newcommand{\intZ}{\ensuremath{\mathbb{Z}}}
 
-%% end headers.tex %%
+%% end mjmdiss.sty %%
