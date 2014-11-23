@@ -365,6 +365,7 @@ the chord symbols.\fn{tf-13}
 %{{{
 
 \subsection{Formalism}
+%{{{
 
 There is an important aspect of jazz harmony that has not yet been considered in
 our discussion of \tf\ space. Crucial to harmony beginning in the bebop era is
@@ -401,7 +402,7 @@ given in both locations).
 
 This arrangement of key centers is topologically equivalent to a Möbius strip,
 which is somewhat easier to see by focusing only on the dominant seventh
-chords, as shown in Figure \ref{tft:mobius-dominants}. By wrapping this figure
+chords, as shown in Figure \ref{tft:mobius-dominants}.\fn{tft-2a} By wrapping this figure
 into a circle and gluing the ends together with a half-twist (so that \h{C7}
 and \h{Gb7} match up), we arrive at the desired Möbius strip.\fn{tft-2} Though
 the underlying topology is easier to visualize this way, it is difficult to
@@ -457,7 +458,7 @@ this new transformation, we can understand the progression
 The introduction of tritone substitutes complicates the space somewhat; Figure
 \ref{tft:tft-space-extract} shows a transformation network of the same portion
 of the space as in Figure \ref{tf:trans-graph-large}, but with some chords
-replaced with their tritone substitutes (shown in green).\fn{tft-2a} The relationship
+replaced with their tritone substitutes (shown in green).\fn{tft-2b} The relationship
 between a substituted dominant in G major (\h{Ab7}) and the unsubstituted ii\tsup{7}
 chord in C (\h{Abm7}) is still, of course, a \textsc{3rd} transformation. The
 substituted V\tsup{7} in C moving to the diatonic V\tsup{7} in F changes the
@@ -506,6 +507,109 @@ motion from \h{DbM7} to \h{Dm7} in mm.~5--6 of ``Ceora'' is indeed a typical
 % xxx more on slide7 here, the idea of it as an involution (UTTs)?
 
 %}}}
+
+
+\subsection{Analytical Applications}
+%{{{
+
+Equipped with these new tritone-substitution transformations, we can now
+analyze somewhat more complicated music; Charlie Parker’s “Blues for Alice”
+will serve as a useful first example (the changes are given in Example
+\ref{tft:blues-alice-changes}).\fn{tft-5} The essential structure of the blues is
+present: the tune arrives on a subdominant in m.~5, and on a home-key \tf in
+m.~9 of the twelve-bar form.
+
+\begin{example}[tbhp]
+  \centerGraphic[width=24em]{eps/ch2/blues-alice-changes.pdf}
+  \caption{Changes to ``Blues for Alice'' (Charlie Parker).}
+  \label{tft:blues-alice-changes}
+\end{example}
+
+\begin{figure}[thbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{An analysis of ``Blues for Alice'' in \tf space.}
+  \label{tft:blues-alice-network}
+\end{figure}
+
+
+Parker elaborates this basic structure with a series of stepwise descending
+\tf progressions (see Figure \ref{tft:blues-alice-network}). The first of
+these is a diatonic descent: m.~2 jumps from the tonic F  major to a \tf in D,
+which resolves (via the \textsc{7th} and \textsc{3rd} transformations) to a
+\h{Dm7} chord as the ii\tsup{7} of C major. We first saw this progression in
+``Ceora'' (mm.~6--7), where we noted that it was a very common way of
+maintaining harmonic motion; instead of a \tf resolving to its tonic, it resolves
+to the minor seventh chord of the same root. Because this progression is so
+common, we might consider defining it as its own transformation, which we will
+call EC (for ``evaded cadence''). Unlike TF, EC is only useful as a
+transformation from V\tsup{7} chords to ii\tsup{7} chords:
+
+\vspace{-3em}
+\begin{displaymath}
+  \mathrm{EC}(X\,) = Y\text{, where}\ X = (x_1, x_2, x_3) \in S_2
+   \text{ and}\
+  Y = (\,y_1, y_2, y_3) = (x_1 + 5, x_3 - 2, x_2 - 1) \in S_1
+\end{displaymath}
+\vspace{-3em}
+
+\noindent EC is of course equivalent to TF $\cdot$ \textsc{7th} $\cdot$
+\textsc{3rd}, but only when the starting chord is a V\tsup{7} chord (a member
+of $S_2$). In \tf space, EC can be represented by following one arrow to the
+right and two arrows downward. The structure of the space immediately shows
+that EC is impossible beginning on a ii\tsup{7} chord; we can follow a single
+arrow to the right, but there is only one downward arrow from a V\tsup{7}
+chord.\fn{tft-7}
+
+This pattern of stepwise descending \tf{}s continues until arriving at the
+subdominant \Bflat\ in m.~5, which includes the standard blues alteration of
+the lowered seventh.\fn{tft-6} The intution that this \h{Bb7} is in fact a
+stable harmony, rather than a descending-fifth transposition of \h{F7}, can be
+captured in our transformational labels. Instead of labeling this progression
+\mbox{\h{F7} $\xrightarrow{T_5}$ \h{Bb7}}, we can instead label it as
+\mbox{\h{F7} $\xrightarrow{\mathrm{TF} \cdot\ \text{\textsc{7th}}}$ \h{Bb7}};
+this designation expresses the notion that we hear the \h{Bb7} chord as a
+resolution to a stable chord (the TF transformation) that has merely been
+inflected with the lowered seventh (the \textsc{7th} transformation).
+Combining this with the rest of mm.~2--5, we can easily construct a
+transformation network:
+
+\begin{center}
+  \h{Em7b5} \TFarrow\ \h{A7} \ECarrow\
+  \h{Dm7}   \TFarrow\ \h{G7} \ECarrow\
+  \h{Cm7}   \TFarrow\ \h{F7} $\xrightarrow{\mathrm{TF} \cdot\ \text{\textsc{7th}}}$
+  \h{Bb7}
+\end{center}
+
+% xxx more here on this tune
+
+At this point, Parker uses a \emph{chromatic} stepwise pattern of \tf{}s
+(mm.~5--9), which we can understand as a tritone-substituted version of the
+earlier descending fifths pattern:
+
+\begin{center}
+  \h{Bbm7} \TFTarrow\ \h{Eb7} \ECTarrow\
+  \h{Am7}  \TFTarrow\ \h{D7}   \ECTarrow\
+  \h{Abm7} \TFTarrow\ \h{Db7} \ECTarrow\
+  \h{Gm7}
+\end{center}
+
+\noindent (Here, EC\tsub{T} is the tritone-substituted variant of EC,
+equivalent to \tft $\cdot$ \textsc{7th} $\cdot$ \textsc{3rd}, applied to a
+dominant seventh chord.) Once this sequence arrives on \h{Gm7} as the ii chord
+of the tonic F, there is a \tfo progression in the home key (the tonic chord
+now appears with the characteristic lowered seventh, so the transformation is
+again TF $\cdot$ \textsc{7th}). After the resolution in m.~11, the progression
+moves backwards through fifths space to begin a VI--ii--V turnaround to F
+major to begin the next chorus.
+
+% how the space doesn't tell us everything: Fmaj7 to Em7 is very close in
+% terms of voice leading, but not functionally
+
+%}}} analytical applications
+
+%}}}
+
+
 
 %%% Local Variables:
 %%% TeX-master: "diss"
