@@ -105,7 +105,7 @@ transformation graphs contain objects of different types, a node in a
 cross-type transformation graph must be labeled with the set from which the
 node contents may be drawn (even in the abstract transformation
 graph).\footcite[7]{hook:2007} In Figure \ref{tf:single-tfo-graph}, the nodes
-are labeled simply $S_1$, $S_2$, and $S_3$, which we can understand as the
+are labeled simply $\Smin$, $\Sdom$, and $\Smaj$, which we can understand as the
 sets of ii\tsup{7}, V\tsup{7}, and I\tsup{7} chords, respectively.
 
 While at its core the \tfo\ progression contains three types of seventh
@@ -116,20 +116,20 @@ unnecessarily restrictive. In order to allow for some freedom in the chord
 qualities, we will consider only chordal roots, thirds, and sevenths; these
 pitches are sufficient to distinguish the three chord qualities in a \tfo.
 
-In this chapter, we will represent a chord with an ordered triple $X = (x_1,
-x_2, x_3)$, where $x_1$ is the root of the chord, $x_2$ the third, and $x_3$
+In this chapter, we will represent a chord with an ordered triple $X = (x_r,
+x_t, x_s)$, where $x_r$ is the root of the chord, $x_t$ the third, and $x_s$
 the seventh. The definitions of the three sets are as follows:\fn{tf-6}
 
 % xxx do these definitions need numbers?
 \vspace{-3em} % xxx not sure why there’s so much space here
 \begin{align*}
-  S_1 &= \{ (x_1, x_2, x_3)\ |\ x_2 - x_1 = 3; x_3 - x_1 = 10 \} &
+  \Smin &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 3; x_s - x_r = 10 \} &
     \text{ii\tsup{7} chords} \\ %
   %
-  S_2 &= \{ (x_1, x_2, x_3)\ |\ x_2 - x_1 = 4; x_3 - x_1 = 10 \} &
+  \Sdom &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \} &
     \text{V\tsup{7} chords} \\ %
   %
-  S_3 &= \{ (x_1, x_2, x_3)\ |\ x_2 - x_1 = 4; x_3 - x_1 = 11 \} &
+  \Smaj &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 11 \} &
     \text{I\tsup{7} chords}
 \end{align*}
 \vspace{-3em}
@@ -152,22 +152,22 @@ representing a \tf, which we will call simply ``TF'':
 
 \vspace{-3em} % xxx not sure why there’s so much space here
 \begin{alignat*}{3}
-    \mathrm{TF}(X\,) = Y\text{, where}\ X = (x_1, x_2, x_3) \in S_1
+    \mathrm{TF}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smin
     & \text{ and}\ &
-    Y &= (\,y_1, y_2, y_3) &= (x_1 + 5, x_3 - 1, x_2) \in S_2 \\
+    Y &= (\,y_r, y_t, y_s) &= (x_r + 5, x_s - 1, x_t) \in \Sdom \\
     %
-    \mathrm{TF}(Y\,) = Z\text{, where}\ Y = (\,y_1, y_2, y_3) \in S_2
+    \mathrm{TF}(Y\,) = Z\text{, where}\ Y = (\,y_r, y_t, y_s) \in \Sdom
     & \text{ and} &
-    Z &= (z_1, z_2, z_3) &= (\,y_1 + 5, y_3 - 1, y_2) \in S_3
+    Z &= (z_r, z_t, z_s) &= (\,y_r + 5, y_s - 1, y_t) \in \Smaj
 \end{alignat*}
 \vspace{-3em}
 
 \noindent Again, these definitions are designed to be musically relevant; the
 voice-leading diagram in Figure \ref{tf:tfo-voice-leading} illustrates this
 more clearly.\fn{tf-6a} The root of the second chord is a fifth below the root of the
-first ($y_1 = x_1 + 5$), the third of the second chord is a semitone below the
-seventh of the first ($y_2 = x_3 - 1$), and the seventh of the second chord is
-a common tone with the third of the first ($y_3 = x_2$). In Lewin's
+first ($y_r = x_r + 5$), the third of the second chord is a semitone below the
+seventh of the first ($y_t = x_s - 1$), and the seventh of the second chord is
+a common tone with the third of the first ($y_s = x_t$). In Lewin's
 transformational language, if a jazz musician is ``at a ii\tsup{7} chord'' and
 wishes to ``get to a V\tsup{7} chord,'' the transformation that will do the
 best job is TF: ``move the root down a fifth and the seventh down a semitone
@@ -176,7 +176,7 @@ aspect of the transformation, we may also write ii\tsup{7}
 \TFarrow\ V\tsup{7}, rather than TF(ii\tsup{7}) = V\tsup{7}.)
 Note that the transformation TF is also valid
 between V\tsup{7} and I\tsup{7} as well (the second equation above,
-involving sets $S_2$ and $S_3$). TF is both one-to-one and onto for sets of
+involving sets $\Sdom$ and $\Smaj$). TF is both one-to-one and onto for sets of
 ordered triples; it maps each ii\tsup{7} to a unique V\tsup{7}, and each
 V\tsup{7} to a unique I\tsup{7}. As such, its inverse ($\mathrm{TF}^{-1}$) is
 well defined, and allows motion backwards along the arrows shown in the
@@ -223,11 +223,11 @@ two more transformations, which we will call simply \textsc{7th} and
 \textsc{3rd}:
 
 \vspace{0.5\baselineskip}
-\h{7}\textsc{th}$(L) = M$, where $L = (l_1, l_2, l_3) \in S_3$ and $M=(m_1, m_2,
-m_3)=(l_1, l_2, l_3-1) \in S_2$
+\h{7}\textsc{th}$(L) = M$, where $L = (l_r, l_t, l_s) \in \Smaj$ and $M=(m_r, m_t,
+m_s)=(l_r, l_t, l_s-1) \in \Sdom$
 
-\h{3}\textsc{rd}$(M) = N$, where $M = (m_1, m_2, m_3) \in S_2$ and $N=(n_1, n_2,
-n_3)=(m_1, m_2-1, m_3) \in S_1$
+\h{3}\textsc{rd}$(M) = N$, where $M = (m_r, m_t, m_s) \in \Sdom$ and $N=(n_r, n_t,
+n_s)=(m_r, m_t-1, m_s) \in \Smin$
 \vspace{0.5\baselineskip}
 
 \noindent Like the TF transformation, the \textsc{7th} and \textsc{3rd}
@@ -252,7 +252,7 @@ Considered more generally, though, it is easy to see that by considering a
 single \tfo\ progression as a unit, \tf\ space maps cleanly onto ordinary
 pitch-class space.  As Figure \ref{tf:trans-graph-large} makes clear, we can
 consider the \tfo\ in C as being three perfect fifths above the \tfo\ in
-\Eflat\ (or put transformationally, the $T_3$ operation transforms a \tfo\ in
+\Eflat\ (or put transformationally, the $T_s$ operation transforms a \tfo\ in
 C to one in \Eflat). This formulation does not allow us a means to say, for
 example, that “the ii chord in C is $x$ units away from the V chord in
 \Eflat,” but because \tfo{}s are rarely split up, falling back on normal
@@ -425,13 +425,13 @@ transformation \tft, to highlight its relationship to the more normative TF:
 
 \vspace*{-3em} % xxx not sure why there’s so much space here
 \begin{alignat*}{3}
-    \mathrm{TF}_\mathrm{T}(X\,) = Y\text{, where}\ X = (x_1, x_2, x_3) \in S_1
+    \mathrm{TF}_\mathrm{T}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smin
     & \text{ and}\ &
-    Y &= (\,y_1, y_2, y_3) &= (x_1 - 1, x_3 + 5, x_2 + 6) \in S_2 \\
+    Y &= (\,y_r, y_t, y_s) &= (x_r - 1, x_s + 5, x_t + 6) \in \Sdom \\
     %
-    \mathrm{TF}_\mathrm{T}(Y\,) = Z\text{, where}\ Y = (\,y_1, y_2, y_3) \in S_2
+    \mathrm{TF}_\mathrm{T}(Y\,) = Z\text{, where}\ Y = (\,y_r, y_t, y_s) \in \Sdom
     & \text{ and} &
-    Z &= (z_1, z_2, z_3) &= (\,y_1 - 1, y_3 + 5, y_2 + 6) \in S_3
+    Z &= (z_r, z_t, z_s) &= (\,y_r - 1, y_s + 5, y_t + 6) \in \Smaj
 \end{alignat*}
 \vspace{-3em}
 
@@ -479,9 +479,9 @@ seventh, we will call this transformation \slideS:\fn{tft-3a}
 
 \vspace{-3em}
 \begin{displaymath}
-    \text{\slideS}(X\,) = Y\text{, where}\ X = (x_1, x_2, x_3) \in S_3
+    \text{\slideS}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smaj
      \text{ and}\
-    Y = (\,y_1, y_2, y_3) = (x_1 + 1, x_2, x_3) \in S_1
+    Y = (\,y_r, y_t, y_s) = (x_r + 1, x_t, x_s) \in \Smin
 \end{displaymath}
 \vspace{-3em}
 
@@ -541,15 +541,15 @@ transformation from V\tsup{7} chords to ii\tsup{7} chords:
 
 \vspace{-3em}
 \begin{displaymath}
-  \mathrm{EC}(X\,) = Y\text{, where}\ X = (x_1, x_2, x_3) \in S_2
+  \mathrm{EC}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
    \text{ and}\
-  Y = (\,y_1, y_2, y_3) = (x_1 + 5, x_3 - 2, x_2 - 1) \in S_1
+  Y = (\,y_r, y_t, y_s) = (x_r + 5, x_s - 2, x_t - 1) \in \Smin
 \end{displaymath}
 \vspace{-3em}
 
 \noindent EC is of course equivalent to TF $\cdot$ \textsc{7th} $\cdot$
 \textsc{3rd}, but only when the starting chord is a V\tsup{7} chord (a member
-of $S_2$). In \tf space, EC can be represented by following one arrow to the
+of $\Sdom$). In \tf space, EC can be represented by following one arrow to the
 right and two arrows downward. The structure of the space immediately shows
 that EC is impossible beginning on a ii\tsup{7} chord; we can follow a single
 arrow to the right, but there is only one downward arrow from a V\tsup{7}
