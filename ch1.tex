@@ -810,13 +810,13 @@ a transformational system. This operation-group must be simply transitive on S
 t of S, then there exists a unique member OP of STRANS such that OP(s) =
 t.”\footcite[157]{lewin:gmit} Lewin then states that in any \gis{}, “there is a
 unique transposition-operation T satisfying T(s) = T, namely T =
-T\tsub{int(s,t)}.\footcite[157]{lewin:gmit} In familiar chromatic pitch-class
+T\tsub{int(s,t)}.''\footcite[157]{lewin:gmit} In familiar chromatic pitch-class
 space, the unique transposition $T_k$ is that operation where $k$ is the
 interval in semitones between the two pitches: the interval between C and
 \Eflat\ is 3, and the operator $T_3$ maps C onto \Eflat.
 
 Converting our “Autumn Leaves” \gis{} into a transformational system, then, is
-only slightly more complicated than this pitch-class space example, since
+only slightly more complicated than this chromatic pitch-class space example, since
 ordinary transposition will not work intuitively. To avoid confusion with the
 traditional transposition operator, we will instead use the lowercase,
 $t_k$.\fn{ds-9} This diatonic transposition operator will be used in almost
@@ -851,16 +851,11 @@ we have gone through a great deal of mathematical rigmarole simply to arrive
 back at our starting point. There would seem to be very little difference
 between describing a progression as a “diatonic cycle” and describing it as “a
 series of $t_3$ transformations in the G-minor diatonic set of seventh
-chords.” And yet, this is almost exactly the point.
-% xxx rewrite this sentence
-By beginning with something jazz musicians know and then applying
-transformational techniques, we can demonstrate that the gap between the way
-jazz musicians discuss harmony need not be far removed from the way music
-theorists discuss jazz harmony.
-The mathematical techniques used by the theory (in addition to enabling
-insights we may not otherwise consider) can help us to translate what is often
-intuitive knowledge for jazz musicians to a language more familiar to music
-theorists.
+chords.” And yet, this is almost exactly the point. Transformational theory
+allows us a means to formalize what is often intuitive knowledge for jazz
+musicians, thereby narrowing the gap between the way jazz musicians discuss
+harmony and the way music theorists often do.
+
 
 % }}}}
 
@@ -904,9 +899,9 @@ $t_1$ transformation. The bridge begins by retracing the same harmonic ground
 as the last four bars of the A section (a \tfo\ progression in G minor); the
 connection to the bridge, then, can be understood as reversing the two
 descending fifths that ended the A section. This observation can be
-represented algebraically ($t_3^{-1} + t_3^{-1} = t_4 + t_4 = t_1$) or
+represented algebraically ($t_3^{-1} \odot\ t_3^{-1} = t_4 \odot\ t_4 = t_1$) or
 graphically (by taking two steps counterclockwise in the circle of fifths in
-Figure \ref{ds:circle-of-fifths}).
+Figure \ref{ds:circle-of-fifths}).\fn{ds-11b}
 
 The next transformation that breaks the series of $t_3$ operations is the
 $t_6$ from \h{BbM7} to \h{Am7b5} at the end of the bridge. This $t_6$ is
@@ -965,7 +960,8 @@ The progression \h{G7}--\h{Em7} seems to move backwards in the cycle, almost
 as if realizing the phrase is in danger of arriving at C major too soon. We
 can capture this intuition by choosing to understand the progression not as a
 forward-directed $t_5$, but as an algebraically-equivalent combination of
-three ascending fifths ($t_3^{-1} + t_3^{-1} + t_3^{-1}$).
+three ascending fifths: ${t_3}^{-1} \odot {t_3}^{-1} \odot {t_3}^{-1}$ (which
+we could also write as ${t_3}^{-1}$ raised to the third power: ${({t_3}^{-1})}^3$).
 
 \begin{figure}[h!btp]
   \centerGraphic{eps/ch1/wonderland-transformations.pdf}
@@ -977,7 +973,7 @@ three ascending fifths ($t_3^{-1} + t_3^{-1} + t_3^{-1}$).
 Throughout \emph{GMIT}, Lewin is clear that transformational theory is a means
 of expressing our “intuitions” about a musical passage in a mathematically
 rigorous way.\fn{ds-16} As he puts it: “If I want to change Gestalt 1 into
-Gestalt 2 \ldots, what sorts of admissible transformations in my space
+Gestalt 2 \ldots\ , what sorts of admissible transformations in my space
 (members of \strans\ or otherwise) will do the best
 job?”\footcite[159]{lewin:gmit} Our explication of diatonic seventh-chord
 spaces may appear to stem from the desire to label everything a $t_3$ and move
@@ -985,7 +981,7 @@ on, confident that we could justify our labels mathematically if called upon
 to do so. This, though, could not be further from the truth; developing the
 space allows us a powerful means to capture intuitions (or apperceptions) like
 the one above. Though the operation $t_5$ does map \h{G7} to \h{Em7} in the
-C-major diatonic space, hearing this connection as $t_3^{-1} + t_3^{-1} +
+C-major diatonic space, hearing this connection as $t_3^{-1} \odot t_3^{-1} \odot
 t_3^{-1}$ instead represents the idea of stepping backwards through the circle
 of descending fifths (an observation that may not be easy to show using other
 methods of analysis).
