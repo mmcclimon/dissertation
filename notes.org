@@ -1,0 +1,12 @@
+* Notes on dissertation
+
+** Ch. 1 todos, from JH
+
+- [X] text on lead sheets, realizations
+  - [X] write text
+  - [X] examples
+- [ ] fn69, page numbers
+- [ ] fn75 (ds-9), cite JH, "Signature Transformations" article
+- [ ] last para before sect. 1.4, rewrite sentence
+- [ ] alice in wonderland, rethink $t_3^{-1}$ addition/composition notation
+- [ ] all the things, rethink tonic of F minor
