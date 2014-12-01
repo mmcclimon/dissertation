@@ -11,4 +11,5 @@
 - [X] fn75 (ds-9), cite JH, "Signature Transformations" article
 - [X] last para before sect. 1.4, rewrite sentence
 - [X] alice in wonderland, rethink $t_3^{-1}$ addition/composition notation
-- [ ] all the things, rethink tonic of F minor
+- [X] all the things, rethink tonic of F minor
+  - (added a footnote, since I still hear it in F minor)
