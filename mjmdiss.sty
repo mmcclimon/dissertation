@@ -164,6 +164,12 @@
 \renewcommand{\dateseparator}{-}
 \usepackage[chicago]{ellipsis}      % better spaced ellipses
 
+% command for removing extra vertical space in math envs
+\newcommand{\novspace}{%
+    \setlength{\abovedisplayskip}{.5em plus 3pt minus 3pt}%
+    \setlength{\belowdisplayskip}{.5em plus 3pt minus 3pt}%
+}
+
 % proposal-specific
 % -----------------
 
