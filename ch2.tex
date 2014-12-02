@@ -506,6 +506,7 @@ motion from \h{DbM7} to \h{Dm7} in mm.~5--6 of ``Ceora'' is indeed a typical
 
 
 \subsection{Analytical Interlude: Charlie Parker, ``Blues for Alice''}
+\label{sec:blues-for-alice}
 %{{{
 
 Equipped with these new tritone-substitution transformations, we can now
@@ -760,6 +761,70 @@ both major and minor triads. Many Tin Pan Alley tunes end with tonic add-6
 chords (which appear nowhere in \tf space), and as we noted in our discussion
 of ``Blues for Alice'', it is very common for a blues tonic to be a
 major-minor seventh chord (which appear only as V\tsup{7} chords in the space).
+
+The solution to this shortcoming of the space is to introduce some general
+transformation (which we might call ``\textsc{ResI}'') that could be redefined
+as needed for each style.\fn{tfe-2} The generic space would then appear as it
+does in Figure \ref{tfe:generic-space}. This space is still arranged in
+perfect fifths, and the basic shape of the \tfo progressions is still present,
+but the quality of the tonic chords is unspecified. Before using this space in
+analysis, of course, we must actually define what we mean by a ``tonic
+chord.'' Because \tf space contains cross-type transformations, this means
+both defining the set of tonic chords
+If we define the transformation \textsc{ResI} to be equivalent to TF,
+the generic space here becomes the specific layout of \tf space first
+presented in \ref{tft:complete-space}.
+
+\begin{figure}[tbhp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption{A generic version of \tf space, with unspecified tonic chords.}
+  \label{tfe:generic-space}
+\end{figure}
+
+Again, it will be easiest to demonstrate exactly how this generic space can be
+actualized by means of an example. In our analysis of ``Blues for Alice'' in
+Section \ref{sec:blues-for-alice} above, we noted that the \h{Bb7} chord in
+m.~5 served as the resolution of the \tf in the preceding bar, but contained
+the lowered seventh, which is typical for the blues. There, we tried to
+capture the intuition that the \h{Bb7} was stable by labeling the
+transformation as TF $\odot$ \textsc{7th}: a resolution merely inflected with
+the lowered seventh. This transformation, though, still results in the \h{Bb7}
+as a dominant seventh chord (it appears in the space only as V\tsup{7} of F).
+
+The generic \textsc{ResI} transformation offers a better solution, in that we
+can define a ``blues TF,'' which resolves a V\tsup{7} to a tonic major-minor
+seventh:%
+%
+{%
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\begin{align*}
+  S_{\mathrm{IMm7}} &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \} \\
+  %
+  \mathrm{TF}_{\mathrm{blues}}(X\,) &= Y\text{, where}\ X = (x_r, x_t, x_s)
+                                      \in \Sdom
+                                      \text{ and}\
+                                      Y=(\,y_r, y_t, y_s)=(x_r, x_t, x_s-1)
+                                      \in S_{\mathrm{IMm7}}
+\end{align*}
+}%
+%
+Note that TF\tsub{blues} is equivalent to TF $\odot$ \textsc{7th},
+and also to $T_5$ (when applied to a V\tsup{7} chord; TF\tsub{blues} is
+undefined on ii\tsup{7} chords). We have also defined the set $S$\tsub{IMm7}, the
+set of tonic major-minor seventh chords; this seems intuitive, but is
+mathematically complicated. $S$\tsub{IMm7} is exactly equivalent to \Sdom (in
+the language of set theory, they are the \emph{same set}); the difference
+between them is not structural, but interpretive. $S$\tsub{IMm7} is the set of
+\emph{tonic} major-minor seventh chords, while \Sdom is the set of
+\emph{dominant} major-minor sevenths. This distinction allows us to capture
+the difference between \h{Bb7} as a stable resolution (as it is in m.~5 of
+``Blues for Alice'') and \h{Bb7} as V\tsup{7} of \Eflat\ (as in m.~8 of
+``Solar'', for example).
+
+% here, steve rings, tonal qualia, etc.
+
+
 
 %}}}
 % interaction with diatonic spaces

@@ -13,3 +13,9 @@
 - [X] alice in wonderland, rethink $t_3^{-1}$ addition/composition notation
 - [X] all the things, rethink tonic of F minor
   - (added a footnote, since I still hear it in F minor)
+
+** Ch. 2, thoughts (mjm)
+   - Do I need some kind of text about path-consistency? When I define EC, I
+     say that it's equivalent to TF * 7th * 3rd, but only when applied to
+     dominants. This plays into the path-consistency condition, for sure (EC
+     is undefined on ii7 chords).
