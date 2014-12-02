@@ -79,6 +79,8 @@
 ]{Source Sans Pro}
 \newfontfamily\ssliningfont[Numbers=Proportional]{Fira Sans}
 
+\newfontface\abbrevSC[Letters=UppercaseSmallCaps,LetterSpace=5.0]{Junicode}
+
 \usepackage{subscript}    % for \textsubscript
 \usepackage{paralist}
 \newcommand{\degree}{\ensuremath{^\circ}}
@@ -229,14 +231,16 @@
 \newcommand{\tfmo}{\mbox{ii--V--i}\xspace}
 \newcommand{\tft}{TF\tsub{T}\xspace}
 \newcommand{\tfmt}{tf\tsub{T}\xspace}
-\newcommand{\slideS}{\textsc{slide}\textsuperscript{7}\xspace}
+\newcommand{\slideS}{\abbrev{SLIDE}\textsuperscript{7}\xspace}
 \newcommand{\tsub}{\textsubscript}
 \newcommand{\tsup}{\textsuperscript}
 \newcommand{\rightparen}{)}
-\newcommand{\ivls}{\textsc{ivls}\xspace}
-\newcommand{\gis}{\textsc{gis}\xspace}
-\newcommand{\strans}{\textsc{strans}\xspace}
+\newcommand{\ivls}{\abbrev{IVLS}\xspace}
+\newcommand{\gis}{\abbrev{GIS}\xspace}
+\newcommand{\strans}{\abbrev{STRANS}\xspace}
 
+% uppercase small caps
+\newcommand{\abbrev}[1]{{\abbrevSC #1}}
 
 % math shortcuts
 \newcommand{\lra}{\longrightarrow}
