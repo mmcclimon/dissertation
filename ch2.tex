@@ -579,9 +579,9 @@ At this point, Parker uses a \emph{chromatic} stepwise pattern of \tf{}s
 earlier descending fifths pattern:
 
 \begin{center}
-  \h{Bbm7} \TFTarrow\ \h{Eb7} \ECTarrow\
-  \h{Am7}  \TFTarrow\ \h{D7}  \ECTarrow\
-  \h{Abm7} \TFTarrow\ \h{Db7} \ECTarrow\
+  \h{Bbm7} \TFarrow\ \h{Eb7} \ECTarrow\
+  \h{Am7}  \TFarrow\ \h{D7}  \ECTarrow\
+  \h{Abm7} \TFarrow\ \h{Db7} \ECTarrow\
   \h{Gm7}
 \end{center}
 
@@ -761,15 +761,16 @@ as needed for each style.\fn{tfe-2} The generic space would then appear as it
 does in Figure \ref{tfe:generic-space}. This space is still arranged in
 perfect fifths, and the basic shape of the \tfo progressions is still present,
 but the quality of the tonic chords is unspecified. Before using this space in
-analysis, of course, we must actually define what we mean by a ``tonic
-chord.'' Because \tf space contains cross-type transformations, this means
-both defining the set of tonic chords
-If we define the transformation \textsc{ResI} to be equivalent to TF,
-the generic space here becomes the specific layout of \tf space first
-presented in \ref{tft:complete-space}.
+analysis, of course, we must actually define what we mean by a ``tonic chord''
+in a given situation. Because \tf space contains cross-type transformations,
+this means we need to define both the set of tonic chords and the
+transformation \textsc{ResI}, from \Sdom to the set of tonics. (By defining
+\textsc{ResI} to be equivalent to TF, for example, the generic space here
+becomes the specific layout of \tf space first presented in Figure
+\ref{tft:complete-space}.)
 
-\begin{figure}[tbhp]
-  \centerGraphic{eps/xxx.pdf}
+\begin{figure}[tbp]
+  \centerGraphic[width=30em]{eps/ch2/generic-space.pdf}
   \caption{A generic version of \tf space, with unspecified tonic chords.}
   \label{tfe:generic-space}
 \end{figure}
@@ -788,36 +789,131 @@ The generic \textsc{ResI} transformation offers a better solution, in that we
 can define a ``blues TF,'' which resolves a V\tsup{7} to a tonic major-minor
 seventh:%
 %
-{\novspace%
 \begin{align*}
   S_{\mathrm{IMm7}} &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \} \\
   %
   \mathrm{TF}_{\mathrm{blues}}(X\,) &= Y\text{, where}\ X = (x_r, x_t, x_s)
                                       \in \Sdom
                                       \text{ and}\
-                                      Y=(\,y_r, y_t, y_s)=(x_r, x_t, x_s-1)
+                                      Y=(\,y_r, y_t, y_s)=(x_r+5, x_s-1, x_t-1)
                                       \in S_{\mathrm{IMm7}}
-\end{align*}}%
+\end{align*}
 %
-Note that TF\tsub{blues} is equivalent to TF $\odot$ \textsc{7th},
-and also to $T_5$ (when applied to a V\tsup{7} chord; TF\tsub{blues} is
+Note that TF\tsub{blues} is equivalent to $T_5$, but is defined differently
+(see the voice leading in Figure \ref{tfe:tf-blues-voice-leading}; TF\tsub{blues} is
 undefined on ii\tsup{7} chords). We have also defined the set $S$\tsub{IMm7}, the
 set of tonic major-minor seventh chords; this seems intuitive, but is
-mathematically complicated. $S$\tsub{IMm7} is exactly equivalent to \Sdom (in
-the language of set theory, they are the \emph{same set}); the difference
-between them is not structural, but interpretive. $S$\tsub{IMm7} is the set of
+mathematically complicated. $S$\tsub{IMm7} is exactly equivalent to \Sdom---in
+the language of set theory, they are the \emph{same set}. The difference
+between them is not structural, but interpretive: $S$\tsub{IMm7} is the set of
 \emph{tonic} major-minor seventh chords, while \Sdom is the set of
 \emph{dominant} major-minor sevenths. This distinction allows us to capture
 the difference between \h{Bb7} as a stable resolution (as it is in m.~5 of
 ``Blues for Alice'') and \h{Bb7} as V\tsup{7} of \Eflat\ (as in m.~8 of
 ``Solar'', for example).
 
-% here, steve rings, tonal qualia, etc.
+\begin{figure}[tbp]
+  \centerGraphic{eps/ch2/tf-blues-voice-leading.pdf}
+  \caption{Voice leading in the TF\tsub{blues} transformation.}
+  \label{tfe:tf-blues-voice-leading}
+\end{figure}
 
+This sort of interpretive analysis lies a the heart of Steven Rings's work in
+\emph{Tonality and Transformation}; the \gis{}es he develops there are
+designed to capture our intuitions that certain collections of pitches can be
+heard (or experienced) differently in different contexts. We can adapt this
+work slightly to capture the intuition that tonic major-minor sevenths are
+experienced differently than dominant major-minor sevenths; Rings would say
+that the two sets have different \emph{qualia}.\footcite[41--43 (and
+throughout)]{rings:2011}
 
+The tonal \gis Rings develops in his second chapter consists of ordered pairs
+of the form (scale degree, acoustic signal); as he has it, ``the notation
+(\sd7, \emph{x}) \ldots\ represents the apperception: `scale degree seven
+inheres in acoustic signal \emph{x}.'\,''\footcite[44]{rings:2011} Rings goes
+on to describe sets of these ordered pairs, which we will use to capture our
+intuitions about the varying roles of the \h{Bb7} chord, as shown
+here:\footcite[55]{rings:2011}
+%
+\begin{displaymath}
+  \setlength{\arraycolsep}{3em}
+  \begin{array}{cc}
+    \begin{Bmatrix}
+      (\text{\sd4}, \text{\Aflat}) \\
+      (\text{\sd7}, \text{D}) \\
+      (\text{\sd5}, \text{\Bflat})
+    \end{Bmatrix}
+    &
+    \begin{Bmatrix}
+      (\text{\flat\sd7}, \text{\Aflat}) \\
+      (\text{\sd3},      \text{D}) \\
+      (\text{\sd1},      \text{\Bflat})
+    \end{Bmatrix}
+    \\
+    \text{\h{Bb7} as dominant} & \text{\h{Bb7} as tonic}
+  \end{array}
+\end{displaymath}
+%
+Here, the left figure (read bottom to top as root, third, seventh) represents
+\h{Bb7} as a dominant seventh of \Eflat\ (i.e., with \sd5, \sd7, and \sd4)
+while the right figure represents the same three pitch classes as a tonic
+major-minor seventh (with \sd1, \sd3, and \flat\sd7). Rings's system of heard
+scale degrees allows us to distinguish between the sets $S$\tsub{IMm7} and
+\Sdom: the \h{Bb7} in m.~5 of ``Blues for Alice'' is a member of
+$S$\tsub{IMm7}, while the \h{Bb7} in m.~8 of ``Solar'' is a member of
+\Sdom.\fn{tfe-3}
 
+\begin{figure}[tbp]
+  \centerGraphic[width=30em]{eps/ch2/blues-tf-space.pdf}
+  \caption{A small portion of ``blues \tf space.''}
+  \label{tfe:blues-tf-space}
+\end{figure}
+
+With the distinction between tonic and dominant minor-major sevenths worked
+out, we can now specify the generic space of Figure \ref{tfe:generic-space} to
+create what we might call a ``blues \tf space'': a small portion of this space
+is shown in Figure \ref{tfe:blues-tf-space}. This space, though, presents
+another problem: it would be nice if we could define the transformation from
+\h{Bb7} as tonic to \h{Bb7} as dominant (the arrow marked with a question mark
+in the figure). The pitch classes remain the same, but the \emph{quale}
+changes from tonic to dominant, so here Rings's notion of a ``pivot interval''
+is useful. Intervals in Rings's \gis are measured with ordered pairs:
+the first element is a scale-degree interval (measured upward), and the second
+is a pitch-class interval.\footcite[46--48]{rings:2011} ``Pivot intervals''
+are those intervals where the second element of the pair is
+$0$.\footcite[58--66]{rings:2011} In the situation here, we have what Rings
+would call a ``pivot fifth'' between the two \h{Bb7} chords:
+%
+\begin{displaymath}
+  \setlength{\arraycolsep}{3em}
+    \begin{Bmatrix}
+      (\text{\flat\sd7}, \text{\Aflat}) \\
+      (\text{\sd3},      \text{D}) \\
+      (\text{\sd1},      \text{\Bflat})
+    \end{Bmatrix}
+    %
+    \xrightarrow[\text{ ``pivot fifth'' }]{(5\mathrm{th}, 0)}
+    %
+    \begin{Bmatrix}
+      (\text{\sd4}, \text{\Aflat}) \\
+      (\text{\sd7}, \text{D}) \\
+      (\text{\sd5}, \text{\Bflat})
+    \end{Bmatrix}
+\end{displaymath}
+%
+The pitch-class interval here is 0, since both chords contain \Bflat, D, and
+\Aflat, and the scale-degree interval is a 5th (\sd1 to \sd5, \sd3 to \sd7, and
+\flat\sd7 to \sd4). With this transformation defined, we can now more fully
+realize our intuitions about the short passage in ``Blues for Alice'' (mm.~4--6):
+\begin{center}
+  \ldots\ \h{Cm7} \TFarrow\ \h{F7} $\xrightarrow{\mathrm{TF}_{\mathrm{blues}}\ }$
+  \h{Bb7} $\xrightarrow{\mathrm{ pivot\ 5th}\ \odot\ 3\text{\textsc{rd} }}$
+  \h{Bbm7} \TFarrow\ \h{Eb7} \ldots
+\end{center}
 
 %}}}
+
+
 % interaction with diatonic spaces
 
 
