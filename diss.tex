@@ -4,20 +4,20 @@
 \addbibresource{discog.bib}
 
 % notes files, must go before document begin
-\input{ch1-notes}
-\input{ch2-notes}
+\input{footnotes/ch1-notes}
+\input{footnotes/ch2-notes}
 
 % control what we’re compiling
-\includeonly{ch2}
+\includeonly{chapters/ch2}
 
 \begin{document}
 
 \frontmatter
-  \include{front}
+  \include{chapters/front}
 \mainmatter
-  \include{ch1}
-  \include{ch2}
+  \include{chapters/ch1}
+  \include{chapters/ch2}
 \backmatter
-  \include{back}
+  \include{chapters/back}
 
 \end{document}
