@@ -2,18 +2,19 @@ FILE = diss
 TEX_FILE = $(FILE).tex
 
 BUILD_FOLDER = build
+AUX_CHAPTERS = build/chapters
 BUILD_PDF = $(BUILD_FOLDER)/$(FILE).pdf
 
 BIBTOOL = bibtool
 LATEX = latexmk
-LATEX_FLAGS = -xelatex --outdir=$(BUILD_FOLDER)
+LATEX_FLAGS = -xelatex --outdir=$(BUILD_FOLDER) -quiet
 LATEX_WATCH = -pvc
 
 .PHONY: watch clean pdf move
 
 pdf: $(FILE).pdf
 
-watch:
+watch: | $(AUX_CHAPTERS)
 	$(LATEX) $(LATEX_FLAGS) $(LATEX_WATCH) $(FILE)
 
 $(FILE).pdf: $(TEX_FILE)
@@ -37,3 +38,6 @@ clean: move
 	-rm $(BUILD_FOLDER)/$(FILE).run.xml
 	-mv $(BUILD_FOLDER)/$(FILE).pdf .
 	-rmdir $(BUILD_FOLDER)
+
+$(AUX_CHAPTERS):
+	-mkdir -p $@
