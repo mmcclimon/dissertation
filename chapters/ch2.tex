@@ -989,13 +989,12 @@ that we can no longer align all of the seventh chords sharing a root; only the
 major and minor seventh chords sharing a root are adjacent in the
 space.\fn{tfe-5a} The \h{GM7} and \h{Gm7} (ii\tsup{7}/F) chords are close to
 one another, for example, but \h{G7} (V\tsup{7}/C) is farther removed. The key
-areas in this figure are not connected by $T_5$, but instead by $t_6$ (recall
-our discussion of the diatonic transposition operator in Section
-\ref{subsec:inttrans}): all of the roots of the major seventh chords (reading
-down the right side of the figure) are members of the 4-flat diatonic
-collection. Though the diatonic distance between key areas is consistent, the
-chromatic distance varies: there are two points in the space connected by half
-steps rather than whole steps.
+areas in this figure are not connected by $T_5$, but instead by $t_6$: all of
+the roots of the major seventh chords (reading down the right side of the
+figure) are members of the 4-flat diatonic collection.\fn{tfe-5b} Though the
+diatonic distance between key areas is consistent, the chromatic distance
+varies: there are two points in the space connected by half steps rather than
+whole steps.
 
 As we saw above, the tritone appearing in diatonic space alters the
 transformational structure somewhat: transformations spanning this tritone
@@ -1044,6 +1043,24 @@ that we hear the same progression repeated many times (Morgan's recording of
 ``Ceora'' runs about 6\,½ minutes, for example), and using only pitches from the
 \Aflat-major diatonic collection would quickly become boring.
 
+This arrangement of \tf space, combining chromatic and diatonic operations, is
+mathematically complicated. As Steven Rings notes, transformation networks
+involving both chromatic and diatonic operations violate Lewin's formal
+definition of a transformation network, since they act on different
+sets.\footcite[98--99]{rings:2011} The underlying transformation graph is not
+path consistent, since two different paths in the space can combine to form
+$t_6$: \slideS $\odot$ TF $\odot$ TF (\h{AbM7} to \h{GM7}, for example), and
+(\textsc{7th} $\odot$ \textsc{3rd}) $\odot$ TF $\odot$ TF (\h{GM7} to
+\h{FM7}).\fn{tfe-7} (Put another way, putting \h{GM7} in the top row of Figure
+\ref{tfe:ab-diatonic-space} does not work: obeying the $t_6$ arrow requires
+\h{FM7} to occupy the row below, but following the other path would give
+\h{FsM7}.) It is, however, realizable: it is possible (as Figure
+\ref{tfe:ab-diatonic-space} attests) to fill in the nodes such that the arrows
+\emph{do} make sense.\footcite[29]{hook:2007} Both Rings and Hook have shown
+that transformation networks that are not path consistent---like the diatonic
+\tf space developed in this section---can nevertheless be analytically
+productive.
+
 \subsection{Summary}
 
 By using the \tfo as the basis of the transformational spaces developed in
@@ -1057,11 +1074,9 @@ instance. This is a useful abstraction, and we will continue to use it in the
 next chapter, where we will also consider relationships among our sets of
 ordered triples more generally.
 
-% xxxx need a section on path consistency here (maybe instead of this dumb summary)
-
 %}}} extensions
 
 %%% Local Variables:
-%%% TeX-master: "diss"
+%%% TeX-master: "../diss"
 %%% End:
 % vim:fdm=marker

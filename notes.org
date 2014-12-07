@@ -1,6 +1,6 @@
 * Notes on dissertation
 
-- [ ] put note on left/right orthography in preface
+- [X] put note on left/right orthography in preface
 
 ** Ch. 1 todos, from JH
 
