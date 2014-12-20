@@ -1,6 +1,6 @@
 %% Chapter 2
 
-\chapter{Fifths Spaces}
+\chapter{\tf Space}
 
 \blankfootnote{Earlier versions of this chapter were presented at
   the annual meetings of the Music Theory Society of the Mid-Atlantic
@@ -9,16 +9,17 @@
   I received at these conferences (especially those from Stefan Love, Brian
   Moseley, and Keith Waters).}%
 %
+% xxx rewrite this paragraph
 Because most jazz is not purely diatonic, we need to expand our
 transformational system to account for more chromatic examples. This chapter
 will begin that work, taking the very common \tfo\ progression as its basis.
 Most of the spaces we will develop in this chapter will fall under the broad
 category of “fifths spaces,” but at the end of the chapter we will have
-occasion to return to the diatonic space of chapter 1 to see how they might be
+occasion to return to the diatonic space of Chapter 1 to see how they might be
 enhanced with the chromatic spaces introduced here.
 
 % xxx this title is stupid
-\section{\tf Space: An Initial Pass}
+\section{A Descending Fifths Arrangement}
 \label{sec:tf-space-1}
 %{{{
 
@@ -26,7 +27,7 @@ enhanced with the chromatic spaces introduced here.
 %{{{
 
 The most common harmonic progression in jazz is undoubtedly the
-\mbox{ii\tsup{7}--V\tsup{7}--I\tsup{7}} progression (hereafter, just \tfo, or
+\mbox{ii\tsup{7}--V\tsup{7}--I\tsup{7}} progression (hereafter, simply \tfo, or
 often just \tf). It is the first progression taught in most jazz method books,
 and the only small-scale harmonic progression to have an entire Aebersold
 play-along volume dedicated to it.\fn{tf-1} The progression is so prevalent
@@ -38,13 +39,13 @@ musicians, it seems natural to use the progression as the basis for developing
 a more general transformational model of jazz harmony.
 
 \begin{figure}[tbp]
-  \centerGraphic[width=20em]{eps/ch2/all-things-bridge.pdf}
+  \centerGraphic[width=22em]{eps/ch2/all-things-bridge.pdf}
   \caption{The bridge of “All the Things You Are” (Jerome Kern).}
   \label{tf:all-things-bridge}
 \end{figure}
 
 \begin{figure}[tbp]
-  \centerGraphic[width=15em]{eps/ch2/single-tfo-network.pdf}
+  \centerGraphic[width=12em]{eps/ch2/single-tfo-network.pdf}
   \caption[A transformation network for a single \tfo\ progression.]{A
   transformation network for a \tfo\ in C major: \caph{Dm7}--\caph{G7}--\caph{CM7}.}
   \label{tf:single-tfo-network}
@@ -53,10 +54,10 @@ a more general transformational model of jazz harmony.
 Figure \ref{tf:single-tfo-network} shows a transformation network for a single
 \tfo\ progression; we will begin by developing the formal apparatus for this
 progression, after which we can begin to combine \tfo\ progressions to form a
-larger musical space.\fn{tf-2a} The illustration, with its combination of
+larger musical space.\fn{tf-2a} This figure, with its combination of
 general Roman numerals and specific key centers, is designed to reflect how
 jazz musicians tend to talk about harmony; we might read this network as “a
-\tfo\ in C.” This combination of Roman numerals and key areas bears some
+\tfo\ in C.” The combination of Roman numerals and key areas bears some
 similarity to Fred Lerdahl’s chordal-regional space, but Figure
 \ref{tf:single-tfo-network} is a transformation network, while
 chordal-regional space is strictly a spatial
@@ -64,16 +65,17 @@ metaphor.\footcite[96--97]{lerdahl:2004}
 
 We have encountered one transformation network already (in Figure
 \ref{ds:autumn-leaves-bridge}), but we have yet to define the concept
-formally.  Transformation networks are a major part of David Lewin’s project
-in \emph{GMIT}, and have been thoroughly covered in the literature, so we will
-not rehearse the formalism at any length here.\fn{tf-3} Briefly, a
-transformation network consists of objects of some kind (here, they are
-chords), represented as vertices in a graph, along with some relations between
-them, represented as arrows. Lewin defines a transformation as “a function
-from a family [set] S into S itself.”\fn{tf-4} The transformations in Figure
-\ref{ds:autumn-leaves-bridge} are indeed Lewinnian transformations (mappings
-in the G-minor diatonic set), but the \tfo\ transformation network is more
-complex.
+formally. Transformation networks are a major part of David Lewin’s project in
+\emph{GMIT}, and have been thoroughly covered in the literature, so we will
+not rehearse the formalism at any length here.\fn{tf-3} A transformation
+network consists of objects of some kind (here, they are chords), represented
+as vertices in a graph, along with some relations (transformations) between
+them, represented as arrows. In Lewin's definition, all of the objects in a
+transformation network must be members of a single set $S$, and the
+transformations must be functions from $S$ into $S$ itself.\fn{tf-4} The
+transformations in Figure \ref{ds:autumn-leaves-bridge} in the previous
+chapter are indeed Lewinnian transformations (mappings in the G-minor diatonic
+set), but the \tfo\ transformation network is more complex.
 
 The transformation TF in Figure \ref{tf:single-tfo-network} is in fact a
 \emph{cross-type} transformation, as defined by Julian
@@ -82,7 +84,7 @@ network to include objects of different types, necessary to define
 transformations in the \tfo\ progression. The progression contains musical
 objects of three types of diatonic seventh chords: minor, dominant,
 and major sevenths (in the key of C major, the progression is
-\h{Dm7}--\h{G7}--\h{CM7}). Using Hook’s relaxed definitions, we are free to
+\h{Dm7}--\h{G7}--\h{CM7}). Using Hook's relaxed definition, we are free to
 define transformations from any set of objects to any other; to understand the
 figure above, we need to define the transformation TF such that it maps
 ii\tsup{7} chords to V\tsup{7} chords, and V\tsup{7} chords to I\tsup{7}
@@ -107,15 +109,16 @@ cross-type transformation graph must be labeled with the set from which the
 node contents may be drawn (even in the abstract transformation
 graph).\footcite[7]{hook:2007} In Figure \ref{tf:single-tfo-graph}, the nodes
 are labeled simply $\Smin$, $\Sdom$, and $\Smaj$, which we can understand as the
-sets of ii\tsup{7}, V\tsup{7}, and I\tsup{7} chords, respectively.
+sets of minor, dominant, and major seventh chords, respectively.
 
 While at its core the \tfo\ progression contains three types of seventh
 chords, in reality a jazz musician might add any number of extensions or
 alterations to this basic structure. Given this practice, defining the
-archetypal progression as being composed of four-note set classes seems
-unnecessarily restrictive. In order to allow for some freedom in the chord
-qualities, we will consider only chordal roots, thirds, and sevenths; these
-pitches are sufficient to distinguish the three chord qualities in a \tfo.
+archetypal progression as being composed of four-note set classes (seventh
+chords) seems unnecessarily restrictive. In order to allow for some freedom in
+the chord qualities, we will consider only chordal roots, thirds, and
+sevenths; these pitches are sufficient to distinguish the three chord
+qualities in a \tfo.\fn{tf-5a}
 
 In this chapter, we will represent a chord with an ordered triple $X = (x_r,
 x_t, x_s)$, where $x_r$ is the root of the chord, $x_t$ the third, and $x_s$
@@ -133,52 +136,52 @@ the seventh. The definitions of the three sets are as follows:\fn{tf-6}
     \text{I\tsup{7} chords}
 \end{align*}}
 %
-The definitions are intuitive, and have clear musical relevance:
-ii\tsup{7} chords have a minor third and minor seventh, V\tsup{7} chords have
-a major third and minor seventh, and I\tsup{7} chords have a major third and
-major seventh. Defining the chords this way rather than as four-note set
-classes offers the great advantage of flexibility. Using the ordered-triple
-representation, the progressions \h{Dm7}--\h{G7}--\h{Cmaj7} and
+The definitions are intuitive, and have clear musical relevance: ii\tsup{7}
+chords have a minor third (interval 3) and minor seventh (interval 10),
+V\tsup{7} chords have a major third and minor seventh (intervals 4 and 10),
+and I\tsup{7} chords have a major third and major seventh (intervals 4 and
+11). Defining the chords this way rather than as four-note set classes offers
+the great advantage of flexibility. Using the ordered-triple representation,
+the progressions \h{Dm7}--\h{G7}--\h{Cmaj7} and
 \h{Dm9(b5)}--\h{G7b13s9b9}--\h{Cmaj7s11} are understood as equivalent, since
 the roots, thirds, and sevenths are the same: both progressions are
-represented $(2, 5, 0)$--\allowbreak$(7, 11, 5)$--\allowbreak$(0, 4,
-11)$. Because the sets are defined in pitch-class space, the three sets all
-have cardinality $12$: each pitch class is the root of exactly one ii\tsup{7},
+represented $(2, 5, 0)$--\allowbreak$(7, 11, 5)$--\allowbreak$(0, 4, 11)$.
+Because the sets are defined in pitch-class space, the three sets all have
+cardinality $12$: each pitch class is the root of exactly one ii\tsup{7},
 V\tsup{7}, and I\tsup{7} chord.
 
 With the space of the nodes defined, we can now formulate the transformation
-representing a \tf, which we will call simply ``TF'':
+representing a \tfo, which we will call simply ``TF'':
 %
 {\novspace%
 \begin{alignat*}{3}
     \mathrm{TF}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smin
     & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) &= (x_r + 5, x_s - 1, x_t) \in \Sdom \\
+    Y &= (\,y_r, y_t, y_s) = (x_r + 5, x_s - 1, x_t) \in \Sdom \\
     %
     \mathrm{TF}(Y\,) = Z\text{, where}\ Y = (\,y_r, y_t, y_s) \in \Sdom
     & \text{ and} &
-    Z &= (z_r, z_t, z_s) &= (\,y_r + 5, y_s - 1, y_t) \in \Smaj
+    Z &= (z_r, z_t, z_s) = (\,y_r + 5, y_s - 1, y_t) \in \Smaj
 \end{alignat*}}%
 %
 Again, these definitions are designed to be musically relevant; the
-voice-leading diagram in Figure \ref{tf:tfo-voice-leading} illustrates this
-more clearly.\fn{tf-6a} The root of the second chord is a fifth below the root of the
-first ($y_r = x_r + 5$), the third of the second chord is a semitone below the
-seventh of the first ($y_t = x_s - 1$), and the seventh of the second chord is
-a common tone with the third of the first ($y_s = x_t$). In Lewin's
-transformational language, if a jazz musician is ``at a ii\tsup{7} chord'' and
-wishes to ``get to a V\tsup{7} chord,'' the transformation that will do the
-best job is TF: ``move the root down a fifth and the seventh down a semitone
-to become the new third.'' (When we wish to emphasize this mapping
-aspect of the transformation, we may also write ii\tsup{7}
-\TFarrow\ V\tsup{7}, rather than TF(ii\tsup{7}) = V\tsup{7}.)
-Note that the transformation TF is also valid
-between V\tsup{7} and I\tsup{7} as well (the second equation above,
-involving sets $\Sdom$ and $\Smaj$). TF is both one-to-one and onto for sets of
-ordered triples; it maps each ii\tsup{7} to a unique V\tsup{7}, and each
-V\tsup{7} to a unique I\tsup{7}. As such, its inverse ($\mathrm{TF}^{-1}$) is
-well defined, and allows motion backwards along the arrows shown in the
-transformation graph in Figure \ref{tf:single-tfo-graph}.
+voice-leading diagram in Figure~\ref{tf:tfo-voice-leading} illustrates this
+more clearly.\fn{tf-6a} The root of the second chord is a fifth below the root
+of the first ($y_r = x_r + 5$), the third of the second chord is a semitone
+below the seventh of the first ($y_t = x_s - 1$), and the seventh of the
+second chord is a common tone with the third of the first ($y_s = x_t$). In
+Lewin's transformational language, if a jazz musician is ``at a ii\tsup{7}
+chord'' and wishes to ``get to a V\tsup{7} chord,'' the transformation that
+will do the best job is TF: ``move the root down a fifth and the seventh down
+a semitone to become the new third.'' (Recall that we may also write
+\mbox{ii\tsup{7} \TFarrow\ V\tsup{7}}, rather than TF(ii\tsup{7}) = V\tsup{7}.) Note
+that the transformation TF is also valid between V\tsup{7} and I\tsup{7} as
+well (the second equation above, involving sets $\Sdom$ and $\Smaj$). TF is
+both one-to-one and onto for sets of ordered triples; it maps each ii\tsup{7}
+to a unique V\tsup{7}, and each V\tsup{7} to a unique I\tsup{7}. As such, its
+inverse ($\mathrm{TF}^{-1}$) is well defined, and allows motion backwards
+along the arrows shown in the transformation graph in Figure
+\ref{tf:single-tfo-graph}.
 
 \begin{figure}[htbp]
   \centerGraphic{eps/ch2/tfo-voice-leading.pdf}
@@ -210,9 +213,9 @@ of specific ordered-triple configurations.
 
 With this understanding of the transformations involved in a single \tfo\
 progression, we can continue to see how we might connect multiple progressions
-in order to form a complete \tf\ space. Because root motion by descending
+in order to form a larger \tf\ space. Because root motion by descending
 fifth is extremely common in jazz, we might consider connecting \tfo\
-progressions by descending fifth as well; Figure \ref{tf:trans-graph-large}
+progressions by descending fifth; Figure \ref{tf:trans-graph-large}
 illustrates this arrangement both as a transformation graph and a
 transformation network.  This descending fifths arrangement means that all of
 the chords sharing a root are aligned vertically (directly below \h{GM7} is
@@ -241,20 +244,19 @@ examples), since these chords are not often directly connected in jazz.
   \label{tf:tf-circle-fifths}
 \end{figure}
 
-By extending the graph of Figure \ref{tf:trans-graph-large} and including the
-node contents (thereby changing it from a transformation \emph{graph} to a
-transformation \emph{network}), we arrive at the entirety of \tf\ space, as
-shown in Figure \ref{tf:tf-circle-fifths}. Because \tf\ space includes
-cross-type transformations, it does not easily form a Lewinnian \gis.\fn{tf-8}
-Considered more generally, though, it is easy to see that by considering a
-single \tfo\ progression as a unit, \tf\ space maps cleanly onto ordinary
-pitch-class space.  As Figure \ref{tf:trans-graph-large} makes clear, we can
-consider the \tfo\ in C as being three perfect fifths above the \tfo\ in
-\Eflat\ (or put transformationally, the $T_s$ operation transforms a \tfo\ in
-C to one in \Eflat). This formulation does not allow us a means to say, for
-example, that “the ii chord in C is $x$ units away from the V chord in
-\Eflat,” but because \tfo{}s are rarely split up, falling back on normal
-pitch-class distance is sufficient in most situations.\fn{tf-9}
+By extending the network of Figure \ref{tf:trans-graph-large}, we arrive at
+the entirety of \tf\ space, as shown in Figure \ref{tf:tf-circle-fifths}.
+Because \tf\ space includes cross-type transformations, it does not easily
+form a Lewinnian \gis.\fn{tf-8} Considered more generally, though, it is easy
+to see that by considering a single \tfo\ progression as a unit, \tf\ space
+maps cleanly onto ordinary pitch-class space. As Figure
+\ref{tf:trans-graph-large} makes clear, we can consider the \tfo\ in C as
+being three perfect fifths above the \tfo\ in \Eflat\ (or put
+transformationally, the $T_3$ operation transforms a \tfo\ in C to one in
+\Eflat). This formulation does not allow us a means to say, for example, that
+“the ii chord in C is $x$ units away from the V chord in \Eflat,” but because
+\tfo{}s are rarely split up, falling back on normal pitch-class distance is
+sufficient in most situations.\fn{tf-9}
 
 % xxx I could go into ii-V space considered as a graph here...I don’t think
 % it’s really all that necessary?
@@ -281,7 +283,7 @@ bars, staying within a single horizontal slice of \tf\ space. This is followed
 immediately by a \tfo\ progression in \Dflat, a fifth lower (mm.~4--5).
 
 \begin{figure}[thbp]
-  \centerGraphic[width=24em]{eps/ch2/ceora-changes-1.pdf}
+  \centerGraphic[width=22em]{eps/ch2/ceora-changes-1.pdf}
   \caption{Changes for the A section of ``Ceora'' (Lee Morgan).}
   \label{tf:ceora-changes-1}
 \end{figure}
@@ -326,7 +328,7 @@ provides additional harmonic interest, and functions as a turnaround to lead
 smoothly back to \h{AbM7} to begin the next chorus.
 
 \begin{figure}[htbp]
-  \centerGraphic[width=24em]{eps/ch2/ceora-changes-2.pdf}
+  \centerGraphic[width=22em]{eps/ch2/ceora-changes-2.pdf}
   \caption{Changes for the B section of ``Ceora'' (Lee Morgan).}
   \label{tf:ceora-changes-2}
 \end{figure}
