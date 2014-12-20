@@ -421,9 +421,8 @@ space.
 While we could navigate this space using only the transformations TF and
 $T_6$, it is convenient to define another transformation to help with a common
 progression like \h{Dm7}--\h{Db7}--\h{Cmaj7}. We will call this
-transformation \tft, to highlight its relationship to the more normative TF:
+transformation \tft, to highlight its relationship to the more normative TF:%
 %
-{\novspace{
 \begin{alignat*}{3}
     \mathrm{TF}_\mathrm{T}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smin
     & \text{ and}\ &
@@ -432,7 +431,7 @@ transformation \tft, to highlight its relationship to the more normative TF:
     \mathrm{TF}_\mathrm{T}(Y\,) = Z\text{, where}\ Y = (\,y_r, y_t, y_s) \in \Sdom
     & \text{ and} &
     Z &= (z_r, z_t, z_s) &= (\,y_r - 1, y_s + 5, y_t + 6) \in \Smaj
-\end{alignat*}}%
+\end{alignat*}%
 %
 The \tft\ transformation represents a tritone substitution, but it
 transforms bass motion by fifth into bass motion by semitone (\emph{not} bass
@@ -618,7 +617,7 @@ explanations).
 
 %}}}
 
-\section{\tf Space: Some Extensions}
+\section{A Few Extensions}
 \label{sec:tf-extensions}
 %{{{
 
@@ -628,11 +627,11 @@ explanations).
 As it has been developed thus far, \tf space has a glaring omission: it
 requires that all tonic chords be major sevenths. Certainly there are
 jazz tunes in minor keys, and thus a need to account for the tonic minor. We
-have certainly seen \tf progressions that resolve to minor chords---we called
-that transformation ``EC'' in the previous section---but the only minor chords
+have already seen \tf progressions that resolve to minor chords---we called
+that transformation EC in the previous section---but the only minor chords
 in the space are ii chords, not tonics. One of the advantages of \tf space is
 that it is easily extended to account for harmonic features specific to
-particular situations; in this section, we will do so to allow for stable
+particular situations; in this section, we will do just that to allow for stable
 minor tonic chords.
 
 The minor \tfmo progression is usually played as
@@ -657,8 +656,8 @@ minor-major seventh with the same root:
   $Y=(\,y_r, y_t, y_s)=(x_r, x_t-1, x_s) \in \SmM$
 \vspace{.5\baselineskip}
 
-\noindent Likewise, the \textsc{7th} transformation is useful to transform a
-major-minor seventh into a minor-minor seventh with the same root:
+\noindent Likewise, the \textsc{7th} transformation transforms a
+minor-major seventh into a minor-minor seventh with the same root:
 
 \vspace{.5\baselineskip}
   \h{7}\textsc{th}$(Y\,) = Z$, where $Y = (\,y_r, y_t, y_s) \in \SmM$ and
@@ -686,38 +685,38 @@ Note that unlike the standard TF and \tft transformations, tf and
 \tfmt only transform V\tsup{7} chords to I\tsup{7} chords; the same
 transformations do \emph{not} hold for ii\tsup{7} to V\tsup{7}.
 
-\begin{figure}[thbp]
+\begin{figure}[tbp]
   \centerGraphic{eps/ch2/tf-minor-tonics.pdf}
   \caption{A small portion of \tf space, including minor tonic chords.}
   \label{tfe:tf-minor-tonics}
 \end{figure}
 
-Figure \ref{tfe:tf-minor-tonics} shows a small portion of \tf space that includes
-minor tonic chords (we might call it \tfo/i space). Because most jazz tunes do
-not contain exclusively minor chords, this figure gives both major and minor
-tonic chords in every key. The transformations defined in the previous
-paragraph are readily apparent in the space, with the exception of the
-\textsc{7th} transformation from a minor-major seventh to a minor
-seventh---\h{GmM7} moving to \h{Gm7} as ii\tsup{7} of F major, for example. Though we
-will not do so here, determining how to fill in the figure with tritone
-substitutions, or to conform it around the circle of fifths in the manner of
-Figure \ref{tf:tf-circle-fifths}, is easy enough to imagine (if not to draw,
-given the added complexity of the minor-major sevenths).
+Figure \ref{tfe:tf-minor-tonics} shows a small portion of \tf space that
+includes minor tonic chords. Because most jazz tunes do not contain
+exclusively minor chords, this figure gives both major and minor tonic chords
+in every key. The transformations defined in the previous paragraph are
+readily apparent in the space, with the exception of the \textsc{7th}
+transformation from a minor-major seventh to a minor seventh---\h{GmM7} moving
+to \h{Gm7} as ii\tsup{7} of F major, for example. Though we will not do so
+here, determining how to fill in the figure with tritone substitutions, or to
+conform it around the circle of fifths in the manner of Figure
+\ref{tf:tf-circle-fifths}, is easy enough to imagine (if not to draw, given
+the added complexity of the minor-major sevenths).
 
 By way of a brief example, Figure \ref{tfe:solar-changes} gives the changes
 for Miles Davis's ``Solar.'' This tune is in C minor, though that is not
 immediately apparent from the changes themselves; in the canonical recording
-of this piece (from Davis's own \emph{Walkin'}), the C minor
-chords are played as minor-major sevenths, and the piece ends on a \h{CmM7}
+of this piece (from Davis's own \emph{Walkin'}\,), the C minor chords are
+played as minor-major sevenths, and the piece ends on a \h{CmM7}
 chord.\nocite{davis:walkin} The fact that the only tonic chord appears in the
-opening bar of the form gives performances of this tune a cyclical quality. By
-not arriving on a tonic at the end of the short 12-bar form, Davis achieves a
-formal overlap at every chorus: the opening tonic serves simultaneously as the
-harmonic resolution of the previous chorus and the formal beginning of the
-next.
+opening bar of the form gives performances of this tune even more of cyclical
+quality than is usual in jazz. By not arriving on a tonic at the end of the
+short 12-bar form, Davis achieves a formal overlap at every chorus: the
+opening tonic serves simultaneously as the harmonic resolution of the previous
+chorus and the formal beginning of the next.
 
-\begin{figure}[tbhp]
-  \centerGraphic[width=24em]{eps/ch2/solar-changes.pdf}
+\begin{figure}[tbp]
+  \centerGraphic[width=22em]{eps/ch2/solar-changes.pdf}
   \caption{Changes to ``Solar'' (Miles Davis).}
   \label{tfe:solar-changes}
 \end{figure}
@@ -727,8 +726,8 @@ The analysis in \tf space is mostly unremarkable, but it is given in Figure
 of the space with a minor tonic, \h{CmM7}, and as such there is no arrow given
 between the C-minor tonic and V\tsup{7}/F. This analysis, though, is not
 possible in the \tf space of the previous section, since the C-minor harmony
-of the first bar is decidedly \emph{not} a ii\tsup{7} chord (there is no
-\Bflat\ major harmony in the piece at all).
+of the first bar is decidedly \emph{not} a ii\tsup{7} chord (it would be ii of
+\Bflat, and there is no \Bflat\ major harmony in the piece at all).
 
 \begin{figure}[tbh]
   \centerGraphic{eps/ch2/solar-space.pdf}
@@ -746,16 +745,17 @@ of the first bar is decidedly \emph{not} a ii\tsup{7} chord (there is no
 
 We have now solved the problem of tonic chords that happen to be minor-major
 seventh chords, but in fact the problem is more general: it would be nice to
-have some way of allowing for any kind of tonic chord we might find. As
-mentioned in Section \ref{sec:theoretical-approaches}, James McGowan has
-argued for what he calls three ``dialects of consonance'' in jazz (extended
-tones we might consider consonant): the added sixth, the minor seventh, and
-the major seventh.\footcite[76--79]{mcgowan:2005} Both of the approaches we
-have used so far have focused only on the major seventh, when it appears atop
-both major and minor triads. Many Tin Pan Alley tunes end with tonic add-6
-chords (which appear nowhere in \tf space), and as we noted in our discussion
-of ``Blues for Alice'', it is very common for a blues tonic to be a
-major-minor seventh chord (which appear only as V\tsup{7} chords in the space).
+have some way of allowing for any kind of tonic chord we might find in real
+music. As mentioned in Section \ref{sec:theoretical-approaches}, James McGowan
+has argued for what he calls three ``dialects of consonance'' in jazz
+(extended tones we might consider consonant): the added sixth, the minor
+seventh, and the major seventh.\footcite[76--79]{mcgowan:2005} Both of the
+approaches in this chapter so far have focused only on the major seventh, when it
+appears atop both major and minor triads. Many Tin Pan Alley tunes end with
+tonic add-6 chords (which appear nowhere in \tf space), and as we noted in our
+discussion of ``Blues for Alice'', it is very common for a blues tonic to be a
+major-minor seventh chord (which appear only as V\tsup{7} chords in the
+space).
 
 The solution to this shortcoming of the space is to introduce some general
 transformation (which we might call ``\textsc{ResI}'') that could be redefined
@@ -765,14 +765,14 @@ perfect fifths, and the basic shape of the \tfo progressions is still present,
 but the quality of the tonic chords is unspecified. Before using this space in
 analysis, of course, we must actually define what we mean by a ``tonic chord''
 in a given situation. Because \tf space contains cross-type transformations,
-this means we need to define both the set of tonic chords and the
-transformation \textsc{ResI}, from \Sdom to the set of tonics. (By defining
-\textsc{ResI} to be equivalent to TF, for example, the generic space here
-becomes the specific layout of \tf space first presented in Figure
-\ref{tft:complete-space}.)
+this means we need to define both the \emph{set} of tonic chords and the
+transformation \textsc{ResI}, from \Sdom to the set of tonics.\fn{tfe-2a} (By defining
+\textsc{ResI} to be equivalent to TF and defining tonic chords to be members
+of \Smaj, for example, the generic space here becomes the specific layout of
+\tf space first presented in Figure \ref{tft:complete-space}.)
 
 \begin{figure}[tbp]
-  \centerGraphic[width=30em]{eps/ch2/generic-space.pdf}
+  \centerGraphic[width=.65\textwidth]{eps/ch2/generic-space.pdf}
   \caption{A generic version of \tf space, with unspecified tonic chords.}
   \label{tfe:generic-space}
 \end{figure}
@@ -791,28 +791,27 @@ The generic \textsc{ResI} transformation offers a better solution, in that we
 can define a ``blues TF,'' which resolves a V\tsup{7} to a tonic major-minor
 seventh:%
 %
-\begin{align*}
-  S_{\mathrm{IMm7}} &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \} \\
+\begin{alignat*}{2}
+  S_{\mathrm{IMm7}} &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \} & \\
   %
   \mathrm{TF}_{\mathrm{blues}}(X\,) &= Y\text{, where}\ X = (x_r, x_t, x_s)
-                                      \in \Sdom
-                                      \text{ and}\
-                                      Y=(\,y_r, y_t, y_s)=(x_r+5, x_s-1, x_t-1)
-                                      \in S_{\mathrm{IMm7}}
-\end{align*}
+    \in \Sdom \text{ and}\ Y &=&\ (\,y_r, y_t, y_s) \\
+     &                     &=&\ (x_r+5, x_s-1, x_t-1) \in S_{\mathrm{IMm7}}
+\end{alignat*}
 %
-Note that TF\tsub{blues} is equivalent to $T_5$, but is defined differently
-(see the voice leading in Figure \ref{tfe:tf-blues-voice-leading}; TF\tsub{blues} is
-undefined on ii\tsup{7} chords). We have also defined the set $S$\tsub{IMm7}, the
-set of tonic major-minor seventh chords; this seems intuitive, but is
-mathematically complicated. $S$\tsub{IMm7} is exactly equivalent to \Sdom---in
-the language of set theory, they are the \emph{same set}. The difference
-between them is not structural, but interpretive: $S$\tsub{IMm7} is the set of
-\emph{tonic} major-minor seventh chords, while \Sdom is the set of
-\emph{dominant} major-minor sevenths. This distinction allows us to capture
-the difference between \h{Bb7} as a stable resolution (as it is in m.~5 of
-``Blues for Alice'') and \h{Bb7} as V\tsup{7} of \Eflat\ (as in m.~8 of
-``Solar'', for example).
+Note that TF\tsub{blues} is equivalent to $T_5$, but is defined in a way to
+demonstrate its similarity to TF (see the voice leading in Figure
+\ref{tfe:tf-blues-voice-leading}; TF\tsub{blues} is undefined on ii\tsup{7}
+chords). We have also defined the set $S$\tsub{IMm7}, the set of tonic
+major-minor seventh chords; this seems intuitive, but is somewhat
+complicated. $S$\tsub{IMm7} is exactly equivalent to \Sdom---in the language
+of set theory, they are the \emph{same set}. The difference between them is
+not structural, but interpretive: $S$\tsub{IMm7} is the set of \emph{tonic}
+major-minor seventh chords, while \Sdom is the set of \emph{dominant}
+major-minor sevenths. This distinction allows us to capture the difference
+between \h{Bb7} as a stable resolution (as it is in m.~5 of ``Blues for
+Alice'') and \h{Bb7} as V\tsup{7} of \Eflat\ (as in m.~8 of ``Solar'', for
+example).
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch2/tf-blues-voice-leading.pdf}
@@ -820,9 +819,9 @@ the difference between \h{Bb7} as a stable resolution (as it is in m.~5 of
   \label{tfe:tf-blues-voice-leading}
 \end{figure}
 
-This sort of interpretive analysis lies a the heart of Steven Rings's work in
+This sort of interpretive analysis lies at the heart of Steven Rings's work in
 \emph{Tonality and Transformation}; the \gis{}es he develops there are
-designed to capture our intuitions that certain collections of pitches can be
+designed to capture the intuitions that collections of pitches can be
 heard (or experienced) differently in different contexts. We can adapt this
 work slightly to capture the intuition that tonic major-minor sevenths are
 experienced differently than dominant major-minor sevenths; Rings would say
@@ -835,7 +834,7 @@ of the form (scale degree, acoustic signal); as he has it, ``the notation
 inheres in acoustic signal \emph{x}.'\,''\footcite[44]{rings:2011} Rings goes
 on to describe sets of these ordered pairs, which we will use to capture our
 intuitions about the varying roles of the \h{Bb7} chord, as shown
-here:\footcite[55]{rings:2011}
+below:\footcite[55]{rings:2011}
 %
 \begin{displaymath}
   \setlength{\arraycolsep}{3em}
@@ -859,11 +858,11 @@ here:\footcite[55]{rings:2011}
 Here, the left figure (read bottom to top as root, third, seventh) represents
 \h{Bb7} as a dominant seventh of \Eflat\ (i.e., with \sd5, \sd7, and \sd4)
 while the right figure represents the same three pitch classes as a tonic
-major-minor seventh (with \sd1, \sd3, and \flat\sd7). Rings's system of heard
-scale degrees allows us to distinguish between the sets $S$\tsub{IMm7} and
-\Sdom: the \h{Bb7} in m.~5 of ``Blues for Alice'' is a member of
-$S$\tsub{IMm7}, while the \h{Bb7} in m.~8 of ``Solar'' is a member of
-\Sdom.\fn{tfe-3}
+major-minor seventh (with \sd1, \sd3, and \flat\sd7).\fn{tfe-3} Rings's system
+of heard scale degrees allows us to distinguish between the sets
+$S$\tsub{IMm7} and \Sdom: the \h{Bb7} in m.~5 of ``Blues for Alice'' is a
+member of $S$\tsub{IMm7}, while the \h{Bb7} in m.~8 of ``Solar'' is a member
+of \Sdom.
 
 \begin{figure}[tbp]
   \centerGraphic[width=30em]{eps/ch2/blues-tf-space.pdf}
@@ -873,18 +872,22 @@ $S$\tsub{IMm7}, while the \h{Bb7} in m.~8 of ``Solar'' is a member of
 
 With the distinction between tonic and dominant minor-major sevenths worked
 out, we can now specify the generic space of Figure \ref{tfe:generic-space} to
-create what we might call a ``blues \tf space'': a small portion of this space
+create what we might call a ``blues \tf space''; a small portion of this space
 is shown in Figure \ref{tfe:blues-tf-space}. This space, though, presents
-another problem: it would be nice if we could define the transformation from
-\h{Bb7} as tonic to \h{Bb7} as dominant (the arrow marked with a question mark
-in the figure). The pitch classes remain the same, but the \emph{quale}
-changes from tonic to dominant, so here Rings's notion of a ``pivot interval''
-is useful. Intervals in Rings's \gis are measured with ordered pairs:
-the first element is a scale-degree interval (measured upward), and the second
-is a pitch-class interval.\footcite[46--48]{rings:2011} ``Pivot intervals''
-are those intervals where the second element of the pair is
-$0$.\footcite[58--66]{rings:2011} In the situation here, we have what Rings
-would call a ``pivot fifth'' between the two \h{Bb7} chords:
+another complication: the top arrow marked with a question mark represents a
+transformation  from \h{Bb7} as tonic to \h{Bb7} as dominant.
+The pitch classes remain the same, but the \emph{quale} of the chord
+changes from tonic to dominant, so this transformation is not simply the
+identity ($T_0$).
+
+Because this transformation is one of \emph{quale}, we can turn to Rings's
+tonal \gis for an explanation. Intervals in this \gis are measured with
+ordered pairs, like the elements themselves: the first element is a
+scale-degree interval (measured upward), and the second is a pitch-class
+interval.\footcite[46--48]{rings:2011} ``Pivot intervals'' are those intervals
+where the second element of the pair is $0$.\footcite[58--66]{rings:2011} In
+the situation here, we have what Rings would call a ``pivot fifth'' between
+the two \h{Bb7} chords:
 %
 \begin{displaymath}
   \setlength{\arraycolsep}{3em}
@@ -917,37 +920,41 @@ realize our intuitions about the short passage in ``Blues for Alice'' (mm.~4--6)
 
 \subsection{Interaction with Diatonic Spaces}
 
-Though our study of other kinds of tonic chords has taken us relatively far
-afield from our starting point, these extensions are not necessary to
-understand most tonal jazz. For many purposes, the conventional space
-developed in Sections \ref{sec:tf-space-1} and \ref{sec:tf-space-tritones}
-will be sufficient. What is missing in our treatment so far, though, is the
-concept of a global tonic. This dissertation, after all, is interested in
-tonal jazz, and most of this music (and certainly all of the examples we have
-seen in this chapter) is in a key. To this point, we have acknowledged
-this fact only by mentioning the key of a particular tune in our analytical
-commentary, or circling the tonic chord in a representation of the space.
-Defining \tf space as a fully chromatic space has many advantages: it is rare
-that every chord in a tune can be understood in a single key, and it is
-convenient not to have to continually switch between diatonic collections.
+The preceding consideration of other kinds of tonic chords has taken us
+relatively far afield from our starting point, and indeed these extensions are
+not necessary to understand most tonal jazz. For many purposes, the
+conventional space developed in Sections \ref{sec:tf-space-1} and
+\ref{sec:tf-space-tritones} will be sufficient. What is missing in our
+treatment so far, though, is the concept of a global tonic. This dissertation,
+after all, is interested in tonal jazz, and most of this music (and certainly
+all of the examples in this chapter) is in a key. To this point, we have
+acknowledged this fact only by mentioning the key of a particular tune in our
+analytical commentary, or circling the tonic chord in a representation of the
+space. Defining \tf space as a fully chromatic space has many advantages: it
+is rare that every chord in a tune can be understood in a single key, and it
+is convenient not to have to continually switch between diatonic collections.
 Moreover, chromatic spaces are much more regular than their diatonic
 counterparts: chromatic step size is consistent, while diatonic step size
 varies between one and two half steps.\fn{tfe-4}
 
-Still, given the work we did in Section \ref{sec:diatonic-spaces} on diatonic
-transformational systems, it seems wise to consider what a diatonic \tf space
+Still, given the exploration of diatonic transformational systems in Section
+\ref{sec:diatonic-spaces}, it seems wise to consider what a diatonic \tf space
 might look like. We first made the space chromatic by arranging individual
 \tfo progressions in descending fifths (recall Figure
-\ref{tf:tf-circle-fifths}). We could instead wrap the space around the
-\emph{diatonic} circle of fifths, as shown in Figure
+\ref{tf:tf-circle-fifths}). We could instead arrange the space according to
+the \emph{diatonic} circle of fifths, as shown in Figure
 \ref{tfe:tf-diatonic-fifths}. This space looks much like the chromatic space,
 with the exception of the diminished fifth between \sd4 and \sd7, where the
-transformational structure of the chromatic space breaks down.
-All of the transformations linking these two key areas must all be combined
-with $T_1$: the \textsc{3rd} transformation becomes \textsc{3rd} $\odot\ T_1$,
-from \h{C7} (as V\tsup{7} of F) to \h{Csm7} (ii\tsup{7} of B); \textsc{7th}
-becomes \h{FM7} $\xrightarrow{7\text{\textsc{th}}\ \odot\ T_1}$ \h{Fs7}; and the
-$T_5$ linking the dominants becomes $T_6$.\fn{tfe-5}
+transformational structure of the chromatic space breaks down. The change of
+the descending perfect fifth ($T_5$) to a diminished fifth ($T_6$) means that
+all of the transformations linking these two key areas must all be combined
+with $T_1$: \h{C7} $\xrightarrow{3\text{\textsc{rd}}\ \odot\ T_1}$ \h{Csm7},
+\h{C7} $\xrightarrow{T_6\;}$ \h{Fs7}, and
+\h{FM7} $\xrightarrow{7\text{\textsc{th}}\ \odot\ T_1}$ \h{Fs7}.\fn{tfe-5}
+% the \textsc{3rd} transformation becomes \textsc{3rd} $\odot\ T_1$,
+% from \h{C7} (as V\tsup{7} of F) to \h{Csm7} (ii\tsup{7} of B); \textsc{7th}
+% becomes \textsc{7th} $\odot\ T_1$ from \h{FM7} to \h{Fs7}; and the $T_5$
+% linking the dominants becomes $T_6$.\fn{tfe-5}
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch2/tf-diatonic-fifths.pdf}
@@ -956,16 +963,17 @@ $T_5$ linking the dominants becomes $T_6$.\fn{tfe-5}
   \label{tfe:tf-diatonic-fifths}
 \end{figure}
 
-As we mentioned in chapter 1, diatonic space (the cyclic group
-$\mathcal{C}_7$) can be generated by any of its members, while chromatic space
-($\mathcal{C}_{12}$) can only be generated by the members 1, 5, 7, or 11
-(half-steps and perfect fourths/fifths). Diatonic \tf space, then, offers the
-interesting possibility of departing from the fifths-based space we have used
-in this chapter, in favor of some other organization of the space. To see how
-such an organization might allow us to capture different kinds of analytical
-insights, I want to return to briefly to Lee Morgan's ``Ceora.''
+As noted in Chapter 1, diatonic space (the cyclic group $\mathcal{C}_7$) can
+be generated by any of its members, while chromatic space ($\mathcal{C}_{12}$)
+can only be generated by the members 1, 5, 7, or 11 (half-steps and perfect
+fourths/fifths). Diatonic \tf space, then, offers the interesting possibility
+of departing from the fifths-based space used so in this chapter, in
+favor of some other organization of the space (since any interval we might
+choose will generate the entire space). To see how such an organization
+might allow us to capture different kinds of analytical insights, I want to
+return to briefly to Lee Morgan's ``Ceora.''
 
-In our analysis of ``Ceora'' in Section \ref{sec:ceora-analysis}, we saw that
+In the analysis of ``Ceora'' in Section \ref{sec:ceora-analysis}, we saw that
 the whole tune takes place in four key areas: \Dflat, C, \Bflat, and the tonic
 \Aflat. Given this organization, we might consider arranging \tf space in
 descending diatonic steps, as shown in Figure \ref{tfe:ab-diatonic-space}.
@@ -975,7 +983,7 @@ arrangement into steps means that the key areas used in the tune are adjacent
 in the space; in the chromatic space of Figure \ref{tf:ceora-space-1}, they
 were separated by an intervening fifth.
 
-\begin{figure}[tbh]
+\begin{figure}[tbp]
   \centerGraphic{eps/ch2/ab-diatonic-space.pdf}
   \caption{An \Aflat{}-major diatonic \tf space, arranged in descending steps.}
   \label{tfe:ab-diatonic-space}
@@ -986,7 +994,7 @@ exploring in this chapter, so it will be helpful to examine it in some detail
 before returning to ``Ceora.'' The arrangement into descending steps means
 that we can no longer align all of the seventh chords sharing a root; only the
 major and minor seventh chords sharing a root are adjacent in the
-space.\fn{tfe-5a} The \h{GM7} and \h{Gm7} (ii\tsup{7}/F) chords are close to
+space.\fn{tfe-5a} The \h{GM7} and \h{Gm7} (as ii\tsup{7}/F) chords are close to
 one another, for example, but \h{G7} (V\tsup{7}/C) is farther removed. The key
 areas in this figure are not connected by $T_5$, but instead by $t_6$: all of
 the roots of the major seventh chords (reading down the right side of the
@@ -999,10 +1007,11 @@ As we saw above, the tritone appearing in diatonic space alters the
 transformational structure somewhat: transformations spanning this tritone
 must must be combined with $T_1$. Here, the relationship between most
 I\tsup{7} and ii\tsup{7} chords is the transformation \textsc{7th}~$\odot$
-\textsc{3rd}, but between the keys of \Dflat\ and C (as well as \Aflat\ and G), it is
-\textsc{7th}~$\odot$ \textsc{3rd}~$\odot\ T_1$. This transformation is in fact
-equivalent to the transformation \slideS: the detail in Figure
-\ref{tfe:diatonic-space-detail} helps make this clear.
+\textsc{3rd}, but between the keys of \Dflat\ and C (as well as \Aflat\ and
+G), it is \textsc{7th}~$\odot$ \textsc{3rd}~$\odot\ T_1$. This transformation
+is in fact equivalent to the transformation \slideS (see the detail in Figure
+\ref{tfe:diatonic-space-detail}); this diatonic origin is one of the reasons
+the \slideS transformation is so common in tonal jazz.
 
 \begin{figure}[tbp]
   \centerGraphic[width=30em]{eps/ch2/diatonic-space-detail.pdf}
@@ -1050,11 +1059,12 @@ sets.\footcite[98--99]{rings:2011} The underlying transformation graph is not
 path consistent, since two different paths in the space can combine to form
 $t_6$: \slideS $\odot$ TF $\odot$ TF (\h{AbM7} to \h{GM7}, for example), and
 (\textsc{7th} $\odot$ \textsc{3rd}) $\odot$ TF $\odot$ TF (\h{GM7} to
-\h{FM7}).\fn{tfe-7} (Put another way, putting \h{GM7} in the top row of Figure
-\ref{tfe:ab-diatonic-space} does not work: obeying the $t_6$ arrow requires
+\h{FM7}).\fn{tfe-7} Put another way, putting \h{GM7} in the top row of Figure
+\ref{tfe:ab-diatonic-space} while leaving the transformational labels
+unchanged does not work: obeying the $t_6$ arrow requires
 \h{FM7} to occupy the row below, but following the other path would give
-\h{FsM7}.) It is, however, realizable: it is possible (as Figure
-\ref{tfe:ab-diatonic-space} attests) to fill in the nodes such that the arrows
+\h{FsM7}. The graph is, however, realizable: it is possible, as Figure
+\ref{tfe:ab-diatonic-space} attests, to fill in the nodes such that the arrows
 \emph{do} make sense.\footcite[29]{hook:2007} Both Rings and Hook have shown
 that transformation networks that are not path consistent---like the diatonic
 \tf space developed in this section---can nevertheless be analytically
