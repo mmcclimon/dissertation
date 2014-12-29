@@ -40,14 +40,14 @@
 % blank footnote comments
 \newcommand\blankfootnote[1]{%
   \begingroup
-  \renewcommand\thefootnote{}\footnote{\hspace{-2em}#1}%
+  \renewcommand\thefootnote{}\footnote{\hspace{-2.55em}#1}%
   \addtocounter{footnote}{-1}%
   \endgroup
 }
 
 \usepackage[ragged, bottom, splitrule]{footmisc}
-\setlength{\skip\footins}{14pt}
-\renewcommand{\footnotelayout}{\raggedright}
+\setlength{\skip\footins}{12pt}
+
 
 % fonts
 % -----------
@@ -80,6 +80,13 @@
 \newfontfamily\ssliningfont[Numbers=Proportional]{Fira Sans}
 
 \newfontface\abbrevSC[Letters=UppercaseSmallCaps,LetterSpace=5.0]{Junicode}
+
+% Use non-superscript number for footnotes
+\renewcommand{\@makefntext}[1]{%
+  \parindent1em \noindent
+  \hspace{\footnotemargin}{\normalfont \@thefnmark.~}%
+  \footnotelayout#1%
+}
 
 \usepackage{subscript}    % for \textsubscript
 \usepackage{paralist}
