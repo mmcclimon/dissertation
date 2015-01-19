@@ -48,31 +48,69 @@ substitutions: just as the tritone evenly divides the octave, so too the minor
 third evenly divides the tritone. In the previous chapter, introducing tritone
 substitutes to \tf space effectively divided the space in half, splitting the
 complete space into ``front'' and ``back'' sides. Repeating the process again
-results in a space that looks something like Figure \ref{mts:m3-space}. The
-introduction of minor thirds once again changes the topology of the space.
-This is somewhat easier to see by focusing again only on the centrally-located
-dominant seventh chords; while the tritone version of \tf space is
-topologically equivalent to a Möbius strip (recall Figure
-\ref{tft:mobius-dominants}), the minor-thirds version of the space is
+results in a space that looks something like Figure \ref{mts:m3-space} (which
+we will call ``m3 space''). The introduction of minor thirds once again
+changes the topology of the space. This is somewhat easier to see by focusing
+again only on the centrally-located dominant seventh chords; while the tritone
+version of \tf space is topologically equivalent to a Möbius strip (recall
+Figure \ref{tft:mobius-dominants}), the minor-thirds version of the space is
 equivalent to a torus (see Figure \ref{mts:m3-torus}).\fn{mts-1}
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch3/m3-space.pdf}
-  \caption[The complete minor-thirds representation of \tf space.]{The
+  \caption[The complete minor-thirds representation of \tf space (m3 space).]{The
     complete minor-thirds representation of \tf space (\ii chords omitted on
-    rear levels for clarity).}
+    rear levels for clarity), or m3 space.}
   \label{mts:m3-space}
 \end{figure}
 
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch3/m3-torus.pdf}
-  \caption{The toroidal center of minor-thirds \tf space.}
+  \caption{The toroidal center of m3 space (the m3-torus).}
   \label{mts:m3-torus}
 \end{figure}
 
-% some text about how the torus is similar to the Tonnetz, but also very different
+Figure \ref{mts:m3-torus} looks remarkably similar to a more familiar toroidal
+figure common in music theory: the neo-Riemannian Tonnetz. Despite the surface
+similarity though, the two are quite distinct. Like the Tonnetz, the dominant
+sevenths at the center of m3 space are arranged into axes of perfect fifths
+(verticals), minor thirds (horizontals), and major thirds (northwest-southeast
+diagonals, not shown in Figure \ref{mts:m3-torus}).\fn{mts-2} Crucially though, the
+vertices in the m3-torus are dominant seventh chords (ordered triples), not
+individual notes; the m3-torus does not represent a parsimonious voice-leading
+space. The neo-Riemannian Tonnetz can also be drawn to represent triads instead of
+individual notes, but the resulting graph (Douthett and Steinbach's
+``chicken-wire torus'') no longer resembles the m3-torus here.\fn{mts-3}
 
+The minor-thirds arrangement of \tf space makes it easy to define a
+transformation to represent the minor-third substitution (which we will call
+BD, for ``backdoor''):%
+%
+\begin{displaymath}
+    \mathrm{BD}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
+    \text{ and}\
+    Y = (\,y_r, y_t, y_s) = (x_r + 2, x_s - 4, x_t - 3) \in \Smaj
+\end{displaymath}%
+%
+Musically, there is no compelling reason to define BD such that the third is
+calculated from the previous chords seventh and vice versa; there is no
+voice-leading connection between them as there is in the TF transformation.
+Defining them this way, however, allows the same function to model both the
+transformation from minor to dominant seventh and from dominant to major
+seventh.\fn{mts-4} In the space, BD is represented as a diagonal line moving
+``frontward'' between two layers; see Figure \ref{mts:bd-transformation}. With
+this definition, we can easily understand the progression in mm.~3--5 of
+``Lady Bird'': \h{Fm7} \TFarrow\ \h{Bb7} $\xrightarrow{\mathrm{BD}}$\ \h{CM7}.
+
+\begin{figure}[tbp]
+  \centerGraphic[width=20em]{eps/ch3/bd-transformation.pdf}
+  \caption[The BD transformation in m3 space.]{The BD transformation from
+    \caph{Bb7} to \caph{CM7} in m3 space.}
+  \label{mts:bd-transformation}
+\end{figure}
+
+% text
 
 %%% Local Variables: %%%
 %%% mode: latex %%%
