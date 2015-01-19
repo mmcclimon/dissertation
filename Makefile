@@ -7,7 +7,8 @@ BUILD_PDF = $(BUILD_FOLDER)/$(FILE).pdf
 
 BIBTOOL = bibtool
 LATEX = latexmk
-LATEX_FLAGS = -xelatex --outdir=$(BUILD_FOLDER) -quiet
+LATEX_QUIET=-quiet
+LATEX_FLAGS = -xelatex --outdir=$(BUILD_FOLDER) $(LATEX_QUIET)
 LATEX_WATCH = -pvc
 
 .PHONY: watch clean pdf move
