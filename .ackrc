@@ -1,0 +1,4 @@
+--ignore-dir=build
+--ignore-dir=auto
+--ignore-dir=eps
+--ignore-dir=pdf
