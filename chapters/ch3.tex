@@ -698,11 +698,27 @@ complete voice-leading roster for ordered triples is given in Table
 
 \begin{table}[tbp]
   \centering
-  \begin{tabular}{}
-
+  \vspace{1em}
+  \begin{tabular}{ccccc}
+   Starting Chord  & Common Tones & Voice leading & Result & Transformation \\
+   \hline
+   \rule[1em]{0ex}{1ex}%
+   \h{CM7}  & $r,t$ & $s-1$ & \h{C7} & \textsc{7th} \\
+   \h{CM7}  & $r,s$ & $t-1$ & [\h{CmM7}] & [\textsc{3rd}] \\
+   \h{CM7}  & $t,s$ & $r+1$ & \h{Csm7} & \slideS \\[2ex]
+   %
+   \h{C7}  & $r,t$ & $s+1$ & \h{CM7} & $\text{\textsc{7th}}^{-1}$\\
+   \h{C7}  & $r,s$ & $t-1$ & \h{Cm7} & \textsc{3rd} \\
+   \h{C7}  & $t,s$ &  --   &  -- &  -- \\[2ex]
+   %
+   \h{Cm7}  & $r,t$ & $s+1$ & [\h{CmM7}] & [$\text{\textsc{7th}}^{-1}$] \\
+   \h{Cm7}  & $r,s$ & $t+1$ & \h{C7} & $\text{\textsc{3rd}}^{-1}$   \\
+   \h{Cm7}  & $t,s$ & $r-1$ & \h{BM7} & $\text{\textsc{slide}}_7^{-1}$
+                                        \vspace{1em}
   \end{tabular}
   \caption{Parsimonious voice-leading among members of \Smin, \Sdom, and
-    \Smaj.}
+    \Smaj. In this table, r, t, and s stand for the root, third, and seventh of a
+    chord, respectively.}
   \label{pvl:vl-table}
 \end{table}
 
