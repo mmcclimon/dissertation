@@ -10,7 +10,7 @@ transformational theorists; this focus will permit the opportunity to
 connect developments in jazz harmony with analogous developments in
 nineteenth-century harmony.
 
-\section{Minor-third Substitutions}
+\section{Minor-Third Substitutions}
 \label{sec:minor-third-subst}
 
 \subsection{Formalism}
@@ -234,7 +234,7 @@ found there are all minimal perturbations of a single diminished seventh
 chord, and each can be connected to the next with a minimal amount of
 voice-leading work (two semitones moving in opposite directions).\fn{mts-10}
 
-\section{Major-third Spaces}
+\section{Major-Third Spaces}
 \label{sec:maj3-spaces}
 
 \subsection{Introduction: Coltrane Changes}
@@ -624,6 +624,123 @@ tune.
 
 \section{Parsimonious Voice-Leading}
 \label{sec:parsimony}
+
+% xxx rewrite this paragraph
+Given the importance of parsimonious voice-leading in many current
+neo-Riemannian and transformational theories of harmony, it seems prudent to
+examine the transformational system we have been developing in the last two
+chapter in that light. Several of the transformations we have defined are
+indeed parsimonious (the \textsc{3rd} and \textsc{7th} transformations, among
+others) while others are less so (the transformation CS from this chapter, for
+example). Though there is indeed a great deal of literature on parsimonious
+voice-leading, all of our transformations are defined on ordered
+triples of the form (root, third, seventh), \emph{not} on triads or seventh
+chords. As such, we will need to take a few steps in order to connect our work
+here with the wider literature.
+
+For the moment, let us set aside the ordered-triple representation we have
+been using here and return to four-note seventh chords proper. Parsimonious
+relationships among seventh chords are shown in Douthett's ``Four Cube Trio''
+(recall Figure \ref{maj3:four-cube-trio}); Figure \ref{pvl:four-cube-correct}
+redraws a portion this figure to include major seventh chords.\fn{pvl-1}
+Because we are interested in this figure's application to jazz, the minor
+seventh chords have been labeled with root names, and the French sixth chords
+are labeled as dominant seventh chords with flatted fifths (a favorite chord of
+Thelonious Monk).
+
+\begin{figure}[tbp]
+  \centerGraphic[width=33em]{eps/ch3/four-cube-correct.pdf}
+  \caption[A portion of Four-Cube-Trio, redrawn to include major seventh
+  chords.]{A portion of Four-Cube-Trio, redrawn to include major seventh
+    chords. All lines, regardless of style, represent a single voice moving by
+    half-step.}
+  \label{pvl:four-cube-correct}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centerGraphic[width=33em]{eps/ch3/four-cube-transformations.pdf}
+  \caption{The transformations 3\textsc{rd}, 7\textsc{th},
+    \textsc{slide}\textsubscript{7}, TF, and \tft in the Four-Cube-Trio.}
+  \label{pvl:four-cube-transformations}
+\end{figure}
+
+By way of illustration, Figure \ref{pvl:four-cube-transformations} shows some
+of the transformations we have defined in the last two chapters in the
+Four-Cube Trio. The most important thing to note about this figure is that it
+is \emph{not} a voice-leading graph of the transformations as they have been
+defined. Because all of our transformations are defined on ordered triples
+(ignoring the fifth of a seventh chord), mapping them into four-note space can
+be misleading. In our ordered triple representations, for example, there is no
+distinction between half-diminished and minor seventh chords, nor between the
+French sixths and the dominant sevenths (i.e., \h{Bb7} is indistinguishable
+from \h{Bb7b5}). This figure is included only to demonstrate that some of the
+transformations do represent single voice-leadings (the \textsc{3rd},
+\textsc{7th}, and \slideS transformations), while others do not.
+
+The parsimonious picture that emerges after we collapse the chords which have
+the same ordered-triple representation is much less interesting.\fn{pvl-2}
+Most damaging to the structure of the Four-Cube Trio is that the minor seventh
+chords become more discriminating: considered as an ordered triple, a minor
+seventh chord is only connected to one dominant seventh chord, not two (see
+Figure \ref{pvl:minor-seventh-parsimony}). This, plus the collapse of the
+French sixths into dominant sevenths, means that every chord is connected to
+exactly one other by single-half-step voice-leading. (For reference, a
+complete voice-leading roster for ordered triples is given in Table
+\ref{pvl:vl-table}.)
+
+\begin{figure}[tbp]
+  \centerGraphic{eps/xxx.pdf}
+  \caption[Parsimonious voice leading of the minor seventh
+    chord.]{Parsimonious voice leading of the minor seventh chord, with its
+      fifth (left) and without (right).}
+  \label{pvl:minor-seventh-parsimony}
+\end{figure}
+
+\begin{table}[tbp]
+  \centering
+  \begin{tabular}{}
+
+  \end{tabular}
+  \caption{Parsimonious voice-leading among members of \Smin, \Sdom, and
+    \Smaj.}
+  \label{pvl:vl-table}
+\end{table}
+
+We could generate the entire set of 36 ordered triples
+using the single-voice half-step transformations \textsc{7th}, \textsc{3rd},
+and $\text{\textsc{slide}}_7^{-1}$:\fn{pvl-3}%
+%
+\begin{center}
+  \h{CM7} $\xrightarrow{\text{7\textsc{th}}\,}$
+  \h{C7}  $\xrightarrow{\text{3\textsc{rd}}\,}$
+  \h{Cm7} $\xrightarrow{\text{\textsc{slide}}_7^{-1}\,}$
+  \h{BM7} $\xrightarrow{\text{7\textsc{th}}\,}$
+  \h{B7}  $\ldots\ $
+  \h{Dbm7} $\xrightarrow{\text{\textsc{slide}}_7^{-1}\,}$
+  \h{CM7}
+\end{center}%
+%
+The resulting graph, however, is simply a circle, and does not mirror the rich
+voice-leading network of the Four-Cube Trio. We could redefine all of the
+other transformations in terms of these single voice-leadings (\h{Dm7}
+\TFarrow\ \h{G7} becomes \h{Dm7}
+$\xrightarrow{\text{\textsc{slide}}_7^{-1}\ \odot\ {(\text{7\textsc{th}}\ \odot\
+  \text{3\textsc{rd}}\ \odot\ \text{\textsc{slide}}_7^{-1})}^6\ \odot\
+  7\text{\textsc{th}}\,}$
+\h{G7}), but these decompositions would not seem to give much insight into
+tonal jazz---which is, after all, the aim of this study.
+
+Throughout the course of the last two chapters, we have developed a fairly
+complete transformational system for jazz harmony. Taking \tf space as our
+starting point, we have seen how it can altered in various ways to show
+different aspects of standard tonal jazz harmony. To this point, though, we
+have focused almost exclusively on chord symbols (via their abstraction into
+ordered triples). Of course, jazz harmony involves quite a bit more than
+relationships among three-note chords: these basic structures are altered in
+various ways by rhythm section members, and we have yet to say anything at all
+about the role harmony plays for an improvising musician. To do so, we'll need
+to expand our harmonic universe somewhat; the next chapter begins to take the
+first steps in that direction.
 
 %%% Local Variables: %%%
 %%% mode: latex %%%
