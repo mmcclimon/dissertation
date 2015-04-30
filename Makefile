@@ -1,4 +1,5 @@
 FILE = diss
+DISCOG_FILE = discog.bib
 TEX_FILE = $(FILE).tex
 
 BUILD_FOLDER = build
@@ -26,6 +27,10 @@ move:
 
 .PHONY: bib
 bib: $(FILE).bib
+	$(BIBTOOL) -i $< -o $<
+
+.PHONY: discog
+discog: $(DISCOG_FILE)
 	$(BIBTOOL) -i $< -o $<
 
 # Biber is stupid and the cache is easily corrupted. If citations aren't
