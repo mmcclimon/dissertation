@@ -34,10 +34,12 @@ discog: $(DISCOG_FILE)
 	$(BIBTOOL) -i $< -o $<
 
 # Biber is stupid and the cache is easily corrupted. If citations aren't
-# working, 'make fix' will fix it.
+# working, 'make fix' will fix it. This isn't portable, but neither is my
+# workflow.
 .PHONY: fix
 fix:
 	rm -rf $$(biber --cache)
+	rm $(BUILD_FOLDER)/$(FILE).{bcf,bbl,blg}
 
 clean: move
 	$(LATEX) -c --outdir=$(BUILD_FOLDER)
