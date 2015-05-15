@@ -112,6 +112,17 @@
 \titleformat*{\subsection}{\normalsize\scshape}
 
 \usepackage[titletoc]{appendix}
+\usepackage{tocloft}
+\renewcommand{\@dotsep}{2}
+\renewcommand{\cftchapafterpnum}{\vspace{8pt}}
+
+% add chapter divisions in list of figures
+\newcommand{\addtolof}[1]{%
+  \addtocontents{lof}{%
+    \noindent \textbf{\thechapter \quad \nameref{#1}}%
+    \vspace{8pt}%
+  }%
+}
 
 % page header
 % -----------
