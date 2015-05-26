@@ -599,6 +599,9 @@ chord-scales as first-class objects will allow us to take seriously the idea
 that scales \emph{are} harmony, and will enable analytical observations about
 the way improvising musicians understand harmony.
 
+\subsection{Introduction: Scale Theory}
+\label{subsec:scale-theory}
+
 First, though, it will be useful to take a brief tour through other analytical
 approaches that incorporate scales. Dmitri Tymoczko dedicates much of \emph{A
 Geometry of Music} to the study of scales, and applies them analytically to
@@ -657,7 +660,7 @@ Russell's Lydian tonic system, despite all of its seemingly unnecessary
 complexity, does provide a simple solution to the cardinality problem. Because
 all non-diatonic scales have a Lydian scale as their ultimate source (their
 parent scale), this means we can understand these other scales as alterations
-of some diatonic diatonic scale. All of the scales in Figure
+of some diatonic scale. All of the scales in Figure
 \ref{lcc:principal-scales} (p.~\pageref{lcc:principal-scales}), for example,
 are derived from the F Lydian diatonic collection: the D melodic minor
 collection (Lyd.\ augmented), F harmonic major (Lyd.\ diminished), F acoustic
@@ -666,6 +669,9 @@ two octatonic scales (\abbrev{OCT}\tsub{02} and \abbrev{OCT}\tsub{12}, the
 auxiliary diminished scales). Russell's four horizontal scales, of which the
 blues scale is the most important, also have a Lydian tonic, and can be
 understood as still another variation on the Lydian collection.\fn{cst-6}
+
+\subsection{A GIS Proper}
+\label{subsec:chord-scale-gis}
 
 This reduction to a single diatonic collection will be our first step in
 devising a transformational system for chord-scales. Instead of referring to a
@@ -681,6 +687,104 @@ both refer to the collection \nat.
 % scales belong to. This will transition into how we need some more
 % information, namely a scale index and a chord symbol.
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{rl}
+    1. & Lydian \\
+    2. & Lydian augmented \\
+    3. & Lydian diminished \\
+    4. & Lydian dominant \\
+    5. & Whole-tone \\
+    6. & Whole-half diminished \\
+    7. & Half-whole diminished \\
+    8. & Blues scale
+  \end{tabular}
+  \caption{A scale index inspired by Russell, listed from most consonant to
+    most dissonant.}
+  \label{cst:scale-index}
+\end{table}
+
+It is not yet clear, though, how Russell's other member scales might be
+incorporated into this system. To do so, first we will first introduce the
+concept of a \emph{scale index}, as shown in Table \ref{cst:scale-index}.
+Several things are worth noting about this table that are different from
+Russell's presentation. First, some of the scale names
+have been changed to reflect their common usage; we no longer need to remember
+which of the diminished (octatonic) scales is the ``blues'' variant.\fn{cst-7}
+I have maintained Russell's names when they clarify the relationship to the
+parent scale: scale 2 remains ``Lydian augmented'' rather than ``melodic
+minor,'' since the D melodic minor scale has F Lydian, not D Lydian as its
+parent scale (we will return to this point shortly).
+
+There are eight scales in our scale index, but Russell gives eleven member
+scales. The reason for this is a practical one: two of the horizontal scales
+are simply diatonic modes (the major scale and major flat seventh), and the
+third is a major scale with an additional \sharp{}\sd5 (major augmented
+fifth), which we can usually understand as a chromatic passing tone. The blues
+scale, though, does appear frequently in jazz, and merits its own place
+here.\fn{cst-8} This scale is given last in the order because it is one of
+Russell's horizontal scales, which are inherently more outgoing than their
+vertical companions.
+
+With some mathematical sleight of hand, we can define a chord-scale \gis using
+our scale index along with a diatonic collection as above. Elements of this
+\gis have the form \scalepair{\emph{diatonic collection}}{\emph{scale name}};
+the F Lydian collection is described by the pair \scalepair{\nat}{Lydian},
+while \scalepair{2\flat}{Lyd.\ dominant} describes the \Eflat\ acoustic
+collection. Creating an ordered-pair \gis of course requires us to show that
+both elements are part of a mathematical group. Though this will not be the
+final form of our chord-scale \gis, we will define this one more formally
+here, with the knowledge that it will be refined before we are finished. It is
+important to realize that this \gis is designed to reflect Russell's own views
+of chord--scale equivalence. There are only three distinct octatonic
+collections, for example, but the \gis contains 24 distinct diminished scales:
+whole-half and half-whole diminished scales on all twelve Lydian tonics.
+
+The first element of the pair is a key signature, which have been studied in a
+transformational context by Julian Hook.\fn{cst-9} Because we are interested
+in collections in jazz (often a non-notated music), we will consider
+enharmonically equivalent key signatures (like 6\sharp\ and 6\kern0.8pt\flat) to be
+identical. There are, then, only twelve key signatures, operated on by the
+sharpwise and flatwise transformations, $s_n$ and $f_n$, which add $n$ sharps
+or flats to a key signature, respectively.\fn{cst-10}
+
+The scales in our scale index do not obviously form a group, but we can define
+the eight scales to be isomorphic to $\intZ_8$, the integers mod 8 (this
+definition is somewhat artificial, and we will relax it shortly). The eight
+scales do form a progression from consonance to dissonance, and for Russell it
+is true that the whole-tone scale is in some sense further away from the
+Lydian tonic than the Lydian augmented scale.\fn{cst-11} They are not,
+however, cyclic in any meaningful way: it is not as though, for example, the
+blues scale is the most dissonant scale and if you take one more step you
+arrive back at the Lydian scale. Nor are the metaphorical distances of
+consonance between the scales really consistent: though Russell does not
+define them (and will not attempt to do so here), the consonant distance
+between the two diminished scales seems much less than the distance between
+the whole-tone and whole-half diminished scales.\fn{cst-12}
+
+If we accept these limitations of the scales' group structure, though, we gain
+all the benefits of a \gis. We can understand a passage like the one in
+Figure \ref{cst:gis-fiveone} as the \gis interval \scalepair{$s_1$}{$0$}:
+where the collection changes but the scale does not. Figure
+\ref{cst:gis-blues-lyd} shows a passage which begins with the F blues scale
+and resolves to the F Lydian collection, representing the \gis interval
+\scalepair{$e$}{$-7$}, where $e$ indicates the identity element.\fn{cst-13}
+
+\begin{figure}[tbp]
+  \centerGraphic{eps/ch4/gis-fiveone.pdf}
+  \caption{A typical V--I jazz lick, along with its chord-scale \textsc{GIS}
+    analysis.}
+  \label{cst:gis-fiveone}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centerGraphic{eps/ch4/gis-blues-lyd.pdf}
+  \caption{A resolution from the F blues scale to the F Lydian scale.}
+  \label{cst:gis-blues-lyd}
+\end{figure}
+
+\subsection{Refining the GIS}
+\label{subsec:refining-gis}
 
 %%% Local Variables:
 %%% mode: latex
