@@ -683,14 +683,10 @@ awkwardness of having to refer constantly to the Lydian mode. The second mode
 of the F Lydian scale is of course the same as the G Mixolydian scale, and
 both refer to the collection \nat.
 
-% Here, need some text about how to determine what diatonic collections other
-% scales belong to. This will transition into how we need some more
-% information, namely a scale index and a chord symbol.
-
-\begin{table}[h]
+\begin{table}[tbp]
   \centering
   \begin{tabular}{rl}
-    1. & Lydian \\
+    1. & Lydian (diatonic) \\
     2. & Lydian augmented \\
     3. & Lydian diminished \\
     4. & Lydian dominant \\
@@ -785,6 +781,98 @@ and resolves to the F Lydian collection, representing the \gis interval
 
 \subsection{Refining the GIS}
 \label{subsec:refining-gis}
+
+This initial pass at a chord-scale \gis is a useful first approximation, but
+there are some aspects of it that are not clear. How, for instance, should we
+determine what scales match with what diatonic collections? In some cases the
+answer is clear, but in others it is not. In Figure \ref{cst:gis-fiveone}
+above, for example, we labeled the \h{G7} chord as \scalepair{\nat}{Lyd.},
+rather than, say, \scalepair{1\sharp}{Lyd.}; the \sd4 that would confirm
+either is absent. The problem seems to become even more intractable when we
+encounter the symmetrical scales: a diminished scale has eight possible parent
+diatonic collections.
+
+\begin{table}[p]
+  \centerGraphic[angle=90,height=.9\textheight]{eps/ch4/scale-table.pdf}
+  \caption{Common chords in the modes of the F Lydian Chromatic scale.}
+  \label{cst:scale-table}
+\end{table}
+
+Here again, we will turn to George Russell. Table \ref{cst:scale-table}
+presents a portion of the foldout chart from the \emph{Lydian Chromatic Concept}
+in somewhat simplified form (it may be useful to compare this table with Table
+\ref{lcc:lydian-pmgs} on p.~\pageref{lcc:lydian-pmgs}). The top of this table
+gives the eight scales in the scale index of the previous section, while the
+left side lists the modal tonics.\fn{cst-14} Only modes that give rise to
+common chords are shown in this table; notably absent are modes III and V,
+which are given by Russell as tonic chords with altered bass notes. The most
+common chords and scales (which are also the most ingoing) appear on the left
+side of the table, and rarer chords and scales appear nearer the right side.
+Alternate names for scales, when they exist, are given in italics in the
+appropriate box.
+
+It is important to realize that for Russell the modal degrees (what he calls
+primary modal tonics) are roughly equivalent to functional categories. This is
+important to us here because it helps us to determine a scale's parent
+diatonic collection. All of the chords in the top row of the table are
+first-mode scales, and act like tonic chords. The \h{F7} in the top row of the
+Lydian \flat{}7 column thus represents a major-minor seventh chord acting as
+tonic (Russell actually gives this chord symbol as ``Maj \flat{}7'' or ``Maj
+9th \flat{}7''). Likewise, dominant chords appear mostly in mode II, minor
+seventh chords appear in mode VI, and half-diminished sevenths in mode
++IV.\fn{cst-15}
+
+Of course, the pairing of modes and scales is still not unique, and is
+ultimately a question of analysis. Consider the scale in Figure
+\ref{cst:ambiguous-acoustic}a. This is an F acoustic scale, which can appear
+as an F Lydian \flat{}7 scale or as the second mode of an \Eflat\ Lydian
+augmented scale.\fn{cst-16} The \gis allows us to show this, since ``F
+acoustic as tonic'' is a different \gis member than ``F acoustic as
+dominant.'' Figure \ref{cst:ambiguous-acoustic}b places the ambiguous scale in
+the context of a \tfo progression in \Bflat\ (you might imagine this is the
+last four bars of a solo on George Gershwin's ``I Got Rhythm''). Here, the
+acoustic scale clearly functions as a dominant, and would be labeled
+\scalepair{2\flat}{Lyd.\ aug.}: the parent collection is \Eflat\ Lydian
+(2\flat), and this is a mode of the Lydian augmented scale (number 2 in the
+scale index of Table \ref{cst:scale-index}). In contrast, Figure
+\ref{cst:ambiguous-acoustic}c places the fragment in an F blues \tfo
+progression (the end of Charlie Parker's ``Now's the Time,'' perhaps). Because
+the collection now functions as a tonic chord, it represents the \gis member
+\scalepair{\nat}{Lyd.\ \flat{}7}.
+
+\begin{figure}[tbp]
+  \centerGraphic{eps/ch4/ambiguous-acoustic.pdf}
+  \caption{An ambiguous acoustic scale and two concrete presentations of it.}
+  \label{cst:ambiguous-acoustic}
+\end{figure}
+
+The intuitions captured by the chord-scale \gis here are not quite like those
+represented by other theories of chord-scales. Indeed, the fact that both
+\scalepair{\nat}{Lyd.\ \flat{}7} and \scalepair{2\flat}{Lyd.\ aug.} refer to
+the same 7-element set is not immediately apparent in the \gis itself.
+Theories that prioritize voice-leading would likely include the F acoustic
+collection only once, since the voice leading from this scale to itself is
+maximally efficient (no voices move at all). Nor is it enough simply to label
+the scale as the F Lydian dominant scale, as this does not capture the
+difference in function between the passages in Figure
+\ref{cst:ambiguous-acoustic}b--c.
+
+The \gis in fact is one of \emph{functional} or \emph{heard} chord-scales. In
+this way, it is perhaps most like Steven Rings's \gis for ``heard scale
+degrees.''\footcite[44--50 and throughout]{rings:2011} Rings argues that scale
+degrees are a perceived, rather than inherent, quality of music, and thus
+listeners have different experiences when hearing ``A4
+as \sd1'' and ``A4 as \sd7.''\footcite[42]{rings:2011} In many ways, this
+distinction is at the heart of what Russell was trying to accomplish in the
+\emph{Lydian Chromatic Concept}. For Russell, the F acoustic collection played
+over a tonic major-minor seventh chord really \emph{is} a different entity
+than the same collection played over a dominant major-minor seventh chord.
+This is what Russell means when he writes of ``a state of complete and
+indestructible chord/scale unity'' (\lcc 10): if an \h{F7} chord can function
+in more than one way, so too can its corresponding scale.
+
+% Here: relax GIS a bit (from gis to quasi-gis), polar graph of chord-scales,
+% adding chord symbol information to quasi-gis.
 
 %%% Local Variables:
 %%% mode: latex
