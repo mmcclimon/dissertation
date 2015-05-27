@@ -874,6 +874,48 @@ in more than one way, so too can its corresponding scale.
 % Here: relax GIS a bit (from gis to quasi-gis), polar graph of chord-scales,
 % adding chord symbol information to quasi-gis.
 
+Previous chapters have constructed various musical spaces in which to analyze
+passages, and we can turn this \gis into a space as well. Before doing that,
+though, we will relax its definition such that the scale indexes are no longer
+isomorphic to $\intZ_8$. We noted above that this isomorphism was somewhat
+artificial, and the space becomes more intuitive if we simply use the integers
+0--7. Of course, these integers do not form a group (they are not closed
+under addition), and so the resulting space is not a proper \gis. It does
+reflect the realities of Russell's system, though: the blues scale is the most
+outgoing scale, and is maximally far away from the consonant Lydian. Intervals
+in this new non-group come are taken from the set $\{-7, -6, \ldots , 6,
+7\}$; except for the lack of closure, everything else about this almost-\gis
+is identical.
+
+We can visualize this space using the diagram in Figure \ref{cst:polar-gis}.
+In this figure, the diatonic (Lydian) scale is centrally located, with more
+outgoing scales located further toward the outside; these concentric circles
+combine with the ordinary circle of fifths to divide each scale into diatonic
+wedges.\fn{cst-17} The figure is inspired by Russell's description of the
+Lydian as a ``musical `Star-Sun'\,'' (\lcc 8) and the ultimate source of tonal
+gravity. More outgoing scales have more gravitational potential energy, as it
+were, and are more dissonant with the underlying diatonic
+collection. We can use this figure to map the two presentations of the F
+acoustic scale of Figure \ref{cst:ambiguous-acoustic}; such a mapping is given
+in Figure \ref{cst:polar-acoustic}. This visualization makes clear that the
+second presentation (a tonic \h{F7} chord) is more outgoing than the first (a
+dominant \h{F7} chord), as well as the shift in underlying diatonic collection
+(\Eflat\ Lydian vs.\ F Lydian).
+
+\begin{figure}[tbp]
+  \centerGraphic{eps/ch4/polar-gis.pdf}
+  \caption{A ``planetary'' model of the chord-scale \textsc{GIS}.}
+  \label{cst:polar-gis}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centerGraphic{eps/ch4/polar-acoustic.pdf}
+  \caption[Two presentations of the F acoustic scale in the planetary
+  model.]{Two presentations of the F acoustic scale, shown in red, in the
+    planetary model (compare Figure \ref{cst:ambiguous-acoustic}).}
+  \label{cst:polar-acoustic}
+\end{figure}
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../diss"
