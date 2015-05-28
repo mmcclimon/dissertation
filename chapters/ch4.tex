@@ -686,14 +686,14 @@ both refer to the collection \nat.
 \begin{table}[tbp]
   \centering
   \begin{tabular}{rl}
-    1. & Lydian (diatonic) \\
-    2. & Lydian augmented \\
-    3. & Lydian diminished \\
-    4. & Lydian dominant \\
-    5. & Whole-tone \\
-    6. & Whole-half diminished \\
-    7. & Half-whole diminished \\
-    8. & Blues scale
+    0. & Lydian (diatonic) \\
+    1. & Lydian augmented \\
+    2. & Lydian diminished \\
+    3. & Lydian dominant \\
+    4. & Whole-tone \\
+    5. & Whole-half diminished \\
+    6. & Half-whole diminished \\
+    7. & Blues scale
   \end{tabular}
   \caption{A scale index inspired by Russell, listed from most consonant to
     most dissonant.}
@@ -702,13 +702,14 @@ both refer to the collection \nat.
 
 It is not yet clear, though, how Russell's other member scales might be
 incorporated into this system. To do so, first we will first introduce the
-concept of a \emph{scale index}, as shown in Table \ref{cst:scale-index}.
+concept of a \emph{scale index}, as shown in Table \ref{cst:scale-index} (they
+are numbered from 0 to 7 for reasons that will become clear shortly).
 Several things are worth noting about this table that are different from
 Russell's presentation. First, some of the scale names
 have been changed to reflect their common usage; we no longer need to remember
 which of the diminished (octatonic) scales is the ``blues'' variant.\fn{cst-7}
 I have maintained Russell's names when they clarify the relationship to the
-parent scale: scale 2 remains ``Lydian augmented'' rather than ``melodic
+parent scale: scale 1 remains ``Lydian augmented'' rather than ``melodic
 minor,'' since the D melodic minor scale has F Lydian, not D Lydian as its
 parent scale (we will return to this point shortly).
 
@@ -728,15 +729,13 @@ our scale index along with a diatonic collection as above. Elements of this
 the F Lydian collection is described by the pair \scalepair{\nat}{Lydian},
 while \scalepair{2\flat}{Lyd.\ dominant} describes the \Eflat\ acoustic
 collection. Creating an ordered-pair \gis of course requires us to show that
-both elements are part of a mathematical group. Though this will not be the
-final form of our chord-scale \gis, we will define this one more formally
+both elements are part of a mathematical group. Though this will not be its
+final form, we will define this chord-scale \gis more formally
 here, with the knowledge that it will be refined before we are finished. It is
 important to realize that this \gis is designed to reflect Russell's own views
 of chord--scale equivalence. There are only three distinct octatonic
 collections, for example, but the \gis contains 24 distinct diminished scales:
 whole-half and half-whole diminished scales on all twelve Lydian tonics.
-
-% xxx clarify the distinction between GIS intervals and transformations here
 
 The first element of the pair is a key signature, which have been studied in a
 transformational context by Julian Hook.\fn{cst-9} Because we are interested
@@ -744,7 +743,9 @@ in collections in jazz (often a non-notated music), we will consider
 enharmonically equivalent key signatures (like 6\sharp\ and 6\kern0.8pt\flat) to be
 identical. There are, then, only twelve key signatures, operated on by the
 sharpwise and flatwise transformations, $s_n$ and $f_n$, which add $n$ sharps
-or flats to a key signature, respectively.\fn{cst-10}
+or flats to a key signature, respectively; we might write \mbox{1\sharp
+$\xrightarrow{\ s_1\ }$ 2\sharp}, \mbox{2\flat $\xrightarrow{\ f_2\ }$ 4\flat}, or
+\mbox{1\flat $\xrightarrow{\ s_3\ }$ 2\sharp}.\fn{cst-10}
 
 The scales in our scale index do not obviously form a group, but we can define
 the eight scales to be isomorphic to $\intZ_8$, the integers mod 8 (this
@@ -759,14 +760,21 @@ consonance between the scales really consistent: though Russell does not
 define them (and will not attempt to do so here), the consonant distance
 between the two diminished scales seems much less than the distance between
 the whole-tone and whole-half diminished scales.\fn{cst-12}
-
 If we accept these limitations of the scales' group structure, though, we gain
-all the benefits of a \gis. We can understand a passage like the one in
-Figure \ref{cst:gis-fiveone} as the \gis interval \scalepair{$s_1$}{$0$}:
-where the collection changes but the scale does not. Figure
-\ref{cst:gis-blues-lyd} shows a passage which begins with the F blues scale
-and resolves to the F Lydian collection, representing the \gis interval
-\scalepair{$e$}{$-7$}, where $e$ indicates the identity element.\fn{cst-13}
+all the benefits of a \gis. Intervals between scales are calculated as
+integers mod 8, using the scale labels from Table \ref{cst:scale-table}: the
+interval from a Lydian augmented scale to a whole-tone scale if $3$ ($=4-1$),
+from a whole-tone scale to a half-whole diminished scale is $2$, and so on.
+
+We will call a transformation between chord-scales $R$, after Russell; these
+transformations have the form $R$\scalepair{\emph{signature
+    transformation}}{\emph{scale index interval}}. This transformation acts on
+elements of the \gis in a pairwise fashion in the usual way. We can understand
+a passage like the one in Figure \ref{cst:gis-fiveone} as expressing the
+$R$\scalepair{$s_1$}{$0$} transformation: the collection changes but the scale does not.
+Figure \ref{cst:gis-blues-lyd} shows a passage which begins with the F blues
+scale and resolves to the F Lydian collection, representing the transformation
+$R$\scalepair{$e$}{$1$}, where $e$ indicates the identity element.\fn{cst-13}
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch4/gis-fiveone.pdf}
@@ -781,6 +789,7 @@ and resolves to the F Lydian collection, representing the \gis interval
   \label{cst:gis-blues-lyd}
 \end{figure}
 
+\FloatBarrier
 \subsection{Relaxing the GIS}
 \label{subsec:relaxing-gis}
 
@@ -880,13 +889,13 @@ Previous chapters have constructed various musical spaces in which to analyze
 passages, and we can turn this \gis into a space as well. Before doing that,
 though, we will relax its definition such that the scale indexes are no longer
 isomorphic to $\intZ_8$. We noted above that this isomorphism was somewhat
-artificial, and the space becomes more intuitive if we simply use the integers
-0--7 (which we will call $S$ for the time being). The resulting space, though,
-runs afoul of the formal requirements for a \gis, which requires that \ivls
-form a mathematical group. The set $S$ under addition does not form a group,
-since it is not closed under addition ($6+5$ is not a member of $S$\,), is not
-associative ($1+1$ and $6+1$ are defined, but $[1 + 6] + 1$ is not), and
-elements do not have inverses.
+artificial, and the space becomes more intuitive if we simply use the
+non-modular integers 0--7 (which we will call $S$ for the time being). The
+resulting space, though, runs afoul of the formal requirements for a \gis,
+which requires that \ivls form a mathematical group. The set $S$ under
+addition does not form a group, since it is not closed ($6+5$
+is not a member of $S$\,), it is not associative ($1+1$ and $6+1$ are defined,
+but $[1 + 6] + 1$ is not), and elements do not have inverses.
 
 This is of course one of the well-known limitations of \gis{}es: the musical
 spaces must be continuous and infinite.\fn{cst-18} A \gis cannot account for
@@ -894,11 +903,12 @@ musical spaces that are discontinuous or have ``boundaries,'' which is the
 case here: it is not possible to conceive of a scale in our system which is
 more ingoing than the Lydian scale, or more outgoing than the blues
 scale.\fn{cst-19} Nevertheless, the transformations developed above still seem
-to be reasonable intuitions about the nature of chord-scales. As Hook notes,
-``the narrative portions of Lewin's analyses generally far transcend the
-logical consequences of the group structure,'' so the fact that a mathematical
-group does not underlie this no-longer-\gis should not dissuade us
-from exploring its analytical potential.\footcite[185]{hook:2007gmit}
+to be reasonable reflections of intuitions about the nature of chord-scales.
+As Hook notes, ``the narrative portions of Lewin's analyses [in \emph{GMIT}]
+generally far transcend the logical consequences of the group structure,'' so
+the fact that a mathematical group does not underlie this no-longer-\gis
+should not dissuade us from exploring its analytical
+potential.\footcite[185]{hook:2007gmit}
 
 Lewin does allow for transformations to form semigroups, but the scale index
 transformations do not form a semigroup either (a semigroup must still be
@@ -907,14 +917,10 @@ closed under the group action). All possible intervals for the scale indexes
 forms neither a group nor a semigroup. It does contain the additive identity
 ($0$), and every element has an inverse, so we can use this set under addition
 in practically the same way. Every interval is well-defined, but all intervals
-are not possible from every scale. For example:
-\mbox{int$\big($\scalepair{\nat}{Lyd.}, \scalepair{\nat}{Whole-tone}$\big)=$
-  \scalepair{$e$}{$4$}}, and \mbox{int$\big($\scalepair{\nat}{Whole-tone},
-  \scalepair{\nat}{Lyd.}$\big)=$ \scalepair{$e$}{$-4$}}, but there is no
-chord-scale which satisfies $x$ in the equation
-\mbox{int$\big($\scalepair{\nat}{Blues}, $x\big)=$ \scalepair{$e$}{$4$}},
-since there is no scale that is four levels more outgoing than the blues
-scale.
+are not possible from every scale. For example: \mbox{int(Lyd., Whole-tone) =
+  $4$}, and \mbox{int(Whole-tone, Lyd.) = $-4$}}, but there is no scale which
+satisfies $x$ in the equation \mbox{int(Blues, $x$) = $4$}, since there is no
+scale that is four levels more outgoing than the blues scale.
 
 With these caveats, we can visualize this space using the diagram in Figure
 \ref{cst:polar-gis}. In this figure, the diatonic (Lydian) scale is centrally
@@ -931,13 +937,13 @@ the second presentation (a tonic \h{F7} chord) is more outgoing than the first
 (a dominant \h{F7} chord), as well as the shift in underlying diatonic
 collection (\Eflat\ Lydian vs.\ F Lydian).
 
-\begin{figure}[tbp]
+\begin{figure}[p]
   \centerGraphic{eps/ch4/polar-gis.pdf}
   \caption{A ``planetary'' model of the chord-scale \textsc{GIS}.}
   \label{cst:polar-gis}
 \end{figure}
 
-\begin{figure}[tbp]
+\begin{figure}[p]
   \centerGraphic{eps/ch4/polar-acoustic.pdf}
   \caption[Two presentations of the F acoustic scale in the planetary
   model.]{Two presentations of the F acoustic scale, shown in red, in the
