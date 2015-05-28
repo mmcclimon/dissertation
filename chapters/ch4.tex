@@ -736,6 +736,8 @@ of chord--scale equivalence. There are only three distinct octatonic
 collections, for example, but the \gis contains 24 distinct diminished scales:
 whole-half and half-whole diminished scales on all twelve Lydian tonics.
 
+% xxx clarify the distinction between GIS intervals and transformations here
+
 The first element of the pair is a key signature, which have been studied in a
 transformational context by Julian Hook.\fn{cst-9} Because we are interested
 in collections in jazz (often a non-notated music), we will consider
@@ -779,8 +781,8 @@ and resolves to the F Lydian collection, representing the \gis interval
   \label{cst:gis-blues-lyd}
 \end{figure}
 
-\subsection{Refining the GIS}
-\label{subsec:refining-gis}
+\subsection{Relaxing the GIS}
+\label{subsec:relaxing-gis}
 
 This initial pass at a chord-scale \gis is a useful first approximation, but
 there are some aspects of it that are not clear. How, for instance, should we
@@ -879,28 +881,55 @@ passages, and we can turn this \gis into a space as well. Before doing that,
 though, we will relax its definition such that the scale indexes are no longer
 isomorphic to $\intZ_8$. We noted above that this isomorphism was somewhat
 artificial, and the space becomes more intuitive if we simply use the integers
-0--7. Of course, these integers do not form a group (they are not closed
-under addition), and so the resulting space is not a proper \gis. It does
-reflect the realities of Russell's system, though: the blues scale is the most
-outgoing scale, and is maximally far away from the consonant Lydian. Intervals
-in this new non-group come are taken from the set $\{-7, -6, \ldots , 6,
-7\}$; except for the lack of closure, everything else about this almost-\gis
-is identical.
+0--7 (which we will call $S$ for the time being). The resulting space, though,
+runs afoul of the formal requirements for a \gis, which requires that \ivls
+form a mathematical group. The set $S$ under addition does not form a group,
+since it is not closed under addition ($6+5$ is not a member of $S$\,), is not
+associative ($1+1$ and $6+1$ are defined, but $[1 + 6] + 1$ is not), and
+elements do not have inverses.
 
-We can visualize this space using the diagram in Figure \ref{cst:polar-gis}.
-In this figure, the diatonic (Lydian) scale is centrally located, with more
-outgoing scales located further toward the outside; these concentric circles
-combine with the ordinary circle of fifths to divide each scale into diatonic
-wedges.\fn{cst-17} The figure is inspired by Russell's description of the
-Lydian as a ``musical `Star-Sun'\,'' (\lcc 8) and the ultimate source of tonal
-gravity. More outgoing scales have more gravitational potential energy, as it
-were, and are more dissonant with the underlying diatonic
-collection. We can use this figure to map the two presentations of the F
-acoustic scale of Figure \ref{cst:ambiguous-acoustic}; such a mapping is given
-in Figure \ref{cst:polar-acoustic}. This visualization makes clear that the
-second presentation (a tonic \h{F7} chord) is more outgoing than the first (a
-dominant \h{F7} chord), as well as the shift in underlying diatonic collection
-(\Eflat\ Lydian vs.\ F Lydian).
+This is of course one of the well-known limitations of \gis{}es: the musical
+spaces must be continuous and infinite.\fn{cst-18} A \gis cannot account for
+musical spaces that are discontinuous or have ``boundaries,'' which is the
+case here: it is not possible to conceive of a scale in our system which is
+more ingoing than the Lydian scale, or more outgoing than the blues
+scale.\fn{cst-19} Nevertheless, the transformations developed above still seem
+to be reasonable intuitions about the nature of chord-scales. As Hook notes,
+``the narrative portions of Lewin's analyses generally far transcend the
+logical consequences of the group structure,'' so the fact that a mathematical
+group does not underlie this no-longer-\gis should not dissuade us
+from exploring its analytical potential.\footcite[185]{hook:2007gmit}
+
+Lewin does allow for transformations to form semigroups, but the scale index
+transformations do not form a semigroup either (a semigroup must still be
+closed under the group action). All possible intervals for the scale indexes
+(the integers 0--7) are contained in the set $\{-7, -6, \ldots, 6, 7\}$, which
+forms neither a group nor a semigroup. It does contain the additive identity
+($0$), and every element has an inverse, so we can use this set under addition
+in practically the same way. Every interval is well-defined, but all intervals
+are not possible from every scale. For example:
+\mbox{int$\big($\scalepair{\nat}{Lyd.}, \scalepair{\nat}{Whole-tone}$\big)=$
+  \scalepair{$e$}{$4$}}, and \mbox{int$\big($\scalepair{\nat}{Whole-tone},
+  \scalepair{\nat}{Lyd.}$\big)=$ \scalepair{$e$}{$-4$}}, but there is no
+chord-scale which satisfies $x$ in the equation
+\mbox{int$\big($\scalepair{\nat}{Blues}, $x\big)=$ \scalepair{$e$}{$4$}},
+since there is no scale that is four levels more outgoing than the blues
+scale.
+
+With these caveats, we can visualize this space using the diagram in Figure
+\ref{cst:polar-gis}. In this figure, the diatonic (Lydian) scale is centrally
+located, with more outgoing scales located further toward the outside; these
+concentric circles combine with the ordinary circle of fifths to divide each
+scale into diatonic wedges.\fn{cst-17} The figure is inspired by Russell's
+description of the Lydian as a ``musical `Star-Sun'\,'' (\lcc 8) and the
+ultimate source of tonal gravity. More outgoing scales have more gravitational
+potential energy, as it were, and are more dissonant with the underlying
+diatonic collection. We can use this figure to map the two presentations of
+the F acoustic scale of Figure \ref{cst:ambiguous-acoustic}; such a mapping is
+given in Figure \ref{cst:polar-acoustic}. This visualization makes clear that
+the second presentation (a tonic \h{F7} chord) is more outgoing than the first
+(a dominant \h{F7} chord), as well as the shift in underlying diatonic
+collection (\Eflat\ Lydian vs.\ F Lydian).
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch4/polar-gis.pdf}
