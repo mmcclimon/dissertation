@@ -588,9 +588,8 @@ writing off Russell's more unusual ideas as eccentric ramblings, we will aim
 in the next section to reincorporate some of them, in an effort to include some
 of the ``first jazz theory'' back into modern scholarship.
 
-\section{A Chord--Scale Quasi-GIS}
+\section{A Chord--Scale Transformational System}
 \label{sec:cst}
-% xxx this title is stupid
 
 % xxx rewrite this paragraph
 Now that we have explored Russell's theory in some detail, we can take it as a
@@ -872,18 +871,15 @@ The \gis in fact is one of \emph{functional} or \emph{heard} chord-scales. In
 this way, it is perhaps most like Steven Rings's \gis for ``heard scale
 degrees.''\footcite[44--50 and throughout]{rings:2011} Rings argues that scale
 degrees are a perceived, rather than inherent, quality of music, and thus
-listeners have different experiences when hearing ``A4
-as \sd1'' and ``A4 as \sd7.''\footcite[42]{rings:2011} In many ways, this
-distinction is at the heart of what Russell was trying to accomplish in the
-\emph{Lydian Chromatic Concept}. For Russell, the F acoustic collection played
-over a tonic major-minor seventh chord really \emph{is} a different entity
-than the same collection played over a dominant major-minor seventh chord.
-This is what Russell means when he writes of ``a state of complete and
-indestructible chord/scale unity'' (\lcc 10): if an \h{F7} chord can function
-in more than one way, so too can its corresponding scale.
-
-% Here: relax GIS a bit (from gis to quasi-gis), polar graph of chord-scales,
-% adding chord symbol information to quasi-gis.
+listeners have different experiences when hearing ``A4 as \sd1'' and ``A4 as
+\sd7.''\footcite[42]{rings:2011} In many ways, this distinction is like the
+one at the heart of what Russell was trying to accomplish in the \emph{Lydian
+  Chromatic Concept}. For Russell, the F acoustic collection played over a
+tonic major-minor seventh chord really \emph{is} a different entity than the
+same collection played over a dominant major-minor seventh chord. This is what
+Russell means when he writes of ``a state of complete and indestructible
+chord/scale unity'' (\lcc 10): if an \h{F7} chord can function in more than
+one way, so too can its corresponding scale.
 
 Previous chapters have constructed various musical spaces in which to analyze
 passages, and we can turn this \gis into a space as well. Before doing that,
@@ -910,7 +906,7 @@ the fact that a mathematical group does not underlie this no-longer-\gis
 should not dissuade us from exploring its analytical
 potential.\footcite[185]{hook:2007gmit}
 
-Lewin does allow for transformations to form semigroups, but the scale index
+Lewin does allow for semigroups of transformations, but the scale index
 transformations do not form a semigroup either (a semigroup must still be
 closed under the group action). All possible intervals for the scale indexes
 (the integers 0--7) are contained in the set $\{-7, -6, \ldots, 6, 7\}$, which
@@ -918,7 +914,7 @@ forms neither a group nor a semigroup. It does contain the additive identity
 ($0$), and every element has an inverse, so we can use this set under addition
 in practically the same way. Every interval is well-defined, but all intervals
 are not possible from every scale. For example: \mbox{int(Lyd., Whole-tone) =
-  $4$}, and \mbox{int(Whole-tone, Lyd.) = $-4$}}, but there is no scale which
+  $4$}, and \mbox{int(Whole-tone, Lyd.) = $-4$}, but there is no scale which
 satisfies $x$ in the equation \mbox{int(Blues, $x$) = $4$}, since there is no
 scale that is four levels more outgoing than the blues scale.
 
@@ -937,19 +933,85 @@ the second presentation (a tonic \h{F7} chord) is more outgoing than the first
 (a dominant \h{F7} chord), as well as the shift in underlying diatonic
 collection (\Eflat\ Lydian vs.\ F Lydian).
 
-\begin{figure}[p]
+\begin{figure}[tbp]
   \centerGraphic{eps/ch4/polar-gis.pdf}
   \caption{A ``planetary'' model of the chord-scale \textsc{GIS}.}
   \label{cst:polar-gis}
 \end{figure}
 
-\begin{figure}[p]
+\begin{figure}[tbp]
   \centerGraphic{eps/ch4/polar-acoustic.pdf}
   \caption[Two presentations of the F acoustic scale in the planetary
   model.]{Two presentations of the F acoustic scale, shown in red, in the
     planetary model (compare Figure \ref{cst:ambiguous-acoustic}).}
   \label{cst:polar-acoustic}
 \end{figure}
+
+Figure \ref{cst:polar-acoustic} also reveals that perhaps the objects in the
+system could be more informative. The right side of this figure represents a
+\tfo in F with the sequence \\
+{ \centering
+  \scalepair{\flat}{Dia.} $\xrightarrow{R\text{\scalepair{$e$}{$0$}}}$
+  \scalepair{\flat}{Dia.} $\xrightarrow{R\text{\scalepair{$s_1$}{$3$}}}$
+  \scalepair{\nat}{Lyd.\ \flat{}7}.
+  \par
+}
+\noindent That is, the G Dorian scale and C Mixolydian scale are both
+represented by the pair \scalepair{\flat}{Dia.}. On one level, this makes
+sense: both scales are modes of the \Bflat\ Lydian (or F major) scale. Still,
+since a chord-scale is supposed to represent a ``complete and indestructible
+unity,'' it seems appropriate to add some information about the chord into the
+system proper. As it stands, information about the chords themselves is
+separate from the transformations, and there is no way to distinguish the
+progression above (a \tfo in F) from, say, the nonsensical progression
+\mbox{\h{Em7b5}--\h{Fmaj7}--\h{Bm7b5}}.
+
+We could solve this problem in several different ways, but the most obvious is
+to include the chord symbol itself in the chord-scale representation. This
+results in what we will call a chord-scale triple of the form
+\mbox{$\langle$\emph{chord symbol}, \emph{diatonic collection}, \emph{scale
+    name}$\rangle$}. This construction will allow us to draw on the work done
+in the previous chapters developing a system of transformations for chord
+symbols; we will still call the resulting transformations $R$, but the first
+element of the triple will be a transformation between chord
+symbols.\fn{cst-20} The F-major \tfo of Figure \ref{cst:ambiguous-acoustic}c
+thus becomes \\
+{ \centering \cst{Gm7}{\flat}{Dia.}
+  $\xrightarrow{R\text{\rtrans{TF}{$e$}{$0$}}}$ \cst{C7}{\flat}{Dia.}
+  $\xrightarrow{R\text{\rtrans{TF\tsub{blues}}{$s_1$}{$3$}}}$
+  \cst{F7}{\nat}{Lyd.\ \flat{}7}.
+  \par
+}
+\noindent Formally, the transformations of the last two chapters act on
+ordered triples of chord root, third, and seventh, but this fact need not
+concern us too much here. Recall that the chord symbol transformations are
+cross-type transformations, and thus even if we had not already relaxed the
+\gis of the previous section (removing the cyclic group $\intZ_8$), the new
+version with chord symbols cannot form a \gis.
+
+While adding chord symbols to the system does clarify matters, it also
+complicates them. In particular, the planetary model of Figure
+\ref{cst:polar-gis} no longer represents the musical space accurately. The
+addition of chord symbols means that a copy of the planetary model exists at
+every location a chord symbol appears in the previous chapters.\fn{cst-21}
+Such a visual space would be forbiddingly complex---imagine the thirds spaces
+of Figures \ref{mts:m3-space} or \ref{maj3:maj3-space} redrawn with the
+additional chord-scale models. This is a sacrifice made consciously so that
+the chord-scale triples and $R$ transformations are clear in the text. In
+practice, we can use either the planetary model or the chord spaces of the
+previous chapters as the situation demands, with the knowledge that both
+representations exist simultaneously as part of the single conceptual space of
+chord-scales. With the final version of the chord-scale transformational
+system now in place, the stage is now set to turn toward actual jazz performance,
+which we will do in the next section.
+
+% xxx Do we need something here about how the size of the new non-group? It's
+% not infinite, but it's also not particularly countable...
+
+\section{Chord-Scales in Analysis}
+\label{sec:chord-scale-analysis}
+
+
 
 %%% Local Variables:
 %%% mode: latex

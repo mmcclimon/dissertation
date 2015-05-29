@@ -262,8 +262,15 @@
   }%
 }
 
+% chord-scale objects/transformations
 \newcommand{\scalepair}[2]{%
   \mbox{\ensuremath{\langle}#1, #2\ensuremath{\rangle}}%
+}
+\newcommand{\cst}[3]{%
+  \mbox{\ensuremath{\langle}\h{#1}, #2, #3\ensuremath{\rangle}}%
+}
+\newcommand{\rtrans}[3]{%
+  \mbox{\ensuremath{\langle}#1, #2, #3\ensuremath{\rangle}}%
 }
 
 % text shortcuts
