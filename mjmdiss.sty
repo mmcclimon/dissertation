@@ -114,12 +114,22 @@
 \usepackage[titletoc]{appendix}
 \usepackage{tocloft}
 \renewcommand{\@dotsep}{2}
-\renewcommand{\cftchapafterpnum}{\vspace{8pt}}
+%\renewcommand{\cftchapafterpnum}{\vspace{8pt}}
+
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftbeforeloftitleskip}{0pt}
+\setlength{\cftbeforelottitleskip}{0pt}
+\renewcommand{\cfttoctitlefont}{\Large}
+\renewcommand{\cftloftitlefont}{\Large}
+\renewcommand{\cftlottitlefont}{\Large}
+
+\renewcommand{\@tocrmarg}{2em plus1fil}
+\newcommand{\addtocspace}{\addtocontents{toc}{\vspace{8pt}}}
 
 % add chapter divisions in list of figures
-\newcommand{\addtolof}[1]{%
-  \addtocontents{lof}{%
-    \noindent \textbf{\thechapter \quad \nameref{#1}}%
+\newcommand{\addtolof}[2][lof]{%
+  \addtocontents{#1}{%
+    \noindent \textbf{\thechapter \quad \nameref{#2}}%
     \vspace{8pt}%
   }%
 }
