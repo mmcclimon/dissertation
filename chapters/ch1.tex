@@ -667,8 +667,8 @@ pitch-class spaces, along with less familiar musical spaces like frequency
 space, time point space, and various durational
 spaces.\footcite[16--25]{lewin:gmit} In our “Autumn Leaves” example, we are
 interested in the (unordered) set of harmonies in the G-minor diatonic
-collection: \mbox{$S =$ \{\h{Gm},} \h{Am7b5}, \h{BbM7}, \h{Cm7}, \h{D7},
-\h{EbM7}, \h{F7}\}.\fn{ds-3}
+collection: \mbox{$S =$ \{\h{Gm},} \h{Am7b5}, \h{Bbmaj7}, \h{Cm7}, \h{D7},
+\h{Ebmaj7}, \h{F7}\}.\fn{ds-3}
 
 With the first element of a \gis{} satisfied, we must then define a group of
 intervals (\ivls). Though we could perhaps imagine a number of
@@ -723,18 +723,18 @@ from one element of S to another is simply the number of steps in the G-minor
 diatonic collection (always counting upward) between the two elements. Thus,
 \mbox{int(\h{D7}, \h{Gm}) = $3$}, since G, the root of the second chord, lies
 3 diatonic steps above D, the root of the first. Likewise,
-\mbox{int(\h{Am7b5}, \h{BbM7}) = $1$}; \mbox{int(\h{F7}, \h{EbM7}) = $6$}; and so
+\mbox{int(\h{Am7b5}, \h{Bbmaj7}) = $1$}; \mbox{int(\h{F7}, \h{Ebmaj7}) = $6$}; and so
 on.
 
 We now have all of the elements of a \gis{}, but we must still prove that Lewin’s
 conditions A and B are satisfied, which we will do by example. Condition A
 states that for all r, s, and t in S, \mbox{int(r,s)int(s,t) = int(r,t)}. In
-our “Autumn Leaves” example, \mbox{int(\h{Cm7}, \h{D7})} and \mbox{int(\h{D7}, \h{EbM7})}
-(both interval 1) must combine to equal \mbox{int(\h{Cm7}, \h{EbM7})} (interval
+our “Autumn Leaves” example, \mbox{int(\h{Cm7}, \h{D7})} and \mbox{int(\h{D7}, \h{Ebmaj7})}
+(both interval 1) must combine to equal \mbox{int(\h{Cm7}, \h{Ebmaj7})} (interval
 2). Second, for every chord $s$ in S and every interval $i$ in $\intZ_7$,
 there must be a unique chord $t$ which satisfies the equation \mbox{int$(s,t)
 = i$}. For example, there must be exactly one chord that lies 2 units above
-\h{Cm7}: namely, \h{EbM7}. It is easy to confirm that the two conditions
+\h{Cm7}: namely, \h{Ebmaj7}. It is easy to confirm that the two conditions
 are also true for any choice of $r, s, t \in$ S.
 
 Before shifting our focus from generalized intervals to transformations, I
@@ -826,8 +826,8 @@ the same way, however: the operation $t_k$ is that transposition which
 transposes the root of a chord $k$ steps inside the G-minor diatonic
 collection. With this understanding, the conversion works as expected: the
 interval between \h{Am7b5} and \h{D7} is 3, so the operator $t_3$ maps
-\h{Am7b5} onto \h{D7} in the space \mbox{$S =$ \{\h{Gm},} \h{Am7b5}, \h{BbM7},
-\h{Cm7}, \h{D7}, \h{EbM7}, \h{F7}\}.\fn{ds-10} The same statement may also be
+\h{Am7b5} onto \h{D7} in the space \mbox{$S =$ \{\h{Gm},} \h{Am7b5}, \h{Bbmaj7},
+\h{Cm7}, \h{D7}, \h{Ebmaj7}, \h{F7}\}.\fn{ds-10} The same statement may also be
 written as \h{Am7b5} $\overset{t_3}{\lra}$ \h{D7}, if we want to emphasize the
 idea of a transformation as a mapping operation.
 
@@ -894,7 +894,7 @@ continuing the chain that has been present since the beginning (see Figure
 
 There are three passages in this piece that are not simply $t_3$ operations:
 the connection from \h{Gm} to \h{Am7b5} that begins the bridge; the connection
-from \h{BbM7} at the end of the bridge to \h{Am7b5} that follows; and the
+from \h{Bbmaj7} at the end of the bridge to \h{Am7b5} that follows; and the
 third and fourth bars of the final section,
 \h{Gm7}--\h{C7}--\h{Fm7}--\h{Bb7}. The first of these, \h{Gm}--\h{Am7b5}, is a
 $t_1$ transformation. The bridge begins by retracing the same harmonic ground
@@ -906,9 +906,9 @@ graphically (by taking two steps counterclockwise in the circle of fifths in
 Figure \ref{ds:circle-of-fifths}).\fn{ds-11b}
 
 The next transformation that breaks the series of $t_3$ operations is the
-$t_6$ from \h{BbM7} to \h{Am7b5} at the end of the bridge. This $t_6$ is
+$t_6$ from \h{Bbmaj7} to \h{Am7b5} at the end of the bridge. This $t_6$ is
 easily understood as a combination of two $t_3$ operations, by imagining that
-there is a “missing” \h{EbM7} chord in the last bar of the bridge.\fn{ds-11}
+there is a “missing” \h{Ebmaj7} chord in the last bar of the bridge.\fn{ds-11}
 Interpolating this chord allows us to hear the progression (beginning on
 \h{Cm7}) as identical to that of the first eight bars, now displaced to span a
 formal boundary, as shown in Figure \ref{ds:displaced-cycle}.\fn{ds-12}
@@ -939,7 +939,7 @@ are shown in Figure \ref{ds:wonderland-changes}.\fn{ds-13} Like “Autumn
 Leaves,” “Alice in Wonderland” begins with a minor diatonic cycle in mm.~1--7
 (also beginning on a iv chord), shown here in A minor. We can modify our \gis{}
 from above simply by changing the set ($S$ is now the set \{\h{Am}, \h{Bm7b5},
-\h{CM7}, \h{Dm7}, \h{E7}, \h{FM7}, \h{G7}\}); the group \ivls{} and the
+\h{Cmaj7}, \h{Dm7}, \h{E7}, \h{Fmaj7}, \h{G7}\}); the group \ivls{} and the
 interval function are identical.\fn{ds-13a} The harmony in m.~7 is an \h{Am7} chord,
 but because the quality of the tonic seventh chord is ambiguous in minor
 keys, this chord is easily understood as tonic.
@@ -1051,11 +1051,11 @@ otherwise go unnoticed.
 
 “All the Things You Are” begins in the key of F minor, and progresses through
 a diatonic cycle (a chain of $t_3$ operations in an F-minor diatonic
-seventh-chord \gis{}) until arriving on \h{DbM7} in m.~5.\fn{ds-18b} At this point, the
+seventh-chord \gis{}) until arriving on \h{Dbmaj7} in m.~5.\fn{ds-18b} At this point, the
 chord roots continue to descend by diatonic fifth in the key of F minor, but
 the qualities of the chords rooted on G and C have been altered, from
 \h{Gm7b5} and \h{C7} (as they would be in the F-minor \gis{}) to \h{G7} and
-\h{CM7}. This arrival on a C major chord, rather than a C dominant seventh,
+\h{Cmaj7}. This arrival on a C major chord, rather than a C dominant seventh,
 has the effect of a half cadence in the prevailing key of F minor. The
 half-cadential C-major chord also serves as a linking chord to the next
 phrase, which contains a diatonic cycle in the key of C minor. Like the first
@@ -1066,9 +1066,9 @@ The bridge of this tune is usually described as being made up of two \tfo\
 progressions, the first in G major and the second in E major. While this is
 true, we might also understand this progression as an alteration of a diatonic
 cycle in E minor.  The bridge begins on a iv chord, which initiates a \tfo\ in
-the relative major. After two bars of \h{GM7}, a $t_6$ takes us to \h{Fsm7b5}.
+the relative major. After two bars of \h{Gmaj7}, a $t_6$ takes us to \h{Fsm7b5}.
 Just as in the bridge to “Autumn Leaves,” we can understand this $t_6$ as a
-combination of two $t_3$ operations, interpolating a missing \h{CM7}
+combination of two $t_3$ operations, interpolating a missing \h{Cmaj7}
 chord.\fn{ds-19} Though the cycle of the bridge (and its associated \gis{}) is in
 the key of E minor, the final chord is an E \emph{major} seventh, a kind of
 Picardy third; in this way the bridge, like the A sections, can end on a major
@@ -1077,7 +1077,7 @@ chord.
 The final A section of “All the Things You Are” is an expanded version of the
 first, now ending in the overall tonic of \Aflat. It begins, after a linking
 \h{C7s5} chord, by outlining a series of $t_3$ operations that lead to
-\h{DbM7}.\fn{ds-20} At this point we might expect the $t_3$s to continue,
+\h{Dbmaj7}.\fn{ds-20} At this point we might expect the $t_3$s to continue,
 leading to \h{Gm7b5}--\h{C7}--\h{Fm} (the tonic of the cycle), but instead we
 see \h{Gb7}--\h{Cm7}--\h{Bo7}. This progression is clearly not diatonic, so we
 cannot say much about it at this point. It is interesting to note, however,
