@@ -134,6 +134,12 @@
   }%
 }
 
+% command for dot-filling the manual TOC for transcriptions
+\newcommand{\DottedPage}[1]{%
+  \leavevmode \leaders \hb@xt@ .66em{\hss .\hss }\hfill \kern \z@%
+  \makebox[1.5em][r]{\pageref{#1}}%
+}
+
 % page header
 % -----------
 \usepackage{fancyhdr}
