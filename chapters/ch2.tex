@@ -94,7 +94,7 @@ figure above, we need to define the transformation TF such that it maps
 \ii chords to \V chords, and \V chords to \I
 chords.
 
-\begin{figure}[btp]
+\begin{figure}[tbp]
   \centerGraphic[width=15em]{eps/ch2/single-tfo-graph.pdf}
   \caption{The underlying transformation graph for a single \tfo\ progression.}
   \label{tf:single-tfo-graph}
@@ -127,7 +127,6 @@ qualities in a \tfo.\fn{tf-5a}
 In this chapter, we will represent a chord with an ordered triple $X = (x_r,
 x_t, x_s)$, where $x_r$ is the root of the chord, $x_t$ the third, and $x_s$
 the seventh. The definitions of the three sets are as follows:\fn{tf-6}
-% xxx do these definitions need numbers?
 {\novspace%
 \begin{align*}
   \Smin &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 3; x_s - x_r = 10 \} &
@@ -155,20 +154,19 @@ cardinality $12$: each pitch class is the root of exactly one \ii,
 \V, and \I chord.
 
 With the space of the nodes defined, we can now formulate the transformation
-representing a \tfo, which we will call simply ``TF'':
+representing a \tfo, which we will call simply ``TF'': \\
 %
-{\novspace%
-\begin{alignat*}{3}
-    \mathrm{TF}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smin
-    & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) = (x_r + 5, x_s - 1, x_t) \in \Sdom \\
-    %
-    \mathrm{TF}(Y\,) = Z\text{, where}\ Y = (\,y_r, y_t, y_s) \in \Sdom
-    & \text{ and} &
-    Z &= (z_r, z_t, z_s) = (\,y_r + 5, y_s - 1, y_t) \in \Smaj
-\end{alignat*}}%
+\vspace{0.5\baselineskip}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smin$, & then &
+    $\mathrm{TF}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r + 5, x_s - 1, x_t) \in \Sdom$ \\
 %
-Again, these definitions are designed to be musically relevant; the
+  If $Y = (y_r, y_t, y_s) \in \Sdom$, & then &
+    $\mathrm{TF}(Y\,) = Z = (\,z_r, z_t, z_s) = (y_r + 5, y_s - 1, y_t) \in \Smaj$
+\end{tabular}
+\vspace{0.5\baselineskip}
+
+\noindent Again, these definitions are designed to be musically relevant; the
 voice-leading diagram in Figure~\ref{tf:tfo-voice-leading} illustrates this
 more clearly.\fn{tf-6a} The root of the second chord is a fifth below the root
 of the first ($y_r = x_r + 5$), the third of the second chord is a semitone
@@ -179,15 +177,15 @@ chord'' and wishes to ``get to a \V chord,'' the transformation that
 will do the best job is TF: ``move the root down a fifth and the seventh down
 a semitone to become the new third.'' (Recall that we may also write
 \mbox{\ii \TFarrow\ \V}, rather than TF(\ii) = \V.) Note
-that the transformation TF is also valid between \V and \I as
-well (the second equation above, involving sets $\Sdom$ and $\Smaj$). TF is
+that the transformation TF is also valid between \V and \I
+(the second equation above, involving sets $\Sdom$ and $\Smaj$). TF is
 both one-to-one and onto for sets of ordered triples; it maps each \ii
 to a unique \V, and each \V to a unique \I. As such, its
 inverse ($\mathrm{TF}^{-1}$) is well defined, and allows motion backwards
 along the arrows shown in the transformation graph in Figure
 \ref{tf:single-tfo-graph}.
 
-\begin{figure}[htbp]
+\begin{figure}[tbp]
   \centerGraphic{eps/ch2/tfo-voice-leading.pdf}
   \caption{Voice leading in the \tfo\ progression.}
   \label{tf:tfo-voice-leading}
@@ -224,15 +222,17 @@ transformation network.  This descending fifths arrangement means that all of
 the chords sharing a root are aligned vertically (directly below \h{Gmaj7} is
 \h{G7}, which is itself above \h{Gm7}). This arrangement allows us to define
 two more transformations, which we will call simply \textsc{7th} and
-\textsc{3rd}:
-
+\textsc{3rd}: \\
+%
 \vspace{0.5\baselineskip}
-\h{7}\textsc{th}$(L) = M$, where $L = (l_r, l_t, l_s) \in \Smaj$ and $M=(m_r, m_t,
-m_s)=(l_r, l_t, l_s-1) \in \Sdom$
-
-\h{3}\textsc{rd}$(M) = N$, where $M = (m_r, m_t, m_s) \in \Sdom$ and $N=(n_r, n_t,
-n_s)=(m_r, m_t-1, m_s) \in \Smin$
-\vspace{0.5\baselineskip}
+\begin{tabular}{lcl}
+  If $L = (l_r, l_t, l_s) \in \Smaj$, & then &\h{7}\textsc{th}$(L) = M=(m_r, m_t,
+  m_s)=(l_r, l_t, l_s-1) \in \Sdom$ \\
+%
+  If $M = (m_r, m_t, m_s) \in \Sdom$, & then &\h{3}\textsc{rd}$(M) = N=(n_r, n_t,
+  n_s)=(m_r, m_t-1, m_s) \in \Smin$
+\end{tabular}
+\vspace{0em}
 
 \noindent Like the TF transformation, the \textsc{7th} and \textsc{3rd}
 transformations have clear musical relevance: each lowers the given note by a
@@ -241,7 +241,7 @@ the $T_5$ labels connecting adjacent \ii chords and \I chords
 are shown in gray in the graph (and omitted in the network, and in later
 examples), since these chords are not often directly connected in jazz.
 
-\begin{figure}[thb]
+\begin{figure}[tb]
   \centerGraphic{eps/ch2/tf-circle-fifths.pdf}
   \caption{The complete \tf\ space, arranged around the circle of fifths.}
   \label{tf:tf-circle-fifths}
@@ -283,13 +283,13 @@ shown in Figure \ref{tf:ceora-space-1}.\fn{tf-10} ``Ceora'' is in the key of
 bars, staying within a single horizontal slice of \tf\ space. This is followed
 immediately by a \tfo\ progression in \Dflat, a fifth lower (mm.~4--5).
 
-\begin{figure}[thbp]
+\begin{figure}[p]
   \centerGraphic[width=22em]{eps/ch2/ceora-changes-1.pdf}
   \caption{Changes for the A section of ``Ceora'' (Lee Morgan).}
   \label{tf:ceora-changes-1}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[p]
   \centerGraphic{eps/ch2/ceora-space-1.pdf}
   \caption{The A section of ``Ceora'' in \tf\ space.}
   \label{tf:ceora-space-1}
@@ -310,7 +310,7 @@ expected \h{Abmaj7} does not materialize; the \h{Eb7} chord moves instead to
 progression repeats in mm.~11--13, leading once again to the \h{Dm7} chord
 first heard in m.~5. The repeated upward motions in the space have the
 effect of ramping up the tonal tension in the passage; not only do the
-dominants fail to resolve as expected, but their stepwise rising motion take
+dominants fail to resolve as expected, but their stepwise rising motion takes
 the music far away from the tonic \Aflat. To release this harmonic tension,
 the \tf\ in C resolves at m.~15 to C minor, at which point the harmonic rhythm
 doubles and the progression follows the normal descending fifths pattern to
@@ -328,7 +328,7 @@ in tonic, resolving in m.~15 of the section. A final \tf\ in the last measure
 provides additional harmonic interest, and functions as a turnaround to lead
 smoothly back to \h{Abmaj7} to begin the next chorus.
 
-\begin{figure}[htbp]
+\begin{figure}[tbp]
   \centerGraphic[width=22em]{eps/ch2/ceora-changes-2.pdf}
   \caption{Changes for the B section of ``Ceora'' (Lee Morgan).}
   \label{tf:ceora-changes-2}
@@ -393,16 +393,22 @@ again as \h{Fs} at the top); likewise, progressions disappearing off the
 bottom of the back side reappear at the top of the front side (C major is
 given in both locations).
 
-\begin{figure}[thb]
+\begin{figure}[tbp]
   \centerGraphic[width=\textwidth]{eps/ch2/complete-space.pdf}
   \caption{The complete \tf space, showing tritone substitutions.}
   \label{tft:complete-space}
 \end{figure}
 
+\begin{figure}[tbp]
+  \centerGraphic[width=.55\textwidth]{eps/ch2/mobius-dominants.pdf}
+  \caption{The Möbius strip at the center of \tf\ space.}
+  \label{tft:mobius-dominants}
+\end{figure}
+
 This arrangement of key centers is topologically equivalent to a Möbius strip,
 which is somewhat easier to see by focusing only on the dominant seventh
 chords, as shown in Figure \ref{tft:mobius-dominants}.\fn{tft-2a} By wrapping this figure
-into a circle and gluing the ends together with a half-twist (so that the two
+into a circle and gluing the left and right edges together with a half-twist (so that the two
 \h{G7} chords and the \h{Db7}/\h{Cs7} match up), we arrive at the desired Möbius strip. Though
 the underlying topology is easier to visualize this way, it is difficult to
 include all of the other progressions (the \tf{}s themselves) in this diagram,
@@ -413,37 +419,33 @@ arbitrary, and may be repositioned as necessary; it is often convenient to
 have the tonic key (when there is one) centrally located at the front of the
 space.
 
-\begin{figure}[htbp]
-  \centerGraphic{eps/ch2/mobius-dominants.pdf}
-  \caption{The Möbius strip at the center of \tf\ space.}
-  \label{tft:mobius-dominants}
-\end{figure}
-
 While we could navigate this space using only the transformations TF and
 $T_6$, it is convenient to define another transformation to help with a common
 progression like \h{Dm7}--\h{Db7}--\h{Cmaj7}. We will call this
-transformation \tft, to highlight its relationship to the more normative TF:%
+transformation \tft, to highlight its relationship to the more normative TF: \\
 %
-\begin{alignat*}{3}
-    \mathrm{TF}_\mathrm{T}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smin
-    & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) &= (x_r - 1, x_s + 5, x_t + 6) \in \Sdom \\
-    %
-    \mathrm{TF}_\mathrm{T}(Y\,) = Z\text{, where}\ Y = (\,y_r, y_t, y_s) \in \Sdom
-    & \text{ and} &
-    Z &= (z_r, z_t, z_s) &= (\,y_r - 1, y_s + 5, y_t + 6) \in \Smaj
-\end{alignat*}%
+\vspace{0.5\baselineskip}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smin$, & then &
+    TF\tsub{T}$(X\,) = Y = (\,y_r, y_t, y_s) = (x_r -1, x_s + 5, x_t + 6) \in \Sdom$ \\
 %
-The \tft\ transformation represents a tritone substitution, but it
+  If $Y = (y_r, y_t, y_s) \in \Sdom$, & then &
+    TF\tsub{T}$(Y\,) = Z = (\,z_r, z_t, z_s) = (y_r -1, y_s + 5, y_t + 6) \in \Smaj$
+\end{tabular}
+\addtolength{\tabcolsep}{3pt}
+\vspace{0pt}    % don't know why this fixes weird spacing, but it does
+
+\noindent The \tft\ transformation represents a tritone substitution, but it
 transforms bass motion by fifth into bass motion by semitone (\emph{not} bass
 motion by tritone); the voice-leading diagram in Figure
 \ref{tft:voice-leading-tft} clarifies the relationship with the ordinary TF. Because TF and $T_6$ commute,
 \tft\ can be considered as either TF followed by $T_6$, or vice versa. With
 this new transformation, we can understand the progression
-\h{Abm7}--\h{Db7}--\h{Cmaj7} as a substituted \tfo\ in C: \h{Abm7} \TFarrow\
-\h{Db7} \TFTarrow\ \h{Cmaj7}.
+\h{Abm7}--\h{Db7}--\h{Cmaj7} as a substituted \tfo\ in C: \mbox{\h{Abm7} \TFarrow\
+\h{Db7} \TFTarrow\ \h{Cmaj7}}.
 
-\begin{figure}[htbp]
+\begin{figure}[tbp]
   \centerGraphic{eps/ch2/voice-leading-tft.pdf}
   \caption{Voice leading in the TF and \tft\ transformations, compared.}
   \label{tft:voice-leading-tft}
@@ -460,7 +462,7 @@ transposition from a descending fifth to a descending half-step, as indicated
 by the $T_{11}$ arrow.
 
 \begin{figure}[tbp]
-  \centerGraphic[width=.7\textwidth]{eps/ch2/tft-space-extract.pdf}
+  \centerGraphic[width=.6\textwidth]{eps/ch2/tft-space-extract.pdf}
   \caption{A transformation network for a small portion of \tf\ space, with
     tritone substitutions.}
   \label{tft:tft-space-extract}
@@ -474,22 +476,22 @@ with the substituted \ii, the third and seventh are both held as common
 tones, and the root and fifth of the chord both ascend by semitone (from
 G--B--D--\h{Fs} to \h{Ab}--\h{Cb}--\h{Eb}--\h{Gb}).\fn{tft-3} Because of its
 similarity to the standard \textsc{slide} transformation, with the addition of
-the common tone seventh, we will call this transformation \slideS:\fn{tft-3a}
+the common tone seventh, we will call this transformation \slideS:\fn{tft-3a} \\
 %
-{\novspace%
-\begin{displaymath}
-    \text{\slideS}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smaj
-     \text{ and}\
-    Y = (\,y_r, y_t, y_s) = (x_r + 1, x_t, x_s) \in \Smin
-\end{displaymath}}%
-%
-In jazz this progression occurs frequently when moving between key
+\vspace{0.5\baselineskip}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smaj$, & then &
+    $\text{\slideS}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r +1, x_t, x_s) \in \Smin$
+\end{tabular}
+\vspace{0.5\baselineskip}
+
+\noindent In jazz this progression occurs frequently when moving between key
 centers related by half step, though it is uncommon in classical
 music.\fn{tft-4} We have encountered this transformation once already: the
 motion from \h{Dbmaj7} to \h{Dm7} in mm.~5--6 of ``Ceora'' is indeed a typical
 \slideS\ transformation (see Figure \ref{tft:slide7-ceora}).
 
-\begin{figure}[htbp]
+\begin{figure}[tbp]
   \centerGraphic{eps/ch2/slide7-ceora.pdf}
   \caption[The \protect\slideS transformation from \protect\h{Dbmaj7} to
   \protect\h{Dm7} in mm.~5--6 of ``Ceora.'']{The
@@ -506,18 +508,7 @@ motion from \h{Dbmaj7} to \h{Dm7} in mm.~5--6 of ``Ceora'' is indeed a typical
 \subsection{Analytical Interlude: Charlie Parker, “Blues for Alice”}
 \label{sec:blues-for-alice}
 %{{{
-
-\begin{figure}[tbp]
-  \centerGraphic[width=22em]{eps/ch2/blues-alice-changes.pdf}
-  \caption{Changes to ``Blues for Alice'' (Charlie Parker).}
-  \label{tft:blues-alice-changes}
-\end{figure}
-\begin{figure}[btp]
-  \centerGraphic[width=\textwidth]{eps/ch2/blues-alice-space.pdf}
-  \caption[An analysis of ``Blues for Alice'' in \tf space]{An analysis of
-    ``Blues for Alice'' in \tf space: mm.~1--5 (left), mm.~6--11 (right).}
-  \label{tft:blues-alice-space}
-\end{figure}
+\FloatBarrier
 
 Equipped with these new tritone-substitution transformations, we can now
 analyze somewhat more complicated music; Charlie Parker’s “Blues for Alice”
@@ -525,6 +516,19 @@ will serve as a useful first example (the changes are given in Figure
 \ref{tft:blues-alice-changes}).\fn{tft-5} The essential structure of the blues is
 present: the tune arrives on a subdominant in m.~5, and on a home-key \tf in
 m.~9 of the twelve-bar form.
+
+\begin{figure}[tbp]
+  \centerGraphic[width=22em]{eps/ch2/blues-alice-changes.pdf}
+  \caption{Changes to ``Blues for Alice'' (Charlie Parker).}
+  \label{tft:blues-alice-changes}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centerGraphic[width=\textwidth]{eps/ch2/blues-alice-space.pdf}
+  \caption[An analysis of ``Blues for Alice'' in \tf space]{An analysis of
+    ``Blues for Alice'' in \tf space: mm.~1--5 (left), mm.~6--11 (right).}
+  \label{tft:blues-alice-space}
+\end{figure}
 
 
 Parker elaborates this basic structure with a series of stepwise descending
@@ -536,23 +540,25 @@ which resolves (via the \textsc{7th} and \textsc{3rd} transformations) to a
 maintaining harmonic motion; instead of a \tf resolving to its tonic, it resolves
 to the minor seventh chord with the same root. Because this progression is so
 common, it is useful to define it as its own transformation, which we will
-call EC (for ``evaded cadence''). Unlike TF, EC is only useful as a
-transformation from \V chords to \ii chords:
+call EC (for ``evaded cadence''). Unlike TF, EC is useful only as a
+transformation from \V chords to \ii chords: \\
 %
-{\novspace%
-\begin{displaymath}
-  \mathrm{EC}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
-   \text{ and}\
-  Y = (\,y_r, y_t, y_s) = (x_r + 5, x_s - 2, x_t - 1) \in \Smin
-\end{displaymath}}%
-%
-EC is of course equivalent to TF $\odot$ \textsc{7th} $\odot$ \textsc{3rd},
-but only when the starting chord is a \V chord (a member of $\Sdom$).
-In \tf space, EC can be represented by starting on a dominant, then following
-one arrow to the right and two arrows downward. The structure of the space
-immediately shows that EC is impossible beginning on a \ii chord; we
-can follow a single arrow to the right, but there is only one downward arrow
-from a \V chord.\fn{tft-7}
+\vspace{0.5\baselineskip}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & then &
+    EC$(X\,) = Y = (\,y_r, y_t, y_s) = (x_r+5, x_s-2, x_t-1) \in \Smin$
+\end{tabular}
+\addtolength{\tabcolsep}{3pt}
+\vspace{0.5\baselineskip}
+
+\noindent EC is of course equivalent to TF $\bullet$ \textsc{7th} $\bullet$
+\textsc{3rd}, but only when the starting chord is a \V chord (a member of
+$\Sdom$). In \tf space, EC can be represented by starting on a dominant, then
+following one arrow to the right and two arrows downward. The structure of the
+space immediately shows that EC is impossible beginning on a \ii chord; we can
+follow a single arrow to the right, but there is only one downward arrow from
+a \V chord.\fn{tft-7}
 
 This pattern of stepwise descending \tf{}s continues until arriving at the
 subdominant \Bflat\ in m.~5, which includes the standard blues alteration of
@@ -560,7 +566,7 @@ the lowered seventh.\fn{tft-6} The intuition that this \h{Bb7} is in fact a
 stable harmony, rather than a descending-fifth transposition of \h{F7}, can be
 captured somewhat in our transformational labels. Instead of labeling this progression
 \mbox{\h{F7} $\xrightarrow{T_5}$ \h{Bb7}}, we might instead label it as
-\mbox{\h{F7} $\xrightarrow{\mathrm{TF}\ \odot\ \text{\textsc{7th}}}$ \h{Bb7}};
+\mbox{\h{F7} $\xrightarrow{\mathrm{TF}\ \bullet\ \text{\textsc{7th}}}$ \h{Bb7}};
 this designation expresses the notion that the \h{Bb7} chord is heard as a
 resolution to a stable chord (the TF transformation) that has merely been
 inflected with the lowered seventh (the \textsc{7th} transformation).
@@ -570,32 +576,32 @@ transformation network:
 \begin{center}
   \h{Em7b5} \TFarrow\ \h{A7} \ECarrow\
   \h{Dm7}   \TFarrow\ \h{G7} \ECarrow\
-  \h{Cm7}   \TFarrow\ \h{F7} $\xrightarrow{\mathrm{TF}\ \odot\ \text{\textsc{7th}}}$
+  \h{Cm7}   \TFarrow\ \h{F7} $\xrightarrow{\mathrm{TF}\ \bullet\ \text{\textsc{7th}}}$
   \h{Bb7}
 \end{center}
 
 After this \h{Bb7} chord, Parker uses a \emph{chromatic} stepwise pattern of \tf{}s
-(mm.~5--9), which we can understand as a tritone-substituted version of the
+(mm.~5--10), which we can understand as a tritone-substituted version of the
 earlier descending fifths pattern:
 
 \begin{center}
-  \h{Bbm7} \TFarrow\ \h{Eb7} \ECTarrow\
-  \h{Am7}  \TFarrow\ \h{D7}  \ECTarrow\
-  \h{Abm7} \TFarrow\ \h{Db7} \ECTarrow\
+  \h{Bbm7} \TFarrow\ \h{Eb7} \ECCarrow\
+  \h{Am7}  \TFarrow\ \h{D7}  \ECCarrow\
+  \h{Abm7} \TFarrow\ \h{Db7} \ECCarrow\
   \h{Gm7}
 \end{center}
 
-\noindent (Here, EC\tsub{T} is the tritone-substituted variant of EC,
-equivalent to \tft $\odot$ \textsc{7th} $\odot$ \textsc{3rd}, applied to a
-dominant seventh chord.) Once this sequence arrives on \h{Gm7} as the ii chord
-of the tonic F, there is a \tfo progression in the home key. After the
-resolution in m.~11, the progression moves backwards through fifths space to
-begin a VI--ii--V turnaround to F major to begin the next chorus.\fn{tft-8}
+\noindent (Here, EC\tsub{C} is the chromatic variant of EC, equivalent to TF
+$\bullet$ \slideS, applied to a dominant seventh chord.) Once this sequence
+arrives on \h{Gm7} as the ii chord of the tonic F, there is a \tfo progression
+in the home key. After the resolution in m.~11, the progression moves
+backwards through fifths space to begin a VI--ii--V turnaround to F major to
+begin the next chorus.\fn{tft-8}
 
 So far, we have not said very much about the first two chords in ``Blues for
 Alice'': \h{Fmaj7}--\h{Em7}. In \tf space, these chords are relatively far
 apart (4 edges): \h{Fmaj7} $\xrightarrow{\text{\textsc{7th}}}$ \h{F7} $\xrightarrow{T_6}$
-\h{B7} $\xrightarrow{T_5}$ \h{E7} $\xrightarrow{\text{\textsc{3rd}}}$ \h{Em7}.
+\mbox{\h{B7} $\xrightarrow{T_5}$} \h{E7} $\xrightarrow{\text{\textsc{3rd}}}$ \h{Em7}.
 Because \tf space prioritizes functional relationships, chord progressions
 that are close in terms of voice leading often appear quite distant in the
 space. In reality, a musician would probably \emph{not} think of this move as
@@ -654,40 +660,44 @@ transformation works intuitively, and transforms a major seventh chord to a
 minor-major seventh with the same root:
 
 \vspace{.5\baselineskip}
-  \h{3}\textsc{rd}$(X\,) = Y$, where $X = (x_r, x_t, x_s) \in \Smaj$ and
-  $Y=(\,y_r, y_t, y_s)=(x_r, x_t-1, x_s) \in \SmM$
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smaj$, & then &
+     \h{3}\textsc{rd}$(X\,) = Y = (\,y_r, y_t, y_s)=(x_r, x_t-1, x_s) \in \SmM$
+\end{tabular}
 \vspace{.5\baselineskip}
 
 \noindent Likewise, the \textsc{7th} transformation transforms a
 minor-major seventh into a minor-minor seventh with the same root:
 
 \vspace{.5\baselineskip}
-  \h{7}\textsc{th}$(Y\,) = Z$, where $Y = (\,y_r, y_t, y_s) \in \SmM$ and
-  $Z=(z_r, z_t, z_s)=(\,y_r, y_t, y_s-1) \in \Smin$
+\begin{tabular}{lcl}
+  If $Y = (\,y_r, y_t, y_s) \in \SmM$, & then &
+    \h{7}\textsc{th}$(Y\,) = Z = (z_r, z_t, z_s)=(\,y_r, y_t, y_s-1) \in \Smin$
+\end{tabular}
 \vspace{.5\baselineskip}
 
 \noindent It will also be useful to define versions of the TF and \tft
 transformations that transform a dominant seventh into a \emph{minor} tonic,
-equivalent to TF $\odot$ \textsc{3rd} or \tft $\odot$ \textsc{3rd}. We will
+equivalent to TF $\bullet$ \textsc{3rd} or \tft $\bullet$ \textsc{3rd}. We will
 call them simply ``tf'' and ``\tfmt'' (the lowercase here is meant to parallel
-the use of lowercase letters to indicate minor triads):
+the use of lowercase letters to indicate minor triads): \\
 %
-{\novspace%
-\begin{alignat*}{3}
-    \mathrm{tf}\,(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
-    & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) = (x_r + 5, x_s - 2, x_t) \in \SmM \\
-    %
-    \mathrm{tf}_\mathrm{T}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
-    & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) = (x_r - 1, x_s + 4, x_t + 6) \in \SmM
-\end{alignat*}}%
+\vspace{0.5\baselineskip}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & then &
+    $\mathrm{tf}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r + 5, x_s - 2, x_t) \in \SmM$ \\
 %
-Note that unlike the standard TF and \tft transformations, tf and
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & then &
+    $\mathrm{tf}_\mathrm{T}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r - 1, x_s + 4,
+                                               x_t + 6) \in \Sdom$ \\
+\end{tabular}
+\vspace{0.5\baselineskip}
+
+\noindent Note that unlike the standard TF and \tft transformations, tf and
 \tfmt only transform \V chords to \I chords; the same
 transformations do \emph{not} hold for \ii to \V.
 
-\begin{figure}[tbhp]
+\begin{figure}[tbp]
   \centerGraphic[width=.8\textwidth]{eps/ch2/tf-minor-tonics.pdf}
   \caption{A small portion of \tf space, including minor tonic chords.}
   \label{tfe:tf-minor-tonics}
@@ -717,13 +727,13 @@ short 12-bar form, Davis achieves a formal overlap at every chorus: the
 opening tonic serves simultaneously as the harmonic resolution of the previous
 chorus and the formal beginning of the next.
 
-\begin{figure}[tp]
+\begin{figure}[tbp]
   \centerGraphic[width=22em]{eps/ch2/solar-changes.pdf}
   \caption{Changes to ``Solar'' (Miles Davis).}
   \label{tfe:solar-changes}
+\end{figure}
 
-  \vspace{4em}
-
+\begin{figure}[tb]
   \centerGraphic{eps/ch2/solar-space.pdf}
   \caption{An analysis of ``Solar'' in \tf space, with C minor tonic.}
   \label{tfe:solar-space}
@@ -786,35 +796,39 @@ Section \ref{sec:blues-for-alice} above, we noted that the \h{Bb7} chord in
 m.~5 served as the resolution of the \tf in the preceding bar, but contained
 the lowered seventh, which is typical for the blues. There, we tried to
 capture the intuition that the \h{Bb7} was stable by labeling the
-transformation as TF $\odot$ \textsc{7th}: a resolution merely inflected with
+transformation as TF $\bullet$ \textsc{7th}: a resolution merely inflected with
 the lowered seventh. This transformation, though, still results in the \h{Bb7}
 as a dominant seventh chord (it appears in the space only as \V of F).
 
 The generic \textsc{ResI} transformation offers a better solution, in that we
 can define a ``blues TF,'' which resolves a \V to a tonic major-minor
-seventh:%
+seventh: \\
 %
-\begin{alignat*}{2}
-  S_{\mathrm{IMm7}} &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \} & \\
+\vspace{0.5\baselineskip}
+\addtolength{\tabcolsep}{-4pt}
+\begin{tabular}{lcll}
+  \multicolumn{3}{l}{$S_{\mathrm{IMm7}} = \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \}$} \\
   %
-  \mathrm{TF}_{\mathrm{blues}}(X\,) &= Y\text{, where}\ X = (x_r, x_t, x_s)
-    \in \Sdom \text{ and}\ Y &=&\ (\,y_r, y_t, y_s) \\
-     &                     &=&\ (x_r+5, x_s-1, x_t-1) \in S_{\mathrm{IMm7}}
-\end{alignat*}
-%
-Note that TF\tsub{blues} is equivalent to $T_5$, but is defined in a way to
-demonstrate its similarity to TF (see the voice leading in Figure
-\ref{tfe:tf-blues-voice-leading}; TF\tsub{blues} is undefined on \ii
-chords). We have also defined the set $S$\tsub{IMm7}, the set of tonic
-major-minor seventh chords; this seems intuitive, but is somewhat
-complicated. $S$\tsub{IMm7} is exactly equivalent to \Sdom---in the language
-of set theory, they are the same set. The difference between them is
-not structural, but interpretive: $S$\tsub{IMm7} is the set of \emph{tonic}
-major-minor seventh chords, while \Sdom is the set of \emph{dominant}
-major-minor sevenths. This distinction allows us to capture the difference
-between \h{Bb7} as a stable resolution (as it is in m.~5 of ``Blues for
-Alice'') and \h{Bb7} as \V of \Eflat\ (as in m.~8 of ``Solar'', for
-example).
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & \hspace{3pt} then \hspace{3pt}&
+    $\mathrm{TF}_\mathrm{blues}(X\,) = Y$ &$= (\,y_r, y_t, y_s) $ \\
+                                        &&&$= (x_r + 5, x_s - 1,
+                                               x_t - 1) \in S_{\mathrm{IMm7}}$
+\end{tabular}
+\addtolength{\tabcolsep}{4pt}
+\vspace{0.5\baselineskip}
+
+\noindent Note that TF\tsub{blues} is equivalent to $T_5$, but is defined in a
+way to demonstrate its similarity to TF (see the voice leading in Figure
+\ref{tfe:tf-blues-voice-leading}; TF\tsub{blues} is undefined on \ii chords).
+We have also defined the set $S$\tsub{IMm7}, the set of tonic major-minor
+seventh chords; this seems intuitive, but is somewhat complicated.
+$S$\tsub{IMm7} is exactly equivalent to \Sdom---in the language of set theory,
+they are the same set. The difference between them is not structural, but
+interpretive: $S$\tsub{IMm7} is the set of \emph{tonic} major-minor seventh
+chords, while \Sdom is the set of \emph{dominant} major-minor sevenths. This
+distinction allows us to capture the difference between \h{Bb7} as a stable
+resolution (as it is in m.~5 of ``Blues for Alice'') and \h{Bb7} as \V of
+\Eflat\ (as in m.~8 of ``Solar'', for example).
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch2/tf-blues-voice-leading.pdf}
@@ -868,7 +882,7 @@ member of $S$\tsub{IMm7}, while the \h{Bb7} in m.~8 of ``Solar'' is a member
 of \Sdom.
 
 \begin{figure}[tbp]
-  \centerGraphic[width=30em]{eps/ch2/blues-tf-space.pdf}
+  \centerGraphic[width=.7\textwidth]{eps/ch2/blues-tf-space.pdf}
   \caption{A small portion of ``blues \tf space.''}
   \label{tfe:blues-tf-space}
 \end{figure}
@@ -915,7 +929,7 @@ The pitch-class interval here is 0, since both chords contain \Bflat, D, and
 realize our intuitions about the short passage in ``Blues for Alice'' (mm.~4--6):
 \begin{center}
   \ldots\ \h{Cm7} \TFarrow\ \h{F7} $\xrightarrow{\mathrm{TF}_{\mathrm{blues}}\ }$
-  \h{Bb7} $\xrightarrow{\mathrm{ pivot\ 5th}\ \odot\ 3\text{\textsc{rd} }}$
+  \h{Bb7} $\xrightarrow{\mathrm{ pivot\ 5th}\ \bullet\ 3\text{\textsc{rd} }}$
   \h{Bbm7} \TFarrow\ \h{Eb7} \ldots
 \end{center}
 
@@ -951,9 +965,9 @@ with the exception of the diminished fifth between \sd4 and \sd7, where the
 regular transformational structure of the chromatic space breaks down. The
 change of the descending perfect fifth ($T_5$) to a diminished fifth ($T_6$)
 means that all of the transformations linking these two key areas must all be
-combined with $T_1$: \h{C7} $\xrightarrow{3\text{\textsc{rd}}\ \odot\ T_1}$
+combined with $T_1$: \h{C7} $\xrightarrow{3\text{\textsc{rd}}\ \bullet\ T_1}$
 \h{Csm7}, \h{C7} $\xrightarrow{T_6\;}$ \h{Fs7}, and \h{Fmaj7}
-$\xrightarrow{7\text{\textsc{th}}\ \odot\ T_1}$ \h{Fs7}.\fn{tfe-5}
+$\xrightarrow{7\text{\textsc{th}}\ \bullet\ T_1}$ \h{Fs7}.\fn{tfe-5}
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch2/tf-diatonic-fifths.pdf}
@@ -966,7 +980,7 @@ As noted in Chapter 1, diatonic space (the cyclic group $\mathcal{C}_7$) can
 be generated by any of its members, while chromatic space ($\mathcal{C}_{12}$)
 can only be generated by the members 1, 5, 7, or 11 (half-steps and perfect
 fourths/fifths). Diatonic \tf space, then, offers the interesting possibility
-of departing from the fifths-based space used so in this chapter, in
+of departing from the fifths-based space used so far in this chapter, in
 favor of some other organization of the space (since any interval we might
 choose will generate the entire space). To see how such an organization
 might allow us to capture different kinds of analytical insights, I want to
@@ -982,42 +996,46 @@ arrangement into steps means that the key areas used in the tune are adjacent
 in the space; in the chromatic space of Figure \ref{tf:ceora-space-1}, they
 were separated by an intervening fifth.
 
-\begin{figure}[tbp]
+\begin{figure}[p]
   \centerGraphic{eps/ch2/ab-diatonic-space.pdf}
   \caption{An \Aflat{}-major diatonic \tf space, arranged in descending steps.}
   \label{tfe:ab-diatonic-space}
 \end{figure}
 
-This figure is structurally a bit different than the other spaces we have been
-exploring in this chapter, so it will be helpful to examine it in some detail
-before returning to ``Ceora.'' The arrangement into descending steps means
-that we can no longer align all of the seventh chords sharing a root; only the
-major and minor seventh chords sharing a root are adjacent in the
-space.\fn{tfe-5a} The \h{Gmaj7} and \h{Gm7} (as \ii/F) chords are close to
-one another, for example, but \h{G7} (\V/C) is farther removed. The key
-areas in this figure are not connected by $T_5$, but instead by $t_6$: all of
-the roots of the major seventh chords (reading down the right side of the
-figure) are members of the 4-flat diatonic collection.\fn{tfe-5b} Though the
-diatonic distance between key areas is consistent, the chromatic distance
-varies: there are two points in the space connected by half steps rather than
-whole steps.
-
-As we saw above, the tritone appearing in diatonic space alters the
-transformational structure somewhat: transformations spanning this tritone
-must must be combined with $T_1$. Here, the relationship between most
-\I and \ii chords is the transformation \textsc{7th}~$\odot$
-\textsc{3rd}, but between the keys of \Dflat\ and C (as well as \Aflat\ and
-G), it is \textsc{7th}~$\odot$ \textsc{3rd}~$\odot\ T_1$. This transformation
-is in fact equivalent to the transformation \slideS (see the detail in Figure
-\ref{tfe:diatonic-space-detail}); this diatonic origin is one of the reasons
-the \slideS transformation is so common in tonal jazz.
-
-\begin{figure}[tbp]
+\begin{figure}[p]
   \centerGraphic[width=30em]{eps/ch2/diatonic-space-detail.pdf}
   \caption{Detail of diatonic \tf space, showing the \textsc{slide}\textsubscript{7}
     transformation between key centers related by half-step.}
   \label{tfe:diatonic-space-detail}
 \end{figure}
+
+This figure is structurally a bit different than the other spaces explored in
+this chapter, so it will be helpful to examine it in some detail before
+returning to ``Ceora.'' The arrangement into descending steps means that we
+can no longer align all of the seventh chords sharing a root; only the major
+and minor seventh chords sharing a root are adjacent in the space.\fn{tfe-5a}
+The \h{Gmaj7} and \h{Gm7} (as \ii/F) chords are close to one another, for
+example, but \h{G7} (\V/C) is farther removed. The key areas in this figure
+are not connected by $T_5$, but instead by $t_6$: all of the roots of the
+major seventh chords (reading down the right side of the figure) are members
+of the 4-flat diatonic collection.\fn{tfe-5b} This $t_6$ operation affects
+only chord roots, unlike the $t_k$ operator in Section \ref{subsec:inttrans};
+all of the resulting chords are major sevenths. Though the diatonic distance
+between key areas is consistent, the chromatic distance varies: there are two
+points in the space connected by half steps rather than whole steps (compare,
+for example, \h{Fmaj7} $\xrightarrow{\;t_6\;}$ \h{Ebmaj7} and \h{Dbmaj7}
+$\xrightarrow{\;t_6\;}$ \h{Cmaj7}).
+
+As we saw above, the tritone appearing in diatonic space alters the
+transformational structure somewhat: transformations spanning this tritone
+must must be combined with $T_1$. Here, the relationship between most
+\I and \ii chords is the transformation \textsc{7th}~$\bullet$
+\textsc{3rd}, but between the keys of \Dflat\ and C (as well as \Aflat\ and
+G), it is \textsc{7th}~$\bullet$ \textsc{3rd}~$\bullet\ T_1$. This transformation
+is in fact equivalent to the transformation \slideS (see the detail in Figure
+\ref{tfe:diatonic-space-detail}); this diatonic origin is one of the reasons
+the \slideS transformation is so common in tonal jazz.
+
 
 All of ``Ceora'' takes place in a relatively small portion of diatonic \tf
 space; Figure \ref{tfe:ceora-space-diatonic} gives an analysis of the A
@@ -1050,24 +1068,22 @@ that we hear the same progression repeated many times (Morgan's recording of
 ``Ceora'' runs about 6\,½ minutes, for example), and using only pitches from the
 \Aflat-major diatonic collection would quickly become boring.
 
-This arrangement of \tf space, combining chromatic and diatonic operations, is
-mathematically complicated. As Steven Rings notes, transformation networks
-involving both chromatic and diatonic operations violate Lewin's formal
-definition of a transformation network, since they act on different
-sets.\footcite[98--99]{rings:2011} The underlying transformation graph is not
-path consistent, since two different paths in the space can combine to form
-$t_6$: \slideS $\odot$ TF $\odot$ TF (\h{Abmaj7} to \h{Gmaj7}, for example), and
-(\textsc{7th} $\odot$ \textsc{3rd}) $\odot$ TF $\odot$ TF (\h{Gmaj7} to
-\h{Fmaj7}).\fn{tfe-7} Put another way, putting \h{Gmaj7} in the top row of Figure
+The arrangement of \tf space in Figure \ref{tfe:ab-diatonic-space}, combining
+chromatic and diatonic operations, is mathematically complicated. As Steven
+Rings notes, transformation networks involving both chromatic and diatonic
+operations violate Lewin's formal definition of a transformation network,
+since they act on different sets.\footcite[98--99]{rings:2011} The underlying
+transformation graph is not path consistent, since the transformation \slideS
+$\bullet$ TF $\bullet$ TF is in general not equal to the transformation
+$t_6$.\fn{tfe-7} Put another way, putting \h{Gmaj7} in the top row of Figure
 \ref{tfe:ab-diatonic-space} while leaving the transformational labels
-unchanged does not work: obeying the $t_6$ arrow requires
-\h{Fmaj7} to occupy the row below, but following the other path would give
-\h{Fsmaj7}. The graph is, however, realizable: it is possible, as Figure
-\ref{tfe:ab-diatonic-space} attests, to fill in the nodes such that the arrows
-\emph{do} make sense.\footcite[29]{hook:2007} Both Rings and Hook have shown
-that transformation networks that are not path consistent---like the diatonic
-\tf space developed in this section---can nevertheless be analytically
-productive.
+unchanged does not work: obeying the $t_6$ arrow requires \h{Fmaj7} to occupy
+the row below, but following the other path would give \h{Fsmaj7}. The graph
+is, however, realizable: it is possible, as the figure itself attests, to fill
+in the nodes such that the arrows \emph{do} make
+sense.\footcite[29]{hook:2007} Both Rings and Hook have shown that
+transformation networks that are not path consistent---like the diatonic \tf
+space developed in this section---can nevertheless be analytically productive.
 
 \subsection{Summary}
 
