@@ -155,20 +155,19 @@ cardinality $12$: each pitch class is the root of exactly one \ii,
 \V, and \I chord.
 
 With the space of the nodes defined, we can now formulate the transformation
-representing a \tfo, which we will call simply ``TF'':
+representing a \tfo, which we will call simply ``TF'': \\
 %
-{\novspace%
-\begin{alignat*}{3}
-    \mathrm{TF}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smin
-    & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) = (x_r + 5, x_s - 1, x_t) \in \Sdom \\
-    %
-    \mathrm{TF}(Y\,) = Z\text{, where}\ Y = (\,y_r, y_t, y_s) \in \Sdom
-    & \text{ and} &
-    Z &= (z_r, z_t, z_s) = (\,y_r + 5, y_s - 1, y_t) \in \Smaj
-\end{alignat*}}%
+\vspace{0.5\baselineskip}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smin$, & then &
+    $\mathrm{TF}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r + 5, x_s - 1, x_t) \in \Sdom$ \\
 %
-Again, these definitions are designed to be musically relevant; the
+  If $Y = (y_r, y_t, y_s) \in \Sdom$, & then &
+    $\mathrm{TF}(Y\,) = Z = (\,z_r, z_t, z_s) = (y_r + 5, y_s - 1, y_t) \in \Smaj$
+\end{tabular}
+\vspace{0.5\baselineskip}
+
+\noindent Again, these definitions are designed to be musically relevant; the
 voice-leading diagram in Figure~\ref{tf:tfo-voice-leading} illustrates this
 more clearly.\fn{tf-6a} The root of the second chord is a fifth below the root
 of the first ($y_r = x_r + 5$), the third of the second chord is a semitone
@@ -224,15 +223,17 @@ transformation network.  This descending fifths arrangement means that all of
 the chords sharing a root are aligned vertically (directly below \h{Gmaj7} is
 \h{G7}, which is itself above \h{Gm7}). This arrangement allows us to define
 two more transformations, which we will call simply \textsc{7th} and
-\textsc{3rd}:
-
+\textsc{3rd}: \\
+%
 \vspace{0.5\baselineskip}
-\h{7}\textsc{th}$(L) = M$, where $L = (l_r, l_t, l_s) \in \Smaj$ and $M=(m_r, m_t,
-m_s)=(l_r, l_t, l_s-1) \in \Sdom$
-
-\h{3}\textsc{rd}$(M) = N$, where $M = (m_r, m_t, m_s) \in \Sdom$ and $N=(n_r, n_t,
-n_s)=(m_r, m_t-1, m_s) \in \Smin$
-\vspace{0.5\baselineskip}
+\begin{tabular}{lcl}
+  If $L = (l_r, l_t, l_s) \in \Smaj$, & then &\h{7}\textsc{th}$(L) = M=(m_r, m_t,
+  m_s)=(l_r, l_t, l_s-1) \in \Sdom$ \\
+%
+  If $M = (m_r, m_t, m_s) \in \Sdom$, & then &\h{3}\textsc{rd}$(M) = N=(n_r, n_t,
+  n_s)=(m_r, m_t-1, m_s) \in \Smin$
+\end{tabular}
+\vspace{0em}
 
 \noindent Like the TF transformation, the \textsc{7th} and \textsc{3rd}
 transformations have clear musical relevance: each lowers the given note by a
@@ -422,26 +423,28 @@ space.
 While we could navigate this space using only the transformations TF and
 $T_6$, it is convenient to define another transformation to help with a common
 progression like \h{Dm7}--\h{Db7}--\h{Cmaj7}. We will call this
-transformation \tft, to highlight its relationship to the more normative TF:%
+transformation \tft, to highlight its relationship to the more normative TF: \\
 %
-\begin{alignat*}{3}
-    \mathrm{TF}_\mathrm{T}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smin
-    & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) &= (x_r - 1, x_s + 5, x_t + 6) \in \Sdom \\
-    %
-    \mathrm{TF}_\mathrm{T}(Y\,) = Z\text{, where}\ Y = (\,y_r, y_t, y_s) \in \Sdom
-    & \text{ and} &
-    Z &= (z_r, z_t, z_s) &= (\,y_r - 1, y_s + 5, y_t + 6) \in \Smaj
-\end{alignat*}%
+\vspace{0.5\baselineskip}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smin$, & then &
+    TF\tsub{T}$(X\,) = Y = (\,y_r, y_t, y_s) = (x_r -1, x_s + 5, x_t + 6) \in \Sdom$ \\
 %
-The \tft\ transformation represents a tritone substitution, but it
+  If $Y = (y_r, y_t, y_s) \in \Sdom$, & then &
+    TF\tsub{T}$(Y\,) = Z = (\,z_r, z_t, z_s) = (y_r -1, y_s + 5, y_t + 6) \in \Smaj$
+\end{tabular}
+\addtolength{\tabcolsep}{3pt}
+\vspace{0.5\baselineskip}
+
+\noindent The \tft\ transformation represents a tritone substitution, but it
 transforms bass motion by fifth into bass motion by semitone (\emph{not} bass
 motion by tritone); the voice-leading diagram in Figure
 \ref{tft:voice-leading-tft} clarifies the relationship with the ordinary TF. Because TF and $T_6$ commute,
 \tft\ can be considered as either TF followed by $T_6$, or vice versa. With
 this new transformation, we can understand the progression
-\h{Abm7}--\h{Db7}--\h{Cmaj7} as a substituted \tfo\ in C: \h{Abm7} \TFarrow\
-\h{Db7} \TFTarrow\ \h{Cmaj7}.
+\h{Abm7}--\h{Db7}--\h{Cmaj7} as a substituted \tfo\ in C: \mbox{\h{Abm7} \TFarrow\
+\h{Db7} \TFTarrow\ \h{Cmaj7}}.
 
 \begin{figure}[htbp]
   \centerGraphic{eps/ch2/voice-leading-tft.pdf}
@@ -474,16 +477,16 @@ with the substituted \ii, the third and seventh are both held as common
 tones, and the root and fifth of the chord both ascend by semitone (from
 G--B--D--\h{Fs} to \h{Ab}--\h{Cb}--\h{Eb}--\h{Gb}).\fn{tft-3} Because of its
 similarity to the standard \textsc{slide} transformation, with the addition of
-the common tone seventh, we will call this transformation \slideS:\fn{tft-3a}
+the common tone seventh, we will call this transformation \slideS:\fn{tft-3a} \\
 %
-{\novspace%
-\begin{displaymath}
-    \text{\slideS}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smaj
-     \text{ and}\
-    Y = (\,y_r, y_t, y_s) = (x_r + 1, x_t, x_s) \in \Smin
-\end{displaymath}}%
-%
-In jazz this progression occurs frequently when moving between key
+\vspace{0.5\baselineskip}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smaj$, & then &
+    $\text{\slideS}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r +1, x_t, x_s) \in \Smin$
+\end{tabular}
+\vspace{0.5\baselineskip}
+
+\noindent In jazz this progression occurs frequently when moving between key
 centers related by half step, though it is uncommon in classical
 music.\fn{tft-4} We have encountered this transformation once already: the
 motion from \h{Dbmaj7} to \h{Dm7} in mm.~5--6 of ``Ceora'' is indeed a typical
@@ -536,23 +539,25 @@ which resolves (via the \textsc{7th} and \textsc{3rd} transformations) to a
 maintaining harmonic motion; instead of a \tf resolving to its tonic, it resolves
 to the minor seventh chord with the same root. Because this progression is so
 common, it is useful to define it as its own transformation, which we will
-call EC (for ``evaded cadence''). Unlike TF, EC is only useful as a
-transformation from \V chords to \ii chords:
+call EC (for ``evaded cadence''). Unlike TF, EC is useful only as a
+transformation from \V chords to \ii chords: \\
 %
-{\novspace%
-\begin{displaymath}
-  \mathrm{EC}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
-   \text{ and}\
-  Y = (\,y_r, y_t, y_s) = (x_r + 5, x_s - 2, x_t - 1) \in \Smin
-\end{displaymath}}%
-%
-EC is of course equivalent to TF $\bullet$ \textsc{7th} $\bullet$ \textsc{3rd},
-but only when the starting chord is a \V chord (a member of $\Sdom$).
-In \tf space, EC can be represented by starting on a dominant, then following
-one arrow to the right and two arrows downward. The structure of the space
-immediately shows that EC is impossible beginning on a \ii chord; we
-can follow a single arrow to the right, but there is only one downward arrow
-from a \V chord.\fn{tft-7}
+\vspace{0.5\baselineskip}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & then &
+    EC$(X\,) = Y = (\,y_r, y_t, y_s) = (x_r+5, x_s-2, x_t-1) \in \Smin$
+\end{tabular}
+\addtolength{\tabcolsep}{3pt}
+\vspace{0.5\baselineskip}
+
+\noindent EC is of course equivalent to TF $\bullet$ \textsc{7th} $\bullet$
+\textsc{3rd}, but only when the starting chord is a \V chord (a member of
+$\Sdom$). In \tf space, EC can be represented by starting on a dominant, then
+following one arrow to the right and two arrows downward. The structure of the
+space immediately shows that EC is impossible beginning on a \ii chord; we can
+follow a single arrow to the right, but there is only one downward arrow from
+a \V chord.\fn{tft-7}
 
 This pattern of stepwise descending \tf{}s continues until arriving at the
 subdominant \Bflat\ in m.~5, which includes the standard blues alteration of
@@ -654,36 +659,40 @@ transformation works intuitively, and transforms a major seventh chord to a
 minor-major seventh with the same root:
 
 \vspace{.5\baselineskip}
-  \h{3}\textsc{rd}$(X\,) = Y$, where $X = (x_r, x_t, x_s) \in \Smaj$ and
-  $Y=(\,y_r, y_t, y_s)=(x_r, x_t-1, x_s) \in \SmM$
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smaj$, & then &
+     \h{3}\textsc{rd}$(X\,) = Y = (\,y_r, y_t, y_s)=(x_r, x_t-1, x_s) \in \SmM$
+\end{tabular}
 \vspace{.5\baselineskip}
 
 \noindent Likewise, the \textsc{7th} transformation transforms a
 minor-major seventh into a minor-minor seventh with the same root:
 
 \vspace{.5\baselineskip}
-  \h{7}\textsc{th}$(Y\,) = Z$, where $Y = (\,y_r, y_t, y_s) \in \SmM$ and
-  $Z=(z_r, z_t, z_s)=(\,y_r, y_t, y_s-1) \in \Smin$
+\begin{tabular}{lcl}
+  If $Y = (\,y_r, y_t, y_s) \in \SmM$, & then &
+    \h{7}\textsc{th}$(Y\,) = Z = (z_r, z_t, z_s)=(\,y_r, y_t, y_s-1) \in \Smin$
+\end{tabular}
 \vspace{.5\baselineskip}
 
 \noindent It will also be useful to define versions of the TF and \tft
 transformations that transform a dominant seventh into a \emph{minor} tonic,
 equivalent to TF $\bullet$ \textsc{3rd} or \tft $\bullet$ \textsc{3rd}. We will
 call them simply ``tf'' and ``\tfmt'' (the lowercase here is meant to parallel
-the use of lowercase letters to indicate minor triads):
+the use of lowercase letters to indicate minor triads): \\
 %
-{\novspace%
-\begin{alignat*}{3}
-    \mathrm{tf}\,(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
-    & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) = (x_r + 5, x_s - 2, x_t) \in \SmM \\
-    %
-    \mathrm{tf}_\mathrm{T}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
-    & \text{ and}\ &
-    Y &= (\,y_r, y_t, y_s) = (x_r - 1, x_s + 4, x_t + 6) \in \SmM
-\end{alignat*}}%
+\vspace{0.5\baselineskip}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & then &
+    $\mathrm{tf}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r + 5, x_s - 2, x_t) \in \SmM$ \\
 %
-Note that unlike the standard TF and \tft transformations, tf and
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & then &
+    $\mathrm{tf}_\mathrm{T}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r - 1, x_s + 4,
+                                               x_t + 6) \in \Sdom$ \\
+\end{tabular}
+\vspace{0.5\baselineskip}
+
+\noindent Note that unlike the standard TF and \tft transformations, tf and
 \tfmt only transform \V chords to \I chords; the same
 transformations do \emph{not} hold for \ii to \V.
 
@@ -792,29 +801,33 @@ as a dominant seventh chord (it appears in the space only as \V of F).
 
 The generic \textsc{ResI} transformation offers a better solution, in that we
 can define a ``blues TF,'' which resolves a \V to a tonic major-minor
-seventh:%
+seventh: \\
 %
-\begin{alignat*}{2}
-  S_{\mathrm{IMm7}} &= \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \} & \\
+\vspace{0.5\baselineskip}
+\addtolength{\tabcolsep}{-4pt}
+\begin{tabular}{lcll}
+  \multicolumn{3}{l}{$S_{\mathrm{IMm7}} = \{ (x_r, x_t, x_s)\ |\ x_t - x_r = 4; x_s - x_r = 10 \}$} \\
   %
-  \mathrm{TF}_{\mathrm{blues}}(X\,) &= Y\text{, where}\ X = (x_r, x_t, x_s)
-    \in \Sdom \text{ and}\ Y &=&\ (\,y_r, y_t, y_s) \\
-     &                     &=&\ (x_r+5, x_s-1, x_t-1) \in S_{\mathrm{IMm7}}
-\end{alignat*}
-%
-Note that TF\tsub{blues} is equivalent to $T_5$, but is defined in a way to
-demonstrate its similarity to TF (see the voice leading in Figure
-\ref{tfe:tf-blues-voice-leading}; TF\tsub{blues} is undefined on \ii
-chords). We have also defined the set $S$\tsub{IMm7}, the set of tonic
-major-minor seventh chords; this seems intuitive, but is somewhat
-complicated. $S$\tsub{IMm7} is exactly equivalent to \Sdom---in the language
-of set theory, they are the same set. The difference between them is
-not structural, but interpretive: $S$\tsub{IMm7} is the set of \emph{tonic}
-major-minor seventh chords, while \Sdom is the set of \emph{dominant}
-major-minor sevenths. This distinction allows us to capture the difference
-between \h{Bb7} as a stable resolution (as it is in m.~5 of ``Blues for
-Alice'') and \h{Bb7} as \V of \Eflat\ (as in m.~8 of ``Solar'', for
-example).
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & \hspace{3pt} then \hspace{3pt}&
+    $\mathrm{TF}_\mathrm{blues}(X\,) = Y$ &$= (\,y_r, y_t, y_s) $ \\
+                                        &&&$= (x_r + 5, x_s - 1,
+                                               x_t - 1) \in S_{\mathrm{IMm7}}$
+\end{tabular}
+\addtolength{\tabcolsep}{4pt}
+\vspace{0.5\baselineskip}
+
+\noindent Note that TF\tsub{blues} is equivalent to $T_5$, but is defined in a
+way to demonstrate its similarity to TF (see the voice leading in Figure
+\ref{tfe:tf-blues-voice-leading}; TF\tsub{blues} is undefined on \ii chords).
+We have also defined the set $S$\tsub{IMm7}, the set of tonic major-minor
+seventh chords; this seems intuitive, but is somewhat complicated.
+$S$\tsub{IMm7} is exactly equivalent to \Sdom---in the language of set theory,
+they are the same set. The difference between them is not structural, but
+interpretive: $S$\tsub{IMm7} is the set of \emph{tonic} major-minor seventh
+chords, while \Sdom is the set of \emph{dominant} major-minor sevenths. This
+distinction allows us to capture the difference between \h{Bb7} as a stable
+resolution (as it is in m.~5 of ``Blues for Alice'') and \h{Bb7} as \V of
+\Eflat\ (as in m.~8 of ``Solar'', for example).
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch2/tf-blues-voice-leading.pdf}
