@@ -278,6 +278,21 @@
   }%
 }
 
+% Chorus numbers: if there's a dash in the argument, everything to its right
+% will be subscripted, if not, the whole thing will be in lining numerals.
+% Ex: \cnum{1B} just gives "1B", but \cnum{1A-1} will give 1A\subscript{1},
+% also with lining numerals.
+\newcommand{\cnum}[1]{%
+  {%
+    \noexpandarg%
+    \liningNums%
+    \StrBefore{#1}{-}[\chorus]%
+    \StrBehind{#1}{-}[\sec]%
+    \expandarg%
+    \IfStrEq{\chorus}{}{#1}{\chorus\tsub{\sec}}%
+  }%
+}
+
 % chord-scale objects/transformations
 \newcommand{\scalepair}[2]{%
   \mbox{\ensuremath{\langle}#1, #2\ensuremath{\rangle}}%
