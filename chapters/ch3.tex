@@ -27,7 +27,7 @@ bebop era. By way of example, Figure \ref{mts:ladybird-changes} gives the
 changes to the opening five bars of Tadd Dameron's ``Lady Bird.'' Normally the
 progression in mm.~3--4 would function as a \tf in the key of \Eflat, but in
 m.~5 it resolves instead to C. What might have been a \tfo in C
-(\h{Dm7}--\h{G7}) does not appear;; the \tf is transposed up a minor third to
+(\h{Dm7}--\h{G7}) does not appear; the \tf is transposed up a minor third to
 become \h{Fm7}--\h{Bb7}.
 
 \begin{figure}[tbp]
@@ -48,7 +48,7 @@ the chord has dominant quality but not dominant function, since it lacks the
 leading tone (of the following tonic).\footcite[123--24]{berklee:harmony} Unlike the tritone
 substitution, there is no strong voice-leading rationale for the minor-third
 substitution; it is simply a progression that bebop players often used, and
-that we as analysts must now contend with.
+that we as analysts must now contend with.\fn{mts-a}
 
 There is, though, a certain similarity between the tritone and minor-third
 substitutions: just as the tritone evenly divides the octave, so too the minor
@@ -94,23 +94,28 @@ individual notes, but the resulting graph (Douthett and Steinbach's
 The minor-third arrangement of \tf space makes it easy to define a
 transformation to represent the minor-third substitution. Because jazz
 musicians often refer to the minor-third substitution as the ``backdoor
-substitution'',  we will call this transformation BD (for ``backdoor''):%
+substitution,''  we will call this transformation BD: \\
 %
-\begin{displaymath}
-    \mathrm{BD}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Sdom
-    \text{ and}\
-    Y = (\,y_r, y_t, y_s) = (x_r + 2, x_s - 4, x_t - 3) \in \Smaj
-\end{displaymath}%
-%
-Musically, there is no compelling reason to define BD such that the third is
-calculated from the previous chord's seventh and vice versa; there is no
-voice-leading connection between them as there is in the TF transformation.
+\vspace{0.35\baselineskip}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Sdom$, & then &
+    $\mathrm{BD}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r + 2, x_s - 4, x_t - 3)
+                                               \in \Smaj$
+\end{tabular}
+\addtolength{\tabcolsep}{3pt}
+\vspace{0.5\baselineskip}
+
+\noindent Musically, there is no compelling reason to define BD such that the
+third is calculated from the previous chord's seventh and vice versa; there is
+no voice-leading connection between them as there is in the TF transformation.
 Defining them this way, however, allows the same function to model both the
 transformation from minor to dominant seventh and from dominant to major
 seventh.\fn{mts-4} In the space, BD is represented as a diagonal line moving
 ``frontward'' between two layers; see Figure \ref{mts:bd-transformation}. With
 this definition, we can easily understand the progression in mm.~3--5 of
-``Lady Bird'': \h{Fm7} \TFarrow\ \h{Bb7} $\xrightarrow{\mathrm{BD}}$\ \h{Cmaj7}.
+``Lady Bird'': \h{Fm7} \TFarrow\ \h{Bb7} $\xrightarrow{\mathrm{BD}}$\
+\h{Cmaj7}.
 
 \begin{figure}[tbp]
   \centerGraphic[width=20em]{eps/ch3/bd-transformation.pdf}
@@ -118,6 +123,26 @@ this definition, we can easily understand the progression in mm.~3--5 of
     \caph{Bb7} to \caph{Cmaj7} in minor-third space.}
   \label{mts:bd-transformation}
 \end{figure}
+
+As noted above, the minor-third substitution is not explained in terms of its
+voice leading in the jazz pedagogical literature, since it does not contain
+the tonic-defining \sd4--\sd7 tritone. There is precedent, however, for the
+backdoor substitution in classical music. Dmitri Tymoczko has written about
+third substitution more generally, noting that it is often derived by
+replacing a root-position chord with one in first inversion (e.g., replacing
+IV with ii$^6$).\footcite[232]{tymoczko:2011} Though he does not mention
+minor third substitution in his chapter on jazz, he identifies the voice-leading
+proximity of third-related chords as fundamental, since ``they can substitute
+for one another without much disrupting the music's contrapuntal or harmonic
+fabric.''\footcite[283]{tymoczko:2011} The minor-third substitution in jazz,
+then, does have some voice-leading rationale: the \V and \flat{}VII$^7$
+chords are connected to \emph{each other} by a minimal amount of voice-leading
+work (a point to which we will return in the final section of this chapter).
+but this voice-leading proximity does not manifest in the surface motion from,
+for example, \h{Bb7}--\h{Cmaj7}. This logic, though, would seem to suggest
+that a chord a minor third \emph{below} the dominant can be substituted just
+as well (e.g., \h{E7}--\h{Cmaj7} standing in for \h{G7}--\h{Cmaj7}), but this
+progression is extremely rare in jazz.
 
 \subsection{Analytical Interlude: Joe Henderson, “Isotope”}
 \label{sec:henderson-isotope}
@@ -282,7 +307,7 @@ tonal, but neither is it really atonal. When I listen to the piece, at least,
 the impression is not one of nonfunctional harmony, but rather of
 tonal harmony used in an unconventional way. This distinction is easiest to understand
 with a counterexample: Figure \ref{maj3:infant-eyes-changes} gives the changes to
-Wayne Shorter's ballad ``Infant Eyes''.\fn{maj3-4a} Here there are no \tf{}s,
+Wayne Shorter's ballad ``Infant Eyes.''\fn{maj3-4a} Here there are no \tf{}s,
 and the only V--I progressions occur across formal boundaries. Shorter's use
 of harmony \emph{does} seem nonfunctional, and gives the piece a floating
 quality that ``Giant Steps'' does not have. Rather, ``Giant Steps'' is
@@ -324,8 +349,8 @@ composition ``Countdown,'' which is based on the changes to Miles Davis's
 ``Tune Up'' (see Figure \ref{maj3:countdown-tune-up}).\fn{maj3-6}
 Coltrane changes can be superimposed over any four-measure \tfo progression,
 so they can be found not only in Coltrane's own compositions, but also in his
-improvisations on other tunes as well as his reharmonizations of standards
-(like ``Body and Soul'').\fn{maj3-7}
+improvisations on other tunes and his reharmonizations of standards
+like ``Body and Soul.''\fn{maj3-7}
 
 \subsection{Developing a Transformational System}
 \label{subsec:maj3-transformations}
@@ -341,13 +366,35 @@ at a point when they would be more relevant. Given the central role of
 harmonic motion in thirds in many neo-Riemannian theories, it seems
 appropriate to fulfill that promise at this point.
 
-Triads related by major third are important in many of these theories,
-but especially those of Richard Cohn. In both of Cohn's models of triadic
-space in \emph{Audacious Euphony}---hexatonic cycles and Weitzmann
-regions---three M3-related major triads combine with three minor triads to
+While not quite neo-Riemannian, Tymoczko's general notion of third
+substitution (discussed above in connection with the backdoor substitution)
+also includes major-third substitution, and thus we might consider all of the
+local tonics in a Coltrane-changes progression as third substitutions for the
+true tonic. These substitutions, according to Tymoczko, are explained by the
+voice-leading proximity of third-related chords---a factor that plays a
+critical part in the work of Richard Cohn. In both of Cohn's models of triadic
+space in \emph{Audacious Euphony}, hexatonic cycles and Weitzmann
+regions, three M3-related major triads combine with three minor triads to
 form a six-chord system.\fn{maj3-8} Thus, the three tonal centers of ``Giant
 Steps'' can be contained in a single hexatonic cycle or a single Weitzmann
 region.
+
+\begin{figure}[p]
+  \centerGraphic[width=0.65\textwidth]{eps/ch3/gs-cube-dance.pdf}
+  \caption[``Giant Steps'' analyzed in Douthett's Cube Dance.]{``Giant
+    Steps,'' mm.~1--5, analyzed in Douthett's Cube Dance. Begin by following the
+    solid arrows, then continue with the dashed arrows.}
+  \label{maj3:gs-cube-dance}
+% \end{figure}
+
+% xxx do we really need this 4-cube trio graphic?
+% \begin{figure}[p]
+  \centerGraphic[width=0.55\textwidth]{eps/ch3/four-cube-trio.pdf}
+  \caption[Cohn's ``Four-Cube Trio'']{Cohn's ``Four-Cube Trio'' (\emph{Audacious
+    Euphony}, Fig.~7.16, 158.) The black triangles indicate minor seventh chords,
+    while the hollow stars indicate French sixth chords.}
+  \label{maj3:four-cube-trio}
+\end{figure}
 
 Understanding the rest of ``Giant Steps'' in terms of one of these systems,
 though, leaves much to be desired. Cohn's systems, and others like them, are
@@ -357,15 +404,6 @@ incongruity, we must either adapt the music to fit our analytical system, or
 adapt our analytical system to fit the music. The first option is clearly a
 nonstarter: Figure~\ref{maj3:gs-cube-dance} gives a non-example of ``Giant
 Steps'' analyzed in Jack Douthett's ``Cube Dance.''\fn{maj3-9}
-%
-\begin{figure}[tbp]
-  \centerGraphic{eps/ch3/gs-cube-dance.pdf}
-  \caption[``Giant Steps'' analyzed in Douthett's Cube Dance.]{``Giant
-    Steps,'' mm.~1--5, analyzed in Douthett's Cube Dance. Begin by following the
-    solid arrows, then continue with the dashed arrows.}
-  \label{maj3:gs-cube-dance}
-\end{figure}
-%
 While this analysis makes the major-third cycle of the tonic chords clear,
 reducing the chords to triads loses the detail of the chord qualities (both
 major-seventh and dominant-seventh chords become major triads), as well as
@@ -378,29 +416,20 @@ these turn out to be not so helpful for our purposes here either. Theories
 that include only the (0258) tetrachords---half-diminished and dominant
 sevenths---are obviously not suitable for analyzing the multiple seventh-chord
 types in jazz. The seventh-chord analogy of ``Cube Dance'' is what Cohn calls
-the ``4-Cube Trio,'' which is shown in Figure
-\ref{maj3:four-cube-trio}.\fn{maj3-10} As is readily apparent, 4-Cube Trio
+the ``Four-Cube Trio,'' which is shown in Figure
+\ref{maj3:four-cube-trio}.\fn{maj3-10} As is readily apparent, Four-Cube Trio
 does not contain any major seventh chords, so it would also create problems if
 pressed into use for analyzing ``Giant Steps.''
-
-% xxx do we really need this 4-cube trio graphic?
-\begin{figure}[tbp]
-  \centerGraphic{eps/ch3/four-cube-trio.pdf}
-  \caption[Cohn's ``4-Cube Trio'']{Cohn's ``4-Cube Trio'' (\emph{Audacious
-    Euphony}, Fig.~7.16, 158.) The black triangles indicate minor seventh chords,
-    while the hollow stars indicate French sixth chords.}
-  \label{maj3:four-cube-trio}
-\end{figure}
 
 There is, though, a more fundamental problem with these neo-Riemannian theories
 of seventh chords, at least when approaching M3-cycles in jazz. As we have
 mentioned, many neo-Riemannian theories focus on
 efficient voice-leading, and parsimonious relationships among seventh chords
-can understood as minimal perturbations of fully-diminished seventh
+can be understood as minimal perturbations of fully-diminished seventh
 chords.\fn{maj3-11} This does not generate major-third cycles (as in the
 triadic case), but rather partitions the octave into \emph{minor} thirds. The
 three dominant sevenths appearing in ``Giant Steps,'' for example, are in
-three different ``towers'' in the 4-Cube Trio, which does not reflect
+three different ``towers'' in the Four-Cube Trio, which does not reflect
 the organizing influence of major thirds in the way that the triadic Cube
 Dance does.
 
@@ -493,25 +522,30 @@ reflect the unusual chromatic organization of the tune itself.
 \label{maj3:coltrane-subs-space}
 \end{figure}
 
-The arrangement into $T_8$-related ``layers'' also helps to clarify in what
-sense Coltrane changes function as a substitution for a \tfo progression
+The arrangement into $T_8$-related ``layers'' also helps to clarify the
+function of Coltrane changes as a substitution for a \tfo progression
 (see Figure \ref{maj3:coltrane-subs-space}). As usual, we could define a
 transformation to help explain this substitution. Though the $T_8$ between
 major seventh chords is certainly important, the most unusual surface feature
 in the substitution is the jump from a major-seventh chord to the dominant
 seventh whose root is a minor third higher; it is this harmonic move that
 gives the progression its forward momentum. We might call this transformation
-CS (for ``Coltrane Substitution''):%
+CS (for ``Coltrane Substitution''): \\
 %
-\begin{displaymath}
-    \mathrm{CS}(X\,) = Y\text{, where}\ X = (x_r, x_t, x_s) \in \Smaj
-    \text{ and}\
-    Y = (\,y_r, y_t, y_s) = (x_r + 3, x_t + 3, x_s + 2) \in \Sdom
-\end{displaymath}%
+\vspace{0.35\baselineskip}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{lcl}
+  If $X = (x_r, x_t, x_s) \in \Smaj$, & then &
+    $\mathrm{CS}(X\,) = Y = (\,y_r, y_t, y_s) = (x_r + 3, x_t + 3, x_s + 2)
+                                               \in \Sdom$
+\end{tabular}
+\addtolength{\tabcolsep}{3pt}
+\vspace{0.5\baselineskip}
+
+\noindent With this transformation, we can understand the entire \tfo
+substitution as follows: \\%
 %
-With this transformation, we can understand the entire \tfo substitution
-as follows:%
-%
+\vbox{
 \begin{center}
   \h{Dm7}  $\xrightarrow{\hspace{8.25em}\mathrm{TF}\hspace{8.25em}}$ \h{G7} \TFarrow\ \h{Cmaj7}
 
@@ -524,6 +558,7 @@ as follows:%
   \h{Emaj7}  \CSarrow\ \h{G7} \TFarrow\
   \h{Cmaj7}
 \end{center}
+}
 
 This M3-space is well equipped to show the logic of major-third cycles, though
 other kinds of tonal relationships are more difficult to see: both tritone
@@ -561,7 +596,7 @@ here will proceed in sections.\fn{maj3-17}
 
 \begin{figure}[tbp]
   \centerGraphic[width=22em]{eps/ch3/miss-jones-changes.pdf}
-  \caption{Changes to ``Have You Met Miss Jones?'' (Richard Rogers/Lorenz Hart).}
+  \caption{Changes to ``Have You Met Miss Jones?'' (Richard Rodgers/Lorenz Hart).}
 \label{maj3:miss-jones-changes}
 \end{figure}
 
@@ -627,7 +662,7 @@ given in Figure \ref{maj3:miss-jones-bridge}.\fn{maj3-18} In this network,
 transformations actualized in the music are shown as solid arrows, while
 others are shown with dotted arrows. (As usual, the unlabeled arrows are TF
 transformations.) A complete $T_8$-cycle is thwarted when the \h{Dmaj7} chord
-moves instead back to \Gflat, but the dotted arrow shows that this move would
+moves instead back to \Gflat, but the dotted arrow shows that another $T_8$ move would
 have completed the cycle. It also clarifies the return to F major in the last
 A section: a larger-scale $T_{11}$ from \Gflat\ to F is accomplished via the
 \slideS transformation from \h{Gbmaj7} to \h{Gm7}.
@@ -662,7 +697,7 @@ deals with these basic chord types directly.
 
 For the moment, let us set aside the ordered-triple representation we have
 been using here and return to four-note seventh chords proper. Parsimonious
-relationships among seventh chords are shown in Douthett's ``Four Cube Trio''
+relationships among seventh chords are shown in Douthett's ``Four-Cube Trio''
 (recall Figure \ref{maj3:four-cube-trio}); Figure \ref{pvl:four-cube-correct}
 redraws a portion this figure to include major seventh chords.\fn{pvl-1}
 Because we are interested in this figure's application to jazz, the minor
@@ -672,8 +707,8 @@ Thelonious Monk).\fn{pvl-1b}
 
 \begin{figure}[tbp]
   \centerGraphic[width=33em]{eps/ch3/four-cube-correct.pdf}
-  \caption[A portion of Four-Cube-Trio, redrawn to include major seventh
-  chords.]{A portion of Four-Cube-Trio, redrawn to include major seventh
+  \caption[A portion of Four-Cube Trio, redrawn to include major seventh
+  chords.]{A portion of Four-Cube Trio, redrawn to include major seventh
     chords. All lines, regardless of style, represent a single voice moving by
     half-step.}
   \label{pvl:four-cube-correct}
@@ -682,7 +717,7 @@ Thelonious Monk).\fn{pvl-1b}
 \begin{figure}[tbp]
   \centerGraphic[width=33em]{eps/ch3/four-cube-transformations.pdf}
   \caption{The transformations 3\textsc{rd}, 7\textsc{th},
-    \textsc{slide}\textsubscript{7}, TF, and \tft in the Four-Cube-Trio.}
+    \textsc{slide}\textsubscript{7}, TF, and \tft in the Four-Cube Trio.}
   \label{pvl:four-cube-transformations}
 \end{figure}
 
@@ -773,15 +808,15 @@ tonal jazz---which is, after all, the aim of this study.
 
 Throughout the course of the last two chapters, we have developed a fairly
 complete transformational system for jazz harmony. Taking \tf space as our
-starting point, we have seen how it can altered in various ways to show
+starting point, we have seen how it can be altered in various ways to show
 different aspects of standard tonal jazz harmony. To this point, though, we
 have focused almost exclusively on chord symbols (via their abstraction into
 ordered triples). Of course, jazz harmony involves quite a bit more than
 relationships among three-note chords: these basic structures are altered in
 various ways by rhythm section members, and we have yet to say anything at all
-about the role harmony plays for an improvising musician. To do so, we'll need
-to expand our harmonic universe somewhat; the next chapter begins to take the
-first steps in that direction.
+about the role harmony plays for an improvising musician. To do so, we will need
+to expand our harmonic universe somewhat; the next chapter begins to take
+steps in that direction.
 
 %%% Local Variables: %%%
 %%% mode: latex %%%
