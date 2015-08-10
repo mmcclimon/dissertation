@@ -31,6 +31,18 @@
   parentracker=true
 ]{biblatex-chicago}
 
+% Patch journal bib code to ensure there is no line break between "no." and
+% the issue number
+\DeclareFieldFormat{journum}{%
+  \ifboolexpr{%
+    test {\ifnumerals{#1}}
+    and
+    not test {\ifnumeral{#1}}
+  }%
+  {\bibstring{numbers}\addnbspace #1}%
+  {\bibstring{number}\addnbspace #1}}
+
+
 % footnotes
 % ------------
 \usepackage{sepfootnotes}
