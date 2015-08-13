@@ -18,7 +18,7 @@ introduction to chord-scale theory, both in its original form and its later
 pedagogical adaptations, and then continues to incorporate it into the
 transformational system developed thus far; finally, we will see how the
 theory allows us to make analytical insights that can go beyond the
-chord-symbol based analysis of previous chapters.
+chord-symbol-based analysis of previous chapters.
 
 \section{George Russell’s \emph{Lydian Chromatic Concept}}
 \label{sec:lcc}
@@ -133,10 +133,11 @@ starting on F (\lcc 12): \\
   \Aflat\quad \Eflat\quad \Bflat\quad \Gflat \par}
 
 \noindent What should be a perfect fifth from B to F\sharp\ is replaced by a
-whole step (B--C\sharp), so that the minor ninth (F--\Gflat), does not appear
-until the last note. This sleight of hand also prevents there from being more
-than one succession of six perfect fifths in the series. If it had continued
-in perfect fifths, there would be by definition seven Lydian tonics!
+whole step (B--C\sharp), so that the pitch forming a minor ninth with the
+Lydian tonic (\Gflat) does not appear until the last note. This sleight of
+hand also prevents there from being more than one succession of six perfect
+fifths in the series. If it had continued in perfect fifths, there would be by
+definition seven Lydian tonics!
 
 Considering these inconsistencies, we might ask if there is anything worth
 saving in Russell's ideas. He is probably right that most people prefer the
@@ -144,7 +145,7 @@ sound of the stack of thirds on the right of Figure \ref{lcc:tertian-stacks}a,
 with the F\sharp.\fn{lcc-8} And the Lydian scale \emph{does} have some
 practical advantages over the major scale. As Russell points out, \sharp\sd4
 appears before \nat\sd4 in the harmonic series (he does not mention that
-\flat\sd7 appears before \nat\sd7\,). The Lydian scale is also unique in that
+\flat\sd7 appears before \nat\sd7\,).\fn{lcc-8a} The Lydian scale is also unique in that
 it is possible to form all twelve interval types with the tonic; Russell's
 explanation of this fact is reproduced in Figure \ref{lcc:lydian-intervals}
 (the F in the major scale is shown with a hollow note because it is the true
@@ -218,9 +219,9 @@ Table \ref{lcc:scale-names}.\fn{lcc-11}
    \hline
    \rule[1em]{0ex}{1ex}%
    Lydian & -- \\
-   Lydian augmented & 3rd mode of melodic minor \\
+   Lydian augmented & 3rd mode of melodic minor, 7th mode of acoustic \\
    Lydian diminished & 4th mode of harmonic major \\
-   Lydian flat seventh & Lydian dominant, acoustic \\
+   Lydian flat seventh & Lydian dominant, acoustic, 4th mode of melodic minor \\
    Auxiliary augmented & whole-tone \\
    Auxiliary diminished & octatonic, diminished (whole--half) \\
    Auxiliary diminished blues & octatonic, diminished (half--whole)
@@ -259,8 +260,8 @@ considers it to be generated in a different direction. All of the horizontal
 scales have \nat\sd4; Russell only includes them because of their ``historical
 and/or sociological significance.'' The horizontal scales do not, as we shall
 see, generate chords in the same way as the vertical scales, and for Russell
-exist in a constant state of tension between the ``false'' tonic and the true
-Lydian tonic.
+they exist in a constant state of tension between the ``false'' tonic and the
+true Lydian tonic.
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch4/horizontal-scales.pdf}
@@ -309,7 +310,7 @@ Russell's first mention of the concept explains its inception:%
   chord/scale unity---a \textsc{chordmode}. (\lcc 10)
 \end{quoting}
 
-What Miles was looking for is essentially a way of determining
+What Davis was looking for is essentially a way of determining
 what notes he could play over a given chord. Simply knowing the chord tones
 no longer seemed to be enough, since various extensions and alterations can
 change the sound of the chord. Chord-scale theory is ultimately, then, an
@@ -620,7 +621,7 @@ structure, and accordingly we will not have much occasion to draw on
 Tymoczko's work here.\fn{cst-2}
 
 Other authors have applied chord-scale theory to jazz, though in somewhat
-different ways than we will do here. Garret Michaelsen, for example, draws on
+different ways than we will do here. Garrett Michaelsen, for example, draws on
 Tymoczko's work on scalar voice leading to construct networks for the music of
 Wayne Shorter.\footcite{michaelsen:2012} Michaelsen does take seriously the
 notion that chords and scales are equivalent, but his work is more interested
@@ -634,7 +635,7 @@ The work that intersects most closely with our work here is John Bishop's
 dissertation, which incorporates chord-scales into a triadic transformational
 system.\footcite{bishop:2012} Bishop is influenced by chord-scale theory as
 it is taught at the Berklee College of Music, which is different in some ways
-than Russell's theory outlined above.\fn{cst-3} He is also interested in
+from Russell's theory outlined above.\fn{cst-3} He is also interested in
 triadic approaches to improvisation; in his theory, chord-scales exist as a
 means of generating these triads.\fn{cst-4} In this section we will not
 restrict our focus to triads, but will instead consider chord-scales as
@@ -643,14 +644,14 @@ objects unto themselves.
 One of the problems facing any scale theory is the need to account for scales
 of different cardinalities. Tymoczko's common-tone theory provides a means of
 connecting a means of relating the whole-tone (6 notes), diatonic, acoustic,
-harmonic major, (all 7), and octatonic (8) scales via ``split'' and ``merge''
-operations, and indeed these four scales account for Russell's six of seven
+harmonic major (all 7), and octatonic (8) scales via ``split'' and ``merge''
+operations, and indeed these four scales account for six of Russell's seven
 vertical scales.\footcite[134--35]{tymoczko:2011} Tymoczko does mention the
 ascending melodic minor scale, but it does not merit a place in his diagram,
 since it is not a nearly even 7-note scale. His system does not, though,
 account for Russell's ``African-American blues scale'' (hereafter,
 simply the ``blues scale''), which has either 8 or 10 notes, depending on
-whether \sd2 and \nat\sd7 are included. While we could incorporate this scale into
+whether \sd2 and \nat\sd7 are included.\fn{cst-4a} While we could incorporate this scale into
 the common-tone system---it is two splits and a semitone displacement from an
 octatonic collection---chord-scale theory as it is usually taught does not
 focus on common tones between chord-scales, but rather on determining what
@@ -726,22 +727,24 @@ With some mathematical sleight of hand, we can define a chord-scale \gis using
 the scale index along with a diatonic collection as above. Elements of this
 \gis have the form \scalepair{\emph{diatonic collection}}{\emph{scale name}};
 the F Lydian collection is described by the pair \scalepair{\nat}{Lydian},
-while \scalepair{2\flat}{Lyd.\ dominant} describes the \Eflat\ acoustic
-collection. Creating an ordered-pair \gis of course requires us to show that
-both elements are part of a mathematical group. Though this will not be its
-final form, we will define this chord-scale \gis formally
-here, with the knowledge that it will be relaxed in the next section. It is
-important to realize that this \gis is designed to reflect Russell's own conception
-of chord/scale equivalence. There are only three distinct octatonic
-collections, for example, but the \gis contains 24 distinct diminished scales:
-whole-half and half-whole diminished scales on all twelve Lydian tonics.
+while \scalepair{2\flat}{Lyd.\ \flat{}7} describes the \Eflat\ acoustic
+collection (\Eflat Lydian is in the 2\flat diatonic collection, and the Lydian
+\flat{}7 scale on \Eflat adds the pitch \Dflat).\fn{cst-8a} Creating an ordered-pair \gis
+of course requires us to show that both elements are part of a mathematical
+group. Though this will not be its final form, we will define this chord-scale
+\gis formally here, with the knowledge that it will be relaxed in the next
+section. It is important to realize that this \gis is designed to reflect
+Russell's own conception of chord/scale equivalence. There are only three
+distinct octatonic collections, for example, but the \gis contains 24 distinct
+diminished scales: whole-half and half-whole diminished scales on all twelve
+Lydian tonics.
 
 The first element of the pair is a key signature, which have been studied in a
 transformational context by Julian Hook.\fn{cst-9} Because we are interested
 in collections in jazz (often a non-notated music), we will consider
 enharmonically equivalent key signatures (like 6\sharp\ and 6\kern0.8pt\flat)
 to be identical. There are, then, only twelve key signatures (isomorphic to
-the group $\intZ_{12}$, operated on by the sharpwise and flatwise
+the group $\intZ_{12}$), operated on by the sharpwise and flatwise
 transformations, $s_n$ and $f_n$, which add $n$ sharps or flats to a key
 signature, respectively; we might write \mbox{1\sharp $\xrightarrow{\ s_1\ }$
   2\sharp}, \mbox{2\flat $\xrightarrow{\ f_2\ }$ 4\flat}, or \mbox{1\flat
@@ -761,7 +764,7 @@ consonant distance between the two diminished scales seems much less than the
 distance between the whole-tone and whole-half diminished scales.\fn{cst-12}
 If we accept these limitations of the scales' group structure, though, we gain
 all the benefits of a \gis. Intervals between scales are calculated as
-integers mod 8, using the scale labels from Table \ref{cst:scale-table}: the
+integers mod 8, using the scale labels from Table \ref{cst:scale-index}: the
 interval from a Lydian augmented scale to a whole-tone scale is $3$ ($=4-1$),
 from a whole-tone scale to a half-whole diminished scale is $2$, and so on.
 
@@ -773,7 +776,7 @@ A passage like the one in Figure \ref{cst:gis-fiveone}, for example, expresses t
 $R$\scalepair{$s_1$}{$0$} transformation: the collection changes but the scale does not.
 Figure \ref{cst:gis-blues-lyd} shows a passage which begins with the F blues
 scale and resolves to the F Lydian collection, representing the transformation
-$R$\scalepair{$e$}{$1$}, where $e$ indicates the identity element.\fn{cst-13}
+$R$\scalepair{$e$}{$1$}, where $e$ indicates the identity element.%\fn{cst-13}
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch4/gis-fiveone.pdf}
@@ -797,10 +800,10 @@ there are some aspects of it that are somewhat unsatisfactory. How, for
 instance, should we determine what scales match with what diatonic
 collections? In some cases the answer is clear, but in others it is not. In
 Figure \ref{cst:gis-fiveone} above, for example, we labeled the \h{G7} chord
-as \scalepair{\nat}{Lyd.}, rather than, say, \scalepair{1\sharp}{Lyd.}; the
-\sd4 that would confirm either is absent. The problem seems to become even
-more intractable when we encounter the symmetrical scales: a diminished scale
-has eight possible parent diatonic collections.
+as \scalepair{\nat}{Lyd.}, rather than, say, \scalepair{2\sharp}{Lyd.\
+  \flat{}7}; the \sd4 that would confirm either is absent. The problem seems
+to become even more intractable when we encounter the symmetrical scales: a
+diminished scale has eight possible parent diatonic collections.
 
 \begin{table}[p]
   \centerGraphic[angle=90,height=.9\textheight]{eps/ch4/scale-table.pdf}
@@ -893,7 +896,7 @@ addition does not form a group, since it is not closed ($6+5$ is not a member
 of $S$\,) and elements do not have inverses.
 
 This is of course one of the well-known limitations of \gis{}es: the musical
-spaces must be both continuous and infinite.\fn{cst-18} A \gis cannot account for
+spaces must be both symmetrical and homogeneous.\fn{cst-18} A \gis cannot account for
 musical spaces that are discontinuous or have ``boundaries,'' which is the
 case here: it is not possible to conceive of a scale in the system which is
 more ingoing than the Lydian scale, or more outgoing than the blues
@@ -1005,7 +1008,7 @@ chord-scale space. With the final version of the chord-scale transformational
 system in place, the stage is now set to turn toward actual jazz
 performance.
 
-\section{Chord-Scales Transformations in Analysis}
+\section{Chord-Scale Transformations in Analysis}
 \label{sec:chord-scale-analysis}
 
 Analyzing jazz performance is inherently more complicated than the
@@ -1315,7 +1318,7 @@ increase the effective harmonic rhythm; Figure \ref{csa:stitt-double-time}
 gives one of these passages over a \tf progression.\fn{csa-13} In the second
 half of m.~73, Stitt plays a descending F bebop scale, implying the \h{F7}
 chord a half-bar early.\fn{csa-14} Instead of continuing to play \h{F7} in the
-next bar, though, Stitt seems to return to \h{Cm7}: he uses only F\sharp\ as a
+next bar, though, Stitt seems to return to \h{Cm7}: he uses F\sharp\ only as a
 lower neighbor until the last beat, when the (strongly C-minor) figure
 G--\Eflat--D--C figure resolves to F\nat. Stitt exploits the fact that there
 is no diatonic shift between \ii and \V chords, and alternates between the
@@ -1395,7 +1398,7 @@ transposed by a tritone. While these chords are close together in \tf space,
 they are far apart in chord-scale space, as noted above; \h{Bm7}--\h{E7}
 is played as \scalepair{3\sharp}{Dia.}\ in this recording, while
 \h{Bbm7}--\h{Eb7} is played as \scalepair{4\flat}{Dia.}---\,a difference of
-five sharps/seven flats.
+five sharps/seven flats.\fn{csa-17a}
 
 The ensemble likely decided to make the substitutions in the solos to prevent
 the piece from becoming boring: since almost all of the original chords are
@@ -1437,7 +1440,7 @@ understands its harmony.
 
 As we observed in Section \ref{sec:other-kinds-tonic}, major-minor seventh
 chords can function as tonic chords in the blues. This fact presents something
-of a problem for an improviser: the \h{C7} at the beginning of ``Isotope''
+of a problem: the \h{C7} at the beginning of ``Isotope''
 acts as tonic at the beginning of its four-bar span, but as a dominant of the
 following \h{F7} at the end.\fn{csa-20} At some point during this four bars
 must be a pivot fifth: a motion from ``\h{C7} as tonic'' to ``\h{C7} as
@@ -1518,17 +1521,16 @@ anticipating the \h{A7} by a full bar, and also deemphasizes the \h{Bb7}
 Henderson plays a similar passage in the middle of chorus 14, shown in Figure
 \ref{csa:henderson-chorus-fourteen}. Like the first, it begins with a diatonic
 sequence, this time in a stepwise rising motion (a series of $t_1$s). Here the
-sequence breaks down much earlier in the passage, but the constant eighth
-notes and general rising contour here link the two together; both sound like a
-single line with a shifting diatonic foundation rather than a series of
-loosely connected gestures. This passage traverses the same $s_4$
-transformation as the first from the 2\flat\ to 2\sharp\ diatonic collections,
-though the route here is more scenic. Henderson does not anticipate the \h{A7}
-and instead plays the C harmony, splitting the $s_4$ transformation into two
-$s_2$s. The first of these is further subdivided into an $f_1$/$s_3$ pair;
-because the \Aflat comes at the very end of m.~162 as part of an enclosure
-figure, it is not as strong as the larger motion from the 2\flat\ to the \nat\
-collection.
+sequence breaks down much earlier, but the constant eighth notes recall the
+previous passage; both sound like a single line with a shifting diatonic
+foundation rather than a series of loosely connected gestures. This passage
+traverses the same $s_4$ transformation as the first from the 2\flat\ to
+2\sharp\ diatonic collections, though the route here is more scenic. Henderson
+does not anticipate the \h{A7} and instead plays the C harmony, splitting the
+$s_4$ transformation into two $s_2$s. The first of these is further subdivided
+into an $f_1$/$s_3$ pair; because the \Aflat comes at the very end of m.~162
+as part of an enclosure figure, it is not as strong as the larger motion from
+the 2\flat\ to the \nat\ collection.
 
 \begin{figure}[tbp]
   \centerGraphic{eps/ch4/henderson-turnarounds.pdf}
@@ -1551,7 +1553,7 @@ emphasize this voice leading. Figure \ref{csa:henderson-turnarounds} gives
 several examples of Henderson's solos on the final bar of the chorus, along
 with their resolutions. In all of these, he emphasizes the \Gflat--G\nat\ voice
 leading from \h{Gb7} to \h{Eb7}, and usually brings out the \Eflat--E\nat\ over
-\h{Eb}--\h{C7} as well. The importance of these voice leadings disappear in
+\h{Eb}--\h{C7} as well. The importance of these voice leadings disappears in
 the chord-scale transformations, and would be better shown in, for example, one of
 Tymoczko's voice-leading spaces.\fn{csa-25}
 
